@@ -1,22 +1,16 @@
 {
-    "name": "clicksend/clicksend-php",
+    "name": "apimatic/clicksendv3api",
     "type": "library",
-    "description": "A PHP wrapper for ClickSend's API",
-    "keywords": ["ClickSend","SMS","Voice","Fax","Post","Email","API","SDK"],
-    "homepage": "https://www.clicksend.com",
+    "description": "Clicksend v3 API",
+    "keywords": ["ClickSend v3 API","API","SDK"],
+    "homepage": "https://apimatic.io",
     "license": "MIT",
     "authors": [
         {
-            "name": "Matthew Larner",
-            "email": "matt@clicksend.com",
-            "homepage": "https://www.clicksend.com",
-            "role": "Director"
-        }
-    ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/apimatic/unirest-php"
+            "name": "Zeeshan @ APIMATIC",
+            "email": "zeeshan@apimatic.io",
+            "homepage": "https://github.com/apimatic",
+            "role": "Developer"
         }
     ],
     "require": {
@@ -24,11 +18,12 @@
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
-        "apimatic/unirest-php": "1.3.*"
+        "mashape/unirest-php": "~3.0.1",
+		"apimatic/jsonmapper": "~1.0.0"
     },
     "autoload": {
         "psr-4": {
-            "ClickSendV3APILib\\": "src/"
+            "ClickSend\\": "src/"
         }
     }
 }

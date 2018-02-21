@@ -22,9 +22,9 @@ class ClickSendClient
         $key = null,
         $baseUri = null
     ) {
-        Configuration::$username = $username ? $username : Configuration::$username;
-        Configuration::$key = $key ? $key : Configuration::$key;
-        Configuration::$BASEURI = $baseUri ? $baseUri : Configuration::$BASEURI;
+        Configuration::$username = $username ?: Configuration::$username;
+        Configuration::$key = $key ?: Configuration::$key;
+        Configuration::$BASEURI = $baseUri ?: Configuration::$BASEURI;
     }
  
     /**

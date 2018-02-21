@@ -19,10 +19,12 @@ class ClickSendClient
      */
     public function __construct(
         $username = null,
-        $key = null
+        $key = null,
+        $baseUri = null
     ) {
         Configuration::$username = $username ? $username : Configuration::$username;
         Configuration::$key = $key ? $key : Configuration::$key;
+        Configuration::$BASEURI = $baseUri ? $baseUri : Configuration::$BASEURI;
     }
  
     /**

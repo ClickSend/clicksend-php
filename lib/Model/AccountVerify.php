@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AccountVerify
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * AccountVerify Class Doc Comment
@@ -58,9 +59,9 @@ class AccountVerify implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'country' => 'string',
+        'country'    => 'string',
         'user_phone' => 'string',
-        'type' => 'string'
+        'type'       => 'string'
     ];
 
     /**
@@ -69,9 +70,9 @@ class AccountVerify implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'country' => null,
+        'country'    => null,
         'user_phone' => null,
-        'type' => null
+        'type'       => null
     ];
 
     /**
@@ -101,9 +102,9 @@ class AccountVerify implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'country' => 'country',
+        'country'    => 'country',
         'user_phone' => 'user_phone',
-        'type' => 'type'
+        'type'       => 'type'
     ];
 
     /**
@@ -112,9 +113,9 @@ class AccountVerify implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'country' => 'setCountry',
+        'country'    => 'setCountry',
         'user_phone' => 'setUserPhone',
-        'type' => 'setType'
+        'type'       => 'setType'
     ];
 
     /**
@@ -123,9 +124,9 @@ class AccountVerify implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'country' => 'getCountry',
+        'country'    => 'getCountry',
         'user_phone' => 'getUserPhone',
-        'type' => 'getType'
+        'type'       => 'getType'
     ];
 
     /**
@@ -169,9 +170,9 @@ class AccountVerify implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -308,6 +309,7 @@ class AccountVerify implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -320,6 +322,7 @@ class AccountVerify implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -333,6 +336,7 @@ class AccountVerify implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -349,6 +353,7 @@ class AccountVerify implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -371,5 +376,3 @@ class AccountVerify implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

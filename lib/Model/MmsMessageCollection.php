@@ -1,4 +1,5 @@
 <?php
+
 /**
  * MmsMessageCollection
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * MmsMessageCollection Class Doc Comment
@@ -59,7 +60,7 @@ class MmsMessageCollection implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'media_file' => 'string',
-        'messages' => '\ClickSend\Model\MmsMessage[]'
+        'messages'   => '\ClickSend\Model\MmsMessage[]'
     ];
 
     /**
@@ -69,7 +70,7 @@ class MmsMessageCollection implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'media_file' => null,
-        'messages' => null
+        'messages'   => null
     ];
 
     /**
@@ -100,7 +101,7 @@ class MmsMessageCollection implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'media_file' => 'media_file',
-        'messages' => 'messages'
+        'messages'   => 'messages'
     ];
 
     /**
@@ -110,7 +111,7 @@ class MmsMessageCollection implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'media_file' => 'setMediaFile',
-        'messages' => 'setMessages'
+        'messages'   => 'setMessages'
     ];
 
     /**
@@ -120,7 +121,7 @@ class MmsMessageCollection implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'media_file' => 'getMediaFile',
-        'messages' => 'getMessages'
+        'messages'   => 'getMessages'
     ];
 
     /**
@@ -164,9 +165,9 @@ class MmsMessageCollection implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -275,6 +276,7 @@ class MmsMessageCollection implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -287,6 +289,7 @@ class MmsMessageCollection implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -300,6 +303,7 @@ class MmsMessageCollection implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -316,6 +320,7 @@ class MmsMessageCollection implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -338,5 +343,3 @@ class MmsMessageCollection implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

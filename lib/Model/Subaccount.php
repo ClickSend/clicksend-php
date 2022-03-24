@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Subaccount
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * Subaccount Class Doc Comment
@@ -58,17 +59,17 @@ class Subaccount implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'api_username' => 'string',
-        'password' => 'string',
-        'email' => 'string',
-        'phone_number' => 'string',
-        'first_name' => 'string',
-        'last_name' => 'string',
-        'access_users' => 'int',
-        'access_billing' => 'int',
+        'api_username'     => 'string',
+        'password'         => 'string',
+        'email'            => 'string',
+        'phone_number'     => 'string',
+        'first_name'       => 'string',
+        'last_name'        => 'string',
+        'access_users'     => 'int',
+        'access_billing'   => 'int',
         'access_reporting' => 'int',
-        'access_contacts' => 'int',
-        'access_settings' => 'int'
+        'access_contacts'  => 'int',
+        'access_settings'  => 'int'
     ];
 
     /**
@@ -77,17 +78,17 @@ class Subaccount implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'api_username' => null,
-        'password' => null,
-        'email' => null,
-        'phone_number' => null,
-        'first_name' => null,
-        'last_name' => null,
-        'access_users' => 'int32',
-        'access_billing' => 'int32',
+        'api_username'     => null,
+        'password'         => null,
+        'email'            => null,
+        'phone_number'     => null,
+        'first_name'       => null,
+        'last_name'        => null,
+        'access_users'     => 'int32',
+        'access_billing'   => 'int32',
         'access_reporting' => 'int32',
-        'access_contacts' => 'int32',
-        'access_settings' => 'int32'
+        'access_contacts'  => 'int32',
+        'access_settings'  => 'int32'
     ];
 
     /**
@@ -117,17 +118,17 @@ class Subaccount implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'api_username' => 'api_username',
-        'password' => 'password',
-        'email' => 'email',
-        'phone_number' => 'phone_number',
-        'first_name' => 'first_name',
-        'last_name' => 'last_name',
-        'access_users' => 'access_users',
-        'access_billing' => 'access_billing',
+        'api_username'     => 'api_username',
+        'password'         => 'password',
+        'email'            => 'email',
+        'phone_number'     => 'phone_number',
+        'first_name'       => 'first_name',
+        'last_name'        => 'last_name',
+        'access_users'     => 'access_users',
+        'access_billing'   => 'access_billing',
         'access_reporting' => 'access_reporting',
-        'access_contacts' => 'access_contacts',
-        'access_settings' => 'access_settings'
+        'access_contacts'  => 'access_contacts',
+        'access_settings'  => 'access_settings'
     ];
 
     /**
@@ -136,17 +137,17 @@ class Subaccount implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'api_username' => 'setApiUsername',
-        'password' => 'setPassword',
-        'email' => 'setEmail',
-        'phone_number' => 'setPhoneNumber',
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
-        'access_users' => 'setAccessUsers',
-        'access_billing' => 'setAccessBilling',
+        'api_username'     => 'setApiUsername',
+        'password'         => 'setPassword',
+        'email'            => 'setEmail',
+        'phone_number'     => 'setPhoneNumber',
+        'first_name'       => 'setFirstName',
+        'last_name'        => 'setLastName',
+        'access_users'     => 'setAccessUsers',
+        'access_billing'   => 'setAccessBilling',
         'access_reporting' => 'setAccessReporting',
-        'access_contacts' => 'setAccessContacts',
-        'access_settings' => 'setAccessSettings'
+        'access_contacts'  => 'setAccessContacts',
+        'access_settings'  => 'setAccessSettings'
     ];
 
     /**
@@ -155,17 +156,17 @@ class Subaccount implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'api_username' => 'getApiUsername',
-        'password' => 'getPassword',
-        'email' => 'getEmail',
-        'phone_number' => 'getPhoneNumber',
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
-        'access_users' => 'getAccessUsers',
-        'access_billing' => 'getAccessBilling',
+        'api_username'     => 'getApiUsername',
+        'password'         => 'getPassword',
+        'email'            => 'getEmail',
+        'phone_number'     => 'getPhoneNumber',
+        'first_name'       => 'getFirstName',
+        'last_name'        => 'getLastName',
+        'access_users'     => 'getAccessUsers',
+        'access_billing'   => 'getAccessBilling',
         'access_reporting' => 'getAccessReporting',
-        'access_contacts' => 'getAccessContacts',
-        'access_settings' => 'getAccessSettings'
+        'access_contacts'  => 'getAccessContacts',
+        'access_settings'  => 'getAccessSettings'
     ];
 
     /**
@@ -209,9 +210,9 @@ class Subaccount implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -557,6 +558,7 @@ class Subaccount implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -569,6 +571,7 @@ class Subaccount implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -582,6 +585,7 @@ class Subaccount implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -598,6 +602,7 @@ class Subaccount implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -620,5 +625,3 @@ class Subaccount implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

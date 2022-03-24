@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AccountForgotPasswordVerify
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * AccountForgotPasswordVerify Class Doc Comment
@@ -57,9 +58,9 @@ class AccountForgotPasswordVerify implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'subaccount_id' => 'int',
+        'subaccount_id'    => 'int',
         'activation_token' => 'string',
-        'password' => 'string'
+        'password'         => 'string'
     ];
 
     /**
@@ -68,9 +69,9 @@ class AccountForgotPasswordVerify implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'subaccount_id' => 'int32',
+        'subaccount_id'    => 'int32',
         'activation_token' => null,
-        'password' => null
+        'password'         => null
     ];
 
     /**
@@ -100,9 +101,9 @@ class AccountForgotPasswordVerify implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'subaccount_id' => 'subaccount_id',
+        'subaccount_id'    => 'subaccount_id',
         'activation_token' => 'activation_token',
-        'password' => 'password'
+        'password'         => 'password'
     ];
 
     /**
@@ -111,9 +112,9 @@ class AccountForgotPasswordVerify implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'subaccount_id' => 'setSubaccountId',
+        'subaccount_id'    => 'setSubaccountId',
         'activation_token' => 'setActivationToken',
-        'password' => 'setPassword'
+        'password'         => 'setPassword'
     ];
 
     /**
@@ -122,9 +123,9 @@ class AccountForgotPasswordVerify implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'subaccount_id' => 'getSubaccountId',
+        'subaccount_id'    => 'getSubaccountId',
         'activation_token' => 'getActivationToken',
-        'password' => 'getPassword'
+        'password'         => 'getPassword'
     ];
 
     /**
@@ -168,9 +169,9 @@ class AccountForgotPasswordVerify implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -307,6 +308,7 @@ class AccountForgotPasswordVerify implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -319,6 +321,7 @@ class AccountForgotPasswordVerify implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -332,6 +335,7 @@ class AccountForgotPasswordVerify implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -348,6 +352,7 @@ class AccountForgotPasswordVerify implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -370,5 +375,3 @@ class AccountForgotPasswordVerify implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

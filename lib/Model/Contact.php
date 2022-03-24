@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Contact
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * Contact Class Doc Comment
@@ -58,22 +59,22 @@ class Contact implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'phone_number' => 'string',
-        'custom_1' => 'string',
-        'email' => 'string',
-        'fax_number' => 'string',
-        'first_name' => 'string',
-        'address_line_1' => 'string',
-        'address_line_2' => 'string',
-        'address_city' => 'string',
-        'address_state' => 'string',
+        'phone_number'        => 'string',
+        'custom_1'            => 'string',
+        'email'               => 'string',
+        'fax_number'          => 'string',
+        'first_name'          => 'string',
+        'address_line_1'      => 'string',
+        'address_line_2'      => 'string',
+        'address_city'        => 'string',
+        'address_state'       => 'string',
         'address_postal_code' => 'string',
-        'address_country' => 'string',
-        'organization_name' => 'string',
-        'custom_2' => 'string',
-        'custom_3' => 'string',
-        'custom_4' => 'string',
-        'last_name' => 'string'
+        'address_country'     => 'string',
+        'organization_name'   => 'string',
+        'custom_2'            => 'string',
+        'custom_3'            => 'string',
+        'custom_4'            => 'string',
+        'last_name'           => 'string'
     ];
 
     /**
@@ -82,22 +83,22 @@ class Contact implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'phone_number' => null,
-        'custom_1' => null,
-        'email' => null,
-        'fax_number' => null,
-        'first_name' => null,
-        'address_line_1' => null,
-        'address_line_2' => null,
-        'address_city' => null,
-        'address_state' => null,
+        'phone_number'        => null,
+        'custom_1'            => null,
+        'email'               => null,
+        'fax_number'          => null,
+        'first_name'          => null,
+        'address_line_1'      => null,
+        'address_line_2'      => null,
+        'address_city'        => null,
+        'address_state'       => null,
         'address_postal_code' => null,
-        'address_country' => null,
-        'organization_name' => null,
-        'custom_2' => null,
-        'custom_3' => null,
-        'custom_4' => null,
-        'last_name' => null
+        'address_country'     => null,
+        'organization_name'   => null,
+        'custom_2'            => null,
+        'custom_3'            => null,
+        'custom_4'            => null,
+        'last_name'           => null
     ];
 
     /**
@@ -127,22 +128,22 @@ class Contact implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'phone_number' => 'phone_number',
-        'custom_1' => 'custom_1',
-        'email' => 'email',
-        'fax_number' => 'fax_number',
-        'first_name' => 'first_name',
-        'address_line_1' => 'address_line_1',
-        'address_line_2' => 'address_line_2',
-        'address_city' => 'address_city',
-        'address_state' => 'address_state',
+        'phone_number'        => 'phone_number',
+        'custom_1'            => 'custom_1',
+        'email'               => 'email',
+        'fax_number'          => 'fax_number',
+        'first_name'          => 'first_name',
+        'address_line_1'      => 'address_line_1',
+        'address_line_2'      => 'address_line_2',
+        'address_city'        => 'address_city',
+        'address_state'       => 'address_state',
         'address_postal_code' => 'address_postal_code',
-        'address_country' => 'address_country',
-        'organization_name' => 'organization_name',
-        'custom_2' => 'custom_2',
-        'custom_3' => 'custom_3',
-        'custom_4' => 'custom_4',
-        'last_name' => 'last_name'
+        'address_country'     => 'address_country',
+        'organization_name'   => 'organization_name',
+        'custom_2'            => 'custom_2',
+        'custom_3'            => 'custom_3',
+        'custom_4'            => 'custom_4',
+        'last_name'           => 'last_name'
     ];
 
     /**
@@ -151,22 +152,22 @@ class Contact implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'phone_number' => 'setPhoneNumber',
-        'custom_1' => 'setCustom1',
-        'email' => 'setEmail',
-        'fax_number' => 'setFaxNumber',
-        'first_name' => 'setFirstName',
-        'address_line_1' => 'setAddressLine1',
-        'address_line_2' => 'setAddressLine2',
-        'address_city' => 'setAddressCity',
-        'address_state' => 'setAddressState',
+        'phone_number'        => 'setPhoneNumber',
+        'custom_1'            => 'setCustom1',
+        'email'               => 'setEmail',
+        'fax_number'          => 'setFaxNumber',
+        'first_name'          => 'setFirstName',
+        'address_line_1'      => 'setAddressLine1',
+        'address_line_2'      => 'setAddressLine2',
+        'address_city'        => 'setAddressCity',
+        'address_state'       => 'setAddressState',
         'address_postal_code' => 'setAddressPostalCode',
-        'address_country' => 'setAddressCountry',
-        'organization_name' => 'setOrganizationName',
-        'custom_2' => 'setCustom2',
-        'custom_3' => 'setCustom3',
-        'custom_4' => 'setCustom4',
-        'last_name' => 'setLastName'
+        'address_country'     => 'setAddressCountry',
+        'organization_name'   => 'setOrganizationName',
+        'custom_2'            => 'setCustom2',
+        'custom_3'            => 'setCustom3',
+        'custom_4'            => 'setCustom4',
+        'last_name'           => 'setLastName'
     ];
 
     /**
@@ -175,22 +176,22 @@ class Contact implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'phone_number' => 'getPhoneNumber',
-        'custom_1' => 'getCustom1',
-        'email' => 'getEmail',
-        'fax_number' => 'getFaxNumber',
-        'first_name' => 'getFirstName',
-        'address_line_1' => 'getAddressLine1',
-        'address_line_2' => 'getAddressLine2',
-        'address_city' => 'getAddressCity',
-        'address_state' => 'getAddressState',
+        'phone_number'        => 'getPhoneNumber',
+        'custom_1'            => 'getCustom1',
+        'email'               => 'getEmail',
+        'fax_number'          => 'getFaxNumber',
+        'first_name'          => 'getFirstName',
+        'address_line_1'      => 'getAddressLine1',
+        'address_line_2'      => 'getAddressLine2',
+        'address_city'        => 'getAddressCity',
+        'address_state'       => 'getAddressState',
         'address_postal_code' => 'getAddressPostalCode',
-        'address_country' => 'getAddressCountry',
-        'organization_name' => 'getOrganizationName',
-        'custom_2' => 'getCustom2',
-        'custom_3' => 'getCustom3',
-        'custom_4' => 'getCustom4',
-        'last_name' => 'getLastName'
+        'address_country'     => 'getAddressCountry',
+        'organization_name'   => 'getOrganizationName',
+        'custom_2'            => 'getCustom2',
+        'custom_3'            => 'getCustom3',
+        'custom_4'            => 'getCustom4',
+        'last_name'           => 'getLastName'
     ];
 
     /**
@@ -234,9 +235,9 @@ class Contact implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -342,7 +343,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets custom_1
      *
-     * @param string $custom_1 
+     * @param string $custom_1
      *
      * @return $this
      */
@@ -462,7 +463,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets address_line_2
      *
-     * @param string $address_line_2 
+     * @param string $address_line_2
      *
      * @return $this
      */
@@ -606,7 +607,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets custom_2
      *
-     * @param string $custom_2 
+     * @param string $custom_2
      *
      * @return $this
      */
@@ -630,7 +631,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets custom_3
      *
-     * @param string $custom_3 
+     * @param string $custom_3
      *
      * @return $this
      */
@@ -654,7 +655,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets custom_4
      *
-     * @param string $custom_4 
+     * @param string $custom_4
      *
      * @return $this
      */
@@ -695,6 +696,7 @@ class Contact implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -707,6 +709,7 @@ class Contact implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -720,6 +723,7 @@ class Contact implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -736,6 +740,7 @@ class Contact implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -758,5 +763,3 @@ class Contact implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

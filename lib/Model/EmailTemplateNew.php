@@ -1,4 +1,5 @@
 <?php
+
 /**
  * EmailTemplateNew
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * EmailTemplateNew Class Doc Comment
@@ -58,7 +59,7 @@ class EmailTemplateNew implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'template_name' => 'string',
+        'template_name'      => 'string',
         'template_id_master' => 'float'
     ];
 
@@ -68,7 +69,7 @@ class EmailTemplateNew implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'template_name' => null,
+        'template_name'      => null,
         'template_id_master' => null
     ];
 
@@ -99,7 +100,7 @@ class EmailTemplateNew implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'template_name' => 'template_name',
+        'template_name'      => 'template_name',
         'template_id_master' => 'template_id_master'
     ];
 
@@ -109,7 +110,7 @@ class EmailTemplateNew implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'template_name' => 'setTemplateName',
+        'template_name'      => 'setTemplateName',
         'template_id_master' => 'setTemplateIdMaster'
     ];
 
@@ -119,7 +120,7 @@ class EmailTemplateNew implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'template_name' => 'getTemplateName',
+        'template_name'      => 'getTemplateName',
         'template_id_master' => 'getTemplateIdMaster'
     ];
 
@@ -164,9 +165,9 @@ class EmailTemplateNew implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -275,6 +276,7 @@ class EmailTemplateNew implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -287,6 +289,7 @@ class EmailTemplateNew implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -300,6 +303,7 @@ class EmailTemplateNew implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -316,6 +320,7 @@ class EmailTemplateNew implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -338,5 +343,3 @@ class EmailTemplateNew implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

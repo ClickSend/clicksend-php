@@ -1,4 +1,5 @@
 <?php
+
 /**
  * EmailSMSAddress
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * EmailSMSAddress Class Doc Comment
@@ -59,7 +60,7 @@ class EmailSMSAddress implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'email_address' => 'string',
-        'from' => 'string',
+        'from'          => 'string',
         'subaccount_id' => 'string'
     ];
 
@@ -70,7 +71,7 @@ class EmailSMSAddress implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'email_address' => null,
-        'from' => null,
+        'from'          => null,
         'subaccount_id' => null
     ];
 
@@ -102,7 +103,7 @@ class EmailSMSAddress implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'email_address' => 'email_address',
-        'from' => 'from',
+        'from'          => 'from',
         'subaccount_id' => 'subaccount_id'
     ];
 
@@ -113,7 +114,7 @@ class EmailSMSAddress implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'email_address' => 'setEmailAddress',
-        'from' => 'setFrom',
+        'from'          => 'setFrom',
         'subaccount_id' => 'setSubaccountId'
     ];
 
@@ -124,7 +125,7 @@ class EmailSMSAddress implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'email_address' => 'getEmailAddress',
-        'from' => 'getFrom',
+        'from'          => 'getFrom',
         'subaccount_id' => 'getSubaccountId'
     ];
 
@@ -169,9 +170,9 @@ class EmailSMSAddress implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -305,6 +306,7 @@ class EmailSMSAddress implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -317,6 +319,7 @@ class EmailSMSAddress implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -330,6 +333,7 @@ class EmailSMSAddress implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -346,6 +350,7 @@ class EmailSMSAddress implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -368,5 +373,3 @@ class EmailSMSAddress implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

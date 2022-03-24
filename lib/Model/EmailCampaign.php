@@ -1,4 +1,5 @@
 <?php
+
 /**
  * EmailCampaign
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * EmailCampaign Class Doc Comment
@@ -58,14 +59,14 @@ class EmailCampaign implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'name' => 'string',
-        'subject' => 'string',
-        'body' => 'string',
+        'name'                  => 'string',
+        'subject'               => 'string',
+        'body'                  => 'string',
         'from_email_address_id' => 'float',
-        'from_name' => 'string',
-        'template_id' => 'float',
-        'list_id' => 'float',
-        'schedule' => 'int'
+        'from_name'             => 'string',
+        'template_id'           => 'float',
+        'list_id'               => 'float',
+        'schedule'              => 'int'
     ];
 
     /**
@@ -74,14 +75,14 @@ class EmailCampaign implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'name' => null,
-        'subject' => null,
-        'body' => null,
+        'name'                  => null,
+        'subject'               => null,
+        'body'                  => null,
         'from_email_address_id' => null,
-        'from_name' => null,
-        'template_id' => null,
-        'list_id' => null,
-        'schedule' => 'int32'
+        'from_name'             => null,
+        'template_id'           => null,
+        'list_id'               => null,
+        'schedule'              => 'int32'
     ];
 
     /**
@@ -111,14 +112,14 @@ class EmailCampaign implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'name' => 'name',
-        'subject' => 'subject',
-        'body' => 'body',
+        'name'                  => 'name',
+        'subject'               => 'subject',
+        'body'                  => 'body',
         'from_email_address_id' => 'from_email_address_id',
-        'from_name' => 'from_name',
-        'template_id' => 'template_id',
-        'list_id' => 'list_id',
-        'schedule' => 'schedule'
+        'from_name'             => 'from_name',
+        'template_id'           => 'template_id',
+        'list_id'               => 'list_id',
+        'schedule'              => 'schedule'
     ];
 
     /**
@@ -127,14 +128,14 @@ class EmailCampaign implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'subject' => 'setSubject',
-        'body' => 'setBody',
+        'name'                  => 'setName',
+        'subject'               => 'setSubject',
+        'body'                  => 'setBody',
         'from_email_address_id' => 'setFromEmailAddressId',
-        'from_name' => 'setFromName',
-        'template_id' => 'setTemplateId',
-        'list_id' => 'setListId',
-        'schedule' => 'setSchedule'
+        'from_name'             => 'setFromName',
+        'template_id'           => 'setTemplateId',
+        'list_id'               => 'setListId',
+        'schedule'              => 'setSchedule'
     ];
 
     /**
@@ -143,14 +144,14 @@ class EmailCampaign implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'subject' => 'getSubject',
-        'body' => 'getBody',
+        'name'                  => 'getName',
+        'subject'               => 'getSubject',
+        'body'                  => 'getBody',
         'from_email_address_id' => 'getFromEmailAddressId',
-        'from_name' => 'getFromName',
-        'template_id' => 'getTemplateId',
-        'list_id' => 'getListId',
-        'schedule' => 'getSchedule'
+        'from_name'             => 'getFromName',
+        'template_id'           => 'getTemplateId',
+        'list_id'               => 'getListId',
+        'schedule'              => 'getSchedule'
     ];
 
     /**
@@ -194,9 +195,9 @@ class EmailCampaign implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -467,6 +468,7 @@ class EmailCampaign implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -479,6 +481,7 @@ class EmailCampaign implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -492,6 +495,7 @@ class EmailCampaign implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -508,6 +512,7 @@ class EmailCampaign implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -530,5 +535,3 @@ class EmailCampaign implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

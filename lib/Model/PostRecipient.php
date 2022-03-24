@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PostRecipient
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * PostRecipient Class Doc Comment
@@ -58,15 +59,15 @@ class PostRecipient implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address_name' => 'string',
-        'address_line_1' => 'string',
-        'address_line_2' => 'string',
-        'address_city' => 'string',
-        'address_state' => 'string',
+        'address_name'        => 'string',
+        'address_line_1'      => 'string',
+        'address_line_2'      => 'string',
+        'address_city'        => 'string',
+        'address_state'       => 'string',
         'address_postal_code' => 'string',
-        'address_country' => 'string',
-        'return_address_id' => 'int',
-        'schedule' => 'int'
+        'address_country'     => 'string',
+        'return_address_id'   => 'int',
+        'schedule'            => 'int'
     ];
 
     /**
@@ -75,15 +76,15 @@ class PostRecipient implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'address_name' => null,
-        'address_line_1' => null,
-        'address_line_2' => null,
-        'address_city' => null,
-        'address_state' => null,
+        'address_name'        => null,
+        'address_line_1'      => null,
+        'address_line_2'      => null,
+        'address_city'        => null,
+        'address_state'       => null,
         'address_postal_code' => null,
-        'address_country' => null,
-        'return_address_id' => 'int32',
-        'schedule' => 'int32'
+        'address_country'     => null,
+        'return_address_id'   => 'int32',
+        'schedule'            => 'int32'
     ];
 
     /**
@@ -113,15 +114,15 @@ class PostRecipient implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'address_name' => 'address_name',
-        'address_line_1' => 'address_line_1',
-        'address_line_2' => 'address_line_2',
-        'address_city' => 'address_city',
-        'address_state' => 'address_state',
+        'address_name'        => 'address_name',
+        'address_line_1'      => 'address_line_1',
+        'address_line_2'      => 'address_line_2',
+        'address_city'        => 'address_city',
+        'address_state'       => 'address_state',
         'address_postal_code' => 'address_postal_code',
-        'address_country' => 'address_country',
-        'return_address_id' => 'return_address_id',
-        'schedule' => 'schedule'
+        'address_country'     => 'address_country',
+        'return_address_id'   => 'return_address_id',
+        'schedule'            => 'schedule'
     ];
 
     /**
@@ -130,15 +131,15 @@ class PostRecipient implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'address_name' => 'setAddressName',
-        'address_line_1' => 'setAddressLine1',
-        'address_line_2' => 'setAddressLine2',
-        'address_city' => 'setAddressCity',
-        'address_state' => 'setAddressState',
+        'address_name'        => 'setAddressName',
+        'address_line_1'      => 'setAddressLine1',
+        'address_line_2'      => 'setAddressLine2',
+        'address_city'        => 'setAddressCity',
+        'address_state'       => 'setAddressState',
         'address_postal_code' => 'setAddressPostalCode',
-        'address_country' => 'setAddressCountry',
-        'return_address_id' => 'setReturnAddressId',
-        'schedule' => 'setSchedule'
+        'address_country'     => 'setAddressCountry',
+        'return_address_id'   => 'setReturnAddressId',
+        'schedule'            => 'setSchedule'
     ];
 
     /**
@@ -147,15 +148,15 @@ class PostRecipient implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'address_name' => 'getAddressName',
-        'address_line_1' => 'getAddressLine1',
-        'address_line_2' => 'getAddressLine2',
-        'address_city' => 'getAddressCity',
-        'address_state' => 'getAddressState',
+        'address_name'        => 'getAddressName',
+        'address_line_1'      => 'getAddressLine1',
+        'address_line_2'      => 'getAddressLine2',
+        'address_city'        => 'getAddressCity',
+        'address_state'       => 'getAddressState',
         'address_postal_code' => 'getAddressPostalCode',
-        'address_country' => 'getAddressCountry',
-        'return_address_id' => 'getReturnAddressId',
-        'schedule' => 'getSchedule'
+        'address_country'     => 'getAddressCountry',
+        'return_address_id'   => 'getReturnAddressId',
+        'schedule'            => 'getSchedule'
     ];
 
     /**
@@ -199,9 +200,9 @@ class PostRecipient implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -500,6 +501,7 @@ class PostRecipient implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -512,6 +514,7 @@ class PostRecipient implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -525,6 +528,7 @@ class PostRecipient implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -541,6 +545,7 @@ class PostRecipient implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -563,5 +568,3 @@ class PostRecipient implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

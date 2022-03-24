@@ -1,4 +1,5 @@
 <?php
+
 /**
  * MmsCampaign
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * MmsCampaign Class Doc Comment
@@ -58,12 +59,12 @@ class MmsCampaign implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'list_id' => 'int',
-        'name' => 'string',
-        'body' => 'string',
-        'from' => 'string',
-        'schedule' => 'int',
-        'subject' => 'string',
+        'list_id'    => 'int',
+        'name'       => 'string',
+        'body'       => 'string',
+        'from'       => 'string',
+        'schedule'   => 'int',
+        'subject'    => 'string',
         'media_file' => 'string'
     ];
 
@@ -73,12 +74,12 @@ class MmsCampaign implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'list_id' => 'int32',
-        'name' => null,
-        'body' => null,
-        'from' => null,
-        'schedule' => 'int32',
-        'subject' => null,
+        'list_id'    => 'int32',
+        'name'       => null,
+        'body'       => null,
+        'from'       => null,
+        'schedule'   => 'int32',
+        'subject'    => null,
         'media_file' => null
     ];
 
@@ -109,12 +110,12 @@ class MmsCampaign implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'list_id' => 'list_id',
-        'name' => 'name',
-        'body' => 'body',
-        'from' => 'from',
-        'schedule' => 'schedule',
-        'subject' => 'subject',
+        'list_id'    => 'list_id',
+        'name'       => 'name',
+        'body'       => 'body',
+        'from'       => 'from',
+        'schedule'   => 'schedule',
+        'subject'    => 'subject',
         'media_file' => 'media_file'
     ];
 
@@ -124,12 +125,12 @@ class MmsCampaign implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'list_id' => 'setListId',
-        'name' => 'setName',
-        'body' => 'setBody',
-        'from' => 'setFrom',
-        'schedule' => 'setSchedule',
-        'subject' => 'setSubject',
+        'list_id'    => 'setListId',
+        'name'       => 'setName',
+        'body'       => 'setBody',
+        'from'       => 'setFrom',
+        'schedule'   => 'setSchedule',
+        'subject'    => 'setSubject',
         'media_file' => 'setMediaFile'
     ];
 
@@ -139,12 +140,12 @@ class MmsCampaign implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'list_id' => 'getListId',
-        'name' => 'getName',
-        'body' => 'getBody',
-        'from' => 'getFrom',
-        'schedule' => 'getSchedule',
-        'subject' => 'getSubject',
+        'list_id'    => 'getListId',
+        'name'       => 'getName',
+        'body'       => 'getBody',
+        'from'       => 'getFrom',
+        'schedule'   => 'getSchedule',
+        'subject'    => 'getSubject',
         'media_file' => 'getMediaFile'
     ];
 
@@ -189,9 +190,9 @@ class MmsCampaign implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -434,6 +435,7 @@ class MmsCampaign implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -446,6 +448,7 @@ class MmsCampaign implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -459,6 +462,7 @@ class MmsCampaign implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -475,6 +479,7 @@ class MmsCampaign implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -497,5 +502,3 @@ class MmsCampaign implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

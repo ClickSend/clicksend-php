@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CreditCard
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * CreditCard Class Doc Comment
@@ -58,12 +59,12 @@ class CreditCard implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'number' => 'string',
+        'number'       => 'string',
         'expiry_month' => 'int',
-        'expiry_year' => 'int',
-        'cvc' => 'int',
-        'name' => 'string',
-        'bank_name' => 'string'
+        'expiry_year'  => 'int',
+        'cvc'          => 'int',
+        'name'         => 'string',
+        'bank_name'    => 'string'
     ];
 
     /**
@@ -72,12 +73,12 @@ class CreditCard implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'number' => null,
+        'number'       => null,
         'expiry_month' => 'int32',
-        'expiry_year' => 'int32',
-        'cvc' => 'int32',
-        'name' => null,
-        'bank_name' => null
+        'expiry_year'  => 'int32',
+        'cvc'          => 'int32',
+        'name'         => null,
+        'bank_name'    => null
     ];
 
     /**
@@ -107,12 +108,12 @@ class CreditCard implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'number' => 'number',
+        'number'       => 'number',
         'expiry_month' => 'expiry_month',
-        'expiry_year' => 'expiry_year',
-        'cvc' => 'cvc',
-        'name' => 'name',
-        'bank_name' => 'bank_name'
+        'expiry_year'  => 'expiry_year',
+        'cvc'          => 'cvc',
+        'name'         => 'name',
+        'bank_name'    => 'bank_name'
     ];
 
     /**
@@ -121,12 +122,12 @@ class CreditCard implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'number' => 'setNumber',
+        'number'       => 'setNumber',
         'expiry_month' => 'setExpiryMonth',
-        'expiry_year' => 'setExpiryYear',
-        'cvc' => 'setCvc',
-        'name' => 'setName',
-        'bank_name' => 'setBankName'
+        'expiry_year'  => 'setExpiryYear',
+        'cvc'          => 'setCvc',
+        'name'         => 'setName',
+        'bank_name'    => 'setBankName'
     ];
 
     /**
@@ -135,12 +136,12 @@ class CreditCard implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'number' => 'getNumber',
+        'number'       => 'getNumber',
         'expiry_month' => 'getExpiryMonth',
-        'expiry_year' => 'getExpiryYear',
-        'cvc' => 'getCvc',
-        'name' => 'getName',
-        'bank_name' => 'getBankName'
+        'expiry_year'  => 'getExpiryYear',
+        'cvc'          => 'getCvc',
+        'name'         => 'getName',
+        'bank_name'    => 'getBankName'
     ];
 
     /**
@@ -184,9 +185,9 @@ class CreditCard implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -407,6 +408,7 @@ class CreditCard implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -419,6 +421,7 @@ class CreditCard implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -432,6 +435,7 @@ class CreditCard implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -448,6 +452,7 @@ class CreditCard implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -470,5 +475,3 @@ class CreditCard implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

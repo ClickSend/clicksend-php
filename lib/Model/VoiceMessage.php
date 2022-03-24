@@ -1,4 +1,5 @@
 <?php
+
 /**
  * VoiceMessage
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * VoiceMessage Class Doc Comment
@@ -58,16 +59,16 @@ class VoiceMessage implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'to' => 'string',
-        'body' => 'string',
-        'voice' => 'string',
-        'custom_string' => 'string',
-        'country' => 'string',
-        'source' => 'string',
-        'list_id' => 'int',
-        'lang' => 'string',
-        'schedule' => 'int',
-        'require_input' => 'int',
+        'to'                => 'string',
+        'body'              => 'string',
+        'voice'             => 'string',
+        'custom_string'     => 'string',
+        'country'           => 'string',
+        'source'            => 'string',
+        'list_id'           => 'int',
+        'lang'              => 'string',
+        'schedule'          => 'int',
+        'require_input'     => 'int',
         'machine_detection' => 'int'
     ];
 
@@ -77,16 +78,16 @@ class VoiceMessage implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'to' => null,
-        'body' => null,
-        'voice' => null,
-        'custom_string' => null,
-        'country' => null,
-        'source' => null,
-        'list_id' => 'int32',
-        'lang' => null,
-        'schedule' => 'int32',
-        'require_input' => 'int32',
+        'to'                => null,
+        'body'              => null,
+        'voice'             => null,
+        'custom_string'     => null,
+        'country'           => null,
+        'source'            => null,
+        'list_id'           => 'int32',
+        'lang'              => null,
+        'schedule'          => 'int32',
+        'require_input'     => 'int32',
         'machine_detection' => 'int32'
     ];
 
@@ -117,16 +118,16 @@ class VoiceMessage implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'to' => 'to',
-        'body' => 'body',
-        'voice' => 'voice',
-        'custom_string' => 'custom_string',
-        'country' => 'country',
-        'source' => 'source',
-        'list_id' => 'list_id',
-        'lang' => 'lang',
-        'schedule' => 'schedule',
-        'require_input' => 'require_input',
+        'to'                => 'to',
+        'body'              => 'body',
+        'voice'             => 'voice',
+        'custom_string'     => 'custom_string',
+        'country'           => 'country',
+        'source'            => 'source',
+        'list_id'           => 'list_id',
+        'lang'              => 'lang',
+        'schedule'          => 'schedule',
+        'require_input'     => 'require_input',
         'machine_detection' => 'machine_detection'
     ];
 
@@ -136,16 +137,16 @@ class VoiceMessage implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'to' => 'setTo',
-        'body' => 'setBody',
-        'voice' => 'setVoice',
-        'custom_string' => 'setCustomString',
-        'country' => 'setCountry',
-        'source' => 'setSource',
-        'list_id' => 'setListId',
-        'lang' => 'setLang',
-        'schedule' => 'setSchedule',
-        'require_input' => 'setRequireInput',
+        'to'                => 'setTo',
+        'body'              => 'setBody',
+        'voice'             => 'setVoice',
+        'custom_string'     => 'setCustomString',
+        'country'           => 'setCountry',
+        'source'            => 'setSource',
+        'list_id'           => 'setListId',
+        'lang'              => 'setLang',
+        'schedule'          => 'setSchedule',
+        'require_input'     => 'setRequireInput',
         'machine_detection' => 'setMachineDetection'
     ];
 
@@ -155,16 +156,16 @@ class VoiceMessage implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'to' => 'getTo',
-        'body' => 'getBody',
-        'voice' => 'getVoice',
-        'custom_string' => 'getCustomString',
-        'country' => 'getCountry',
-        'source' => 'getSource',
-        'list_id' => 'getListId',
-        'lang' => 'getLang',
-        'schedule' => 'getSchedule',
-        'require_input' => 'getRequireInput',
+        'to'                => 'getTo',
+        'body'              => 'getBody',
+        'voice'             => 'getVoice',
+        'custom_string'     => 'getCustomString',
+        'country'           => 'getCountry',
+        'source'            => 'getSource',
+        'list_id'           => 'getListId',
+        'lang'              => 'getLang',
+        'schedule'          => 'getSchedule',
+        'require_input'     => 'getRequireInput',
         'machine_detection' => 'getMachineDetection'
     ];
 
@@ -209,9 +210,9 @@ class VoiceMessage implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -551,6 +552,7 @@ class VoiceMessage implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -563,6 +565,7 @@ class VoiceMessage implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -576,6 +579,7 @@ class VoiceMessage implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -592,6 +596,7 @@ class VoiceMessage implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -614,5 +619,3 @@ class VoiceMessage implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

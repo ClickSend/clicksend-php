@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Email
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * Email Class Doc Comment
@@ -58,14 +59,14 @@ class Email implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'to' => '\ClickSend\Model\EmailRecipient[]',
-        'cc' => '\ClickSend\Model\EmailRecipient[]',
-        'bcc' => '\ClickSend\Model\EmailRecipient[]',
-        'from' => '\ClickSend\Model\EmailFrom',
-        'subject' => 'string',
-        'body' => 'string',
+        'to'          => '\ClickSend\Model\EmailRecipient[]',
+        'cc'          => '\ClickSend\Model\EmailRecipient[]',
+        'bcc'         => '\ClickSend\Model\EmailRecipient[]',
+        'from'        => '\ClickSend\Model\EmailFrom',
+        'subject'     => 'string',
+        'body'        => 'string',
         'attachments' => '\ClickSend\Model\Attachment[]',
-        'schedule' => 'float'
+        'schedule'    => 'float'
     ];
 
     /**
@@ -74,14 +75,14 @@ class Email implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'to' => null,
-        'cc' => null,
-        'bcc' => null,
-        'from' => null,
-        'subject' => null,
-        'body' => null,
+        'to'          => null,
+        'cc'          => null,
+        'bcc'         => null,
+        'from'        => null,
+        'subject'     => null,
+        'body'        => null,
         'attachments' => null,
-        'schedule' => null
+        'schedule'    => null
     ];
 
     /**
@@ -111,14 +112,14 @@ class Email implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'to' => 'to',
-        'cc' => 'cc',
-        'bcc' => 'bcc',
-        'from' => 'from',
-        'subject' => 'subject',
-        'body' => 'body',
+        'to'          => 'to',
+        'cc'          => 'cc',
+        'bcc'         => 'bcc',
+        'from'        => 'from',
+        'subject'     => 'subject',
+        'body'        => 'body',
         'attachments' => 'attachments',
-        'schedule' => 'schedule'
+        'schedule'    => 'schedule'
     ];
 
     /**
@@ -127,14 +128,14 @@ class Email implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'to' => 'setTo',
-        'cc' => 'setCc',
-        'bcc' => 'setBcc',
-        'from' => 'setFrom',
-        'subject' => 'setSubject',
-        'body' => 'setBody',
+        'to'          => 'setTo',
+        'cc'          => 'setCc',
+        'bcc'         => 'setBcc',
+        'from'        => 'setFrom',
+        'subject'     => 'setSubject',
+        'body'        => 'setBody',
         'attachments' => 'setAttachments',
-        'schedule' => 'setSchedule'
+        'schedule'    => 'setSchedule'
     ];
 
     /**
@@ -143,14 +144,14 @@ class Email implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'to' => 'getTo',
-        'cc' => 'getCc',
-        'bcc' => 'getBcc',
-        'from' => 'getFrom',
-        'subject' => 'getSubject',
-        'body' => 'getBody',
+        'to'          => 'getTo',
+        'cc'          => 'getCc',
+        'bcc'         => 'getBcc',
+        'from'        => 'getFrom',
+        'subject'     => 'getSubject',
+        'body'        => 'getBody',
         'attachments' => 'getAttachments',
-        'schedule' => 'getSchedule'
+        'schedule'    => 'getSchedule'
     ];
 
     /**
@@ -194,9 +195,9 @@ class Email implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -458,6 +459,7 @@ class Email implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -470,6 +472,7 @@ class Email implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -483,6 +486,7 @@ class Email implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -499,6 +503,7 @@ class Email implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -521,5 +526,3 @@ class Email implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

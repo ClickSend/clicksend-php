@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ResellerAccountTransferCredit
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * ResellerAccountTransferCredit Class Doc Comment
@@ -59,8 +60,8 @@ class ResellerAccountTransferCredit implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'client_user_id' => 'int',
-        'balance' => 'int',
-        'currency' => 'string'
+        'balance'        => 'int',
+        'currency'       => 'string'
     ];
 
     /**
@@ -70,8 +71,8 @@ class ResellerAccountTransferCredit implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'client_user_id' => 'int32',
-        'balance' => 'int32',
-        'currency' => null
+        'balance'        => 'int32',
+        'currency'       => null
     ];
 
     /**
@@ -102,8 +103,8 @@ class ResellerAccountTransferCredit implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'client_user_id' => 'client_user_id',
-        'balance' => 'balance',
-        'currency' => 'currency'
+        'balance'        => 'balance',
+        'currency'       => 'currency'
     ];
 
     /**
@@ -113,8 +114,8 @@ class ResellerAccountTransferCredit implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'client_user_id' => 'setClientUserId',
-        'balance' => 'setBalance',
-        'currency' => 'setCurrency'
+        'balance'        => 'setBalance',
+        'currency'       => 'setCurrency'
     ];
 
     /**
@@ -124,8 +125,8 @@ class ResellerAccountTransferCredit implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'client_user_id' => 'getClientUserId',
-        'balance' => 'getBalance',
-        'currency' => 'getCurrency'
+        'balance'        => 'getBalance',
+        'currency'       => 'getCurrency'
     ];
 
     /**
@@ -169,9 +170,9 @@ class ResellerAccountTransferCredit implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -308,6 +309,7 @@ class ResellerAccountTransferCredit implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -320,6 +322,7 @@ class ResellerAccountTransferCredit implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -333,6 +336,7 @@ class ResellerAccountTransferCredit implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -349,6 +353,7 @@ class ResellerAccountTransferCredit implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -371,5 +376,3 @@ class ResellerAccountTransferCredit implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

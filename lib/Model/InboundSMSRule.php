@@ -1,4 +1,5 @@
 <?php
+
 /**
  * InboundSMSRule
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * InboundSMSRule Class Doc Comment
@@ -58,14 +59,14 @@ class InboundSMSRule implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'dedicated_number' => 'string',
-        'rule_name' => 'string',
+        'dedicated_number'    => 'string',
+        'rule_name'           => 'string',
         'message_search_type' => 'float',
         'message_search_term' => 'string',
-        'action' => 'string',
-        'action_address' => 'string',
-        'enabled' => 'float',
-        'webhook_type' => 'string'
+        'action'              => 'string',
+        'action_address'      => 'string',
+        'enabled'             => 'float',
+        'webhook_type'        => 'string'
     ];
 
     /**
@@ -74,14 +75,14 @@ class InboundSMSRule implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'dedicated_number' => null,
-        'rule_name' => null,
+        'dedicated_number'    => null,
+        'rule_name'           => null,
         'message_search_type' => null,
         'message_search_term' => null,
-        'action' => null,
-        'action_address' => null,
-        'enabled' => null,
-        'webhook_type' => null
+        'action'              => null,
+        'action_address'      => null,
+        'enabled'             => null,
+        'webhook_type'        => null
     ];
 
     /**
@@ -111,14 +112,14 @@ class InboundSMSRule implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'dedicated_number' => 'dedicated_number',
-        'rule_name' => 'rule_name',
+        'dedicated_number'    => 'dedicated_number',
+        'rule_name'           => 'rule_name',
         'message_search_type' => 'message_search_type',
         'message_search_term' => 'message_search_term',
-        'action' => 'action',
-        'action_address' => 'action_address',
-        'enabled' => 'enabled',
-        'webhook_type' => 'webhook_type'
+        'action'              => 'action',
+        'action_address'      => 'action_address',
+        'enabled'             => 'enabled',
+        'webhook_type'        => 'webhook_type'
     ];
 
     /**
@@ -127,14 +128,14 @@ class InboundSMSRule implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'dedicated_number' => 'setDedicatedNumber',
-        'rule_name' => 'setRuleName',
+        'dedicated_number'    => 'setDedicatedNumber',
+        'rule_name'           => 'setRuleName',
         'message_search_type' => 'setMessageSearchType',
         'message_search_term' => 'setMessageSearchTerm',
-        'action' => 'setAction',
-        'action_address' => 'setActionAddress',
-        'enabled' => 'setEnabled',
-        'webhook_type' => 'setWebhookType'
+        'action'              => 'setAction',
+        'action_address'      => 'setActionAddress',
+        'enabled'             => 'setEnabled',
+        'webhook_type'        => 'setWebhookType'
     ];
 
     /**
@@ -143,14 +144,14 @@ class InboundSMSRule implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'dedicated_number' => 'getDedicatedNumber',
-        'rule_name' => 'getRuleName',
+        'dedicated_number'    => 'getDedicatedNumber',
+        'rule_name'           => 'getRuleName',
         'message_search_type' => 'getMessageSearchType',
         'message_search_term' => 'getMessageSearchTerm',
-        'action' => 'getAction',
-        'action_address' => 'getActionAddress',
-        'enabled' => 'getEnabled',
-        'webhook_type' => 'getWebhookType'
+        'action'              => 'getAction',
+        'action_address'      => 'getActionAddress',
+        'enabled'             => 'getEnabled',
+        'webhook_type'        => 'getWebhookType'
     ];
 
     /**
@@ -194,9 +195,9 @@ class InboundSMSRule implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -470,6 +471,7 @@ class InboundSMSRule implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -482,6 +484,7 @@ class InboundSMSRule implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -495,6 +498,7 @@ class InboundSMSRule implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -511,6 +515,7 @@ class InboundSMSRule implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -533,5 +538,3 @@ class InboundSMSRule implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

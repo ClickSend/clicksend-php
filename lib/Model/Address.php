@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Address
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * Address Class Doc Comment
@@ -58,13 +59,13 @@ class Address implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address_name' => 'string',
-        'address_line_1' => 'string',
-        'address_city' => 'string',
+        'address_name'        => 'string',
+        'address_line_1'      => 'string',
+        'address_city'        => 'string',
         'address_postal_code' => 'string',
-        'address_country' => 'string',
-        'address_line_2' => 'string',
-        'address_state' => 'string'
+        'address_country'     => 'string',
+        'address_line_2'      => 'string',
+        'address_state'       => 'string'
     ];
 
     /**
@@ -73,13 +74,13 @@ class Address implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'address_name' => null,
-        'address_line_1' => null,
-        'address_city' => null,
+        'address_name'        => null,
+        'address_line_1'      => null,
+        'address_city'        => null,
         'address_postal_code' => null,
-        'address_country' => null,
-        'address_line_2' => null,
-        'address_state' => null
+        'address_country'     => null,
+        'address_line_2'      => null,
+        'address_state'       => null
     ];
 
     /**
@@ -109,13 +110,13 @@ class Address implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'address_name' => 'address_name',
-        'address_line_1' => 'address_line_1',
-        'address_city' => 'address_city',
+        'address_name'        => 'address_name',
+        'address_line_1'      => 'address_line_1',
+        'address_city'        => 'address_city',
         'address_postal_code' => 'address_postal_code',
-        'address_country' => 'address_country',
-        'address_line_2' => 'address_line_2',
-        'address_state' => 'address_state'
+        'address_country'     => 'address_country',
+        'address_line_2'      => 'address_line_2',
+        'address_state'       => 'address_state'
     ];
 
     /**
@@ -124,13 +125,13 @@ class Address implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'address_name' => 'setAddressName',
-        'address_line_1' => 'setAddressLine1',
-        'address_city' => 'setAddressCity',
+        'address_name'        => 'setAddressName',
+        'address_line_1'      => 'setAddressLine1',
+        'address_city'        => 'setAddressCity',
         'address_postal_code' => 'setAddressPostalCode',
-        'address_country' => 'setAddressCountry',
-        'address_line_2' => 'setAddressLine2',
-        'address_state' => 'setAddressState'
+        'address_country'     => 'setAddressCountry',
+        'address_line_2'      => 'setAddressLine2',
+        'address_state'       => 'setAddressState'
     ];
 
     /**
@@ -139,13 +140,13 @@ class Address implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'address_name' => 'getAddressName',
-        'address_line_1' => 'getAddressLine1',
-        'address_city' => 'getAddressCity',
+        'address_name'        => 'getAddressName',
+        'address_line_1'      => 'getAddressLine1',
+        'address_city'        => 'getAddressCity',
         'address_postal_code' => 'getAddressPostalCode',
-        'address_country' => 'getAddressCountry',
-        'address_line_2' => 'getAddressLine2',
-        'address_state' => 'getAddressState'
+        'address_country'     => 'getAddressCountry',
+        'address_line_2'      => 'getAddressLine2',
+        'address_state'       => 'getAddressState'
     ];
 
     /**
@@ -189,9 +190,9 @@ class Address implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -434,6 +435,7 @@ class Address implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -446,6 +448,7 @@ class Address implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -459,6 +462,7 @@ class Address implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -475,6 +479,7 @@ class Address implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -497,5 +502,3 @@ class Address implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

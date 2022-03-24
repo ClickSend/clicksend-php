@@ -1,4 +1,5 @@
 <?php
+
 /**
  * FaxMessage
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * FaxMessage Class Doc Comment
@@ -58,14 +59,14 @@ class FaxMessage implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'source' => 'string',
-        'to' => 'string',
-        'list_id' => 'int',
-        'from' => 'string',
-        'schedule' => 'int',
+        'source'        => 'string',
+        'to'            => 'string',
+        'list_id'       => 'int',
+        'from'          => 'string',
+        'schedule'      => 'int',
         'custom_string' => 'string',
-        'country' => 'string',
-        'from_email' => 'string'
+        'country'       => 'string',
+        'from_email'    => 'string'
     ];
 
     /**
@@ -74,14 +75,14 @@ class FaxMessage implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'source' => null,
-        'to' => null,
-        'list_id' => 'int32',
-        'from' => null,
-        'schedule' => 'int32',
+        'source'        => null,
+        'to'            => null,
+        'list_id'       => 'int32',
+        'from'          => null,
+        'schedule'      => 'int32',
         'custom_string' => null,
-        'country' => null,
-        'from_email' => null
+        'country'       => null,
+        'from_email'    => null
     ];
 
     /**
@@ -111,14 +112,14 @@ class FaxMessage implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'source' => 'source',
-        'to' => 'to',
-        'list_id' => 'list_id',
-        'from' => 'from',
-        'schedule' => 'schedule',
+        'source'        => 'source',
+        'to'            => 'to',
+        'list_id'       => 'list_id',
+        'from'          => 'from',
+        'schedule'      => 'schedule',
         'custom_string' => 'custom_string',
-        'country' => 'country',
-        'from_email' => 'from_email'
+        'country'       => 'country',
+        'from_email'    => 'from_email'
     ];
 
     /**
@@ -127,14 +128,14 @@ class FaxMessage implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'source' => 'setSource',
-        'to' => 'setTo',
-        'list_id' => 'setListId',
-        'from' => 'setFrom',
-        'schedule' => 'setSchedule',
+        'source'        => 'setSource',
+        'to'            => 'setTo',
+        'list_id'       => 'setListId',
+        'from'          => 'setFrom',
+        'schedule'      => 'setSchedule',
         'custom_string' => 'setCustomString',
-        'country' => 'setCountry',
-        'from_email' => 'setFromEmail'
+        'country'       => 'setCountry',
+        'from_email'    => 'setFromEmail'
     ];
 
     /**
@@ -143,14 +144,14 @@ class FaxMessage implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'source' => 'getSource',
-        'to' => 'getTo',
-        'list_id' => 'getListId',
-        'from' => 'getFrom',
-        'schedule' => 'getSchedule',
+        'source'        => 'getSource',
+        'to'            => 'getTo',
+        'list_id'       => 'getListId',
+        'from'          => 'getFrom',
+        'schedule'      => 'getSchedule',
         'custom_string' => 'getCustomString',
-        'country' => 'getCountry',
-        'from_email' => 'getFromEmail'
+        'country'       => 'getCountry',
+        'from_email'    => 'getFromEmail'
     ];
 
     /**
@@ -194,9 +195,9 @@ class FaxMessage implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -452,6 +453,7 @@ class FaxMessage implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -464,6 +466,7 @@ class FaxMessage implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -477,6 +480,7 @@ class FaxMessage implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -493,6 +497,7 @@ class FaxMessage implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -515,5 +520,3 @@ class FaxMessage implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

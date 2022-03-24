@@ -1,4 +1,5 @@
 <?php
+
 /**
  * EmailFrom
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * EmailFrom Class Doc Comment
@@ -59,7 +60,7 @@ class EmailFrom implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'email_address_id' => 'string',
-        'name' => 'string'
+        'name'             => 'string'
     ];
 
     /**
@@ -69,7 +70,7 @@ class EmailFrom implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'email_address_id' => null,
-        'name' => null
+        'name'             => null
     ];
 
     /**
@@ -100,7 +101,7 @@ class EmailFrom implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'email_address_id' => 'email_address_id',
-        'name' => 'name'
+        'name'             => 'name'
     ];
 
     /**
@@ -110,7 +111,7 @@ class EmailFrom implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'email_address_id' => 'setEmailAddressId',
-        'name' => 'setName'
+        'name'             => 'setName'
     ];
 
     /**
@@ -120,7 +121,7 @@ class EmailFrom implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'email_address_id' => 'getEmailAddressId',
-        'name' => 'getName'
+        'name'             => 'getName'
     ];
 
     /**
@@ -164,9 +165,9 @@ class EmailFrom implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -268,6 +269,7 @@ class EmailFrom implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -280,6 +282,7 @@ class EmailFrom implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -293,6 +296,7 @@ class EmailFrom implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -309,6 +313,7 @@ class EmailFrom implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -331,5 +336,3 @@ class EmailFrom implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

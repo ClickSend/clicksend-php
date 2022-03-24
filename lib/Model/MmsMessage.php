@@ -1,4 +1,5 @@
 <?php
+
 /**
  * MmsMessage
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * MmsMessage Class Doc Comment
@@ -58,16 +59,16 @@ class MmsMessage implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'to' => 'string',
-        'body' => 'string',
-        'subject' => 'string',
-        'from' => 'string',
-        'country' => 'string',
-        'source' => 'string',
-        'list_id' => 'int',
-        'schedule' => 'int',
+        'to'            => 'string',
+        'body'          => 'string',
+        'subject'       => 'string',
+        'from'          => 'string',
+        'country'       => 'string',
+        'source'        => 'string',
+        'list_id'       => 'int',
+        'schedule'      => 'int',
         'custom_string' => 'string',
-        'from_email' => 'string'
+        'from_email'    => 'string'
     ];
 
     /**
@@ -76,16 +77,16 @@ class MmsMessage implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'to' => null,
-        'body' => null,
-        'subject' => null,
-        'from' => null,
-        'country' => null,
-        'source' => null,
-        'list_id' => 'int32',
-        'schedule' => 'int32',
+        'to'            => null,
+        'body'          => null,
+        'subject'       => null,
+        'from'          => null,
+        'country'       => null,
+        'source'        => null,
+        'list_id'       => 'int32',
+        'schedule'      => 'int32',
         'custom_string' => null,
-        'from_email' => null
+        'from_email'    => null
     ];
 
     /**
@@ -115,16 +116,16 @@ class MmsMessage implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'to' => 'to',
-        'body' => 'body',
-        'subject' => 'subject',
-        'from' => 'from',
-        'country' => 'country',
-        'source' => 'source',
-        'list_id' => 'list_id',
-        'schedule' => 'schedule',
+        'to'            => 'to',
+        'body'          => 'body',
+        'subject'       => 'subject',
+        'from'          => 'from',
+        'country'       => 'country',
+        'source'        => 'source',
+        'list_id'       => 'list_id',
+        'schedule'      => 'schedule',
         'custom_string' => 'custom_string',
-        'from_email' => 'from_email'
+        'from_email'    => 'from_email'
     ];
 
     /**
@@ -133,16 +134,16 @@ class MmsMessage implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'to' => 'setTo',
-        'body' => 'setBody',
-        'subject' => 'setSubject',
-        'from' => 'setFrom',
-        'country' => 'setCountry',
-        'source' => 'setSource',
-        'list_id' => 'setListId',
-        'schedule' => 'setSchedule',
+        'to'            => 'setTo',
+        'body'          => 'setBody',
+        'subject'       => 'setSubject',
+        'from'          => 'setFrom',
+        'country'       => 'setCountry',
+        'source'        => 'setSource',
+        'list_id'       => 'setListId',
+        'schedule'      => 'setSchedule',
         'custom_string' => 'setCustomString',
-        'from_email' => 'setFromEmail'
+        'from_email'    => 'setFromEmail'
     ];
 
     /**
@@ -151,16 +152,16 @@ class MmsMessage implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'to' => 'getTo',
-        'body' => 'getBody',
-        'subject' => 'getSubject',
-        'from' => 'getFrom',
-        'country' => 'getCountry',
-        'source' => 'getSource',
-        'list_id' => 'getListId',
-        'schedule' => 'getSchedule',
+        'to'            => 'getTo',
+        'body'          => 'getBody',
+        'subject'       => 'getSubject',
+        'from'          => 'getFrom',
+        'country'       => 'getCountry',
+        'source'        => 'getSource',
+        'list_id'       => 'getListId',
+        'schedule'      => 'getSchedule',
         'custom_string' => 'getCustomString',
-        'from_email' => 'getFromEmail'
+        'from_email'    => 'getFromEmail'
     ];
 
     /**
@@ -204,9 +205,9 @@ class MmsMessage implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -515,6 +516,7 @@ class MmsMessage implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -527,6 +529,7 @@ class MmsMessage implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -540,6 +543,7 @@ class MmsMessage implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -556,6 +560,7 @@ class MmsMessage implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -578,5 +583,3 @@ class MmsMessage implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

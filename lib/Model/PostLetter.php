@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PostLetter
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * PostLetter Class Doc Comment
@@ -58,13 +59,13 @@ class PostLetter implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'file_url' => 'string',
+        'file_url'      => 'string',
         'priority_post' => 'int',
-        'recipients' => '\ClickSend\Model\PostRecipient[]',
+        'recipients'    => '\ClickSend\Model\PostRecipient[]',
         'template_used' => 'int',
-        'duplex' => 'int',
-        'colour' => 'int',
-        'source' => 'string'
+        'duplex'        => 'int',
+        'colour'        => 'int',
+        'source'        => 'string'
     ];
 
     /**
@@ -73,13 +74,13 @@ class PostLetter implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'file_url' => null,
+        'file_url'      => null,
         'priority_post' => 'int32',
-        'recipients' => null,
+        'recipients'    => null,
         'template_used' => 'int32',
-        'duplex' => 'int32',
-        'colour' => 'int32',
-        'source' => null
+        'duplex'        => 'int32',
+        'colour'        => 'int32',
+        'source'        => null
     ];
 
     /**
@@ -109,13 +110,13 @@ class PostLetter implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'file_url' => 'file_url',
+        'file_url'      => 'file_url',
         'priority_post' => 'priority_post',
-        'recipients' => 'recipients',
+        'recipients'    => 'recipients',
         'template_used' => 'template_used',
-        'duplex' => 'duplex',
-        'colour' => 'colour',
-        'source' => 'source'
+        'duplex'        => 'duplex',
+        'colour'        => 'colour',
+        'source'        => 'source'
     ];
 
     /**
@@ -124,13 +125,13 @@ class PostLetter implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'file_url' => 'setFileUrl',
+        'file_url'      => 'setFileUrl',
         'priority_post' => 'setPriorityPost',
-        'recipients' => 'setRecipients',
+        'recipients'    => 'setRecipients',
         'template_used' => 'setTemplateUsed',
-        'duplex' => 'setDuplex',
-        'colour' => 'setColour',
-        'source' => 'setSource'
+        'duplex'        => 'setDuplex',
+        'colour'        => 'setColour',
+        'source'        => 'setSource'
     ];
 
     /**
@@ -139,13 +140,13 @@ class PostLetter implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'file_url' => 'getFileUrl',
+        'file_url'      => 'getFileUrl',
         'priority_post' => 'getPriorityPost',
-        'recipients' => 'getRecipients',
+        'recipients'    => 'getRecipients',
         'template_used' => 'getTemplateUsed',
-        'duplex' => 'getDuplex',
-        'colour' => 'getColour',
-        'source' => 'getSource'
+        'duplex'        => 'getDuplex',
+        'colour'        => 'getColour',
+        'source'        => 'getSource'
     ];
 
     /**
@@ -189,9 +190,9 @@ class PostLetter implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -425,6 +426,7 @@ class PostLetter implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -437,6 +439,7 @@ class PostLetter implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -450,6 +453,7 @@ class PostLetter implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -466,6 +470,7 @@ class PostLetter implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -488,5 +493,3 @@ class PostLetter implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ResellerAccount
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * ResellerAccount Class Doc Comment
@@ -58,14 +59,14 @@ class ResellerAccount implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'username' => 'string',
-        'password' => 'string',
-        'user_email' => 'string',
-        'user_phone' => 'string',
+        'username'        => 'string',
+        'password'        => 'string',
+        'user_email'      => 'string',
+        'user_phone'      => 'string',
         'user_first_name' => 'string',
-        'user_last_name' => 'string',
-        'account_name' => 'string',
-        'country' => 'string'
+        'user_last_name'  => 'string',
+        'account_name'    => 'string',
+        'country'         => 'string'
     ];
 
     /**
@@ -74,14 +75,14 @@ class ResellerAccount implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'username' => null,
-        'password' => null,
-        'user_email' => null,
-        'user_phone' => null,
+        'username'        => null,
+        'password'        => null,
+        'user_email'      => null,
+        'user_phone'      => null,
         'user_first_name' => null,
-        'user_last_name' => null,
-        'account_name' => null,
-        'country' => null
+        'user_last_name'  => null,
+        'account_name'    => null,
+        'country'         => null
     ];
 
     /**
@@ -111,14 +112,14 @@ class ResellerAccount implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'username' => 'username',
-        'password' => 'password',
-        'user_email' => 'user_email',
-        'user_phone' => 'user_phone',
+        'username'        => 'username',
+        'password'        => 'password',
+        'user_email'      => 'user_email',
+        'user_phone'      => 'user_phone',
         'user_first_name' => 'user_first_name',
-        'user_last_name' => 'user_last_name',
-        'account_name' => 'account_name',
-        'country' => 'country'
+        'user_last_name'  => 'user_last_name',
+        'account_name'    => 'account_name',
+        'country'         => 'country'
     ];
 
     /**
@@ -127,14 +128,14 @@ class ResellerAccount implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'username' => 'setUsername',
-        'password' => 'setPassword',
-        'user_email' => 'setUserEmail',
-        'user_phone' => 'setUserPhone',
+        'username'        => 'setUsername',
+        'password'        => 'setPassword',
+        'user_email'      => 'setUserEmail',
+        'user_phone'      => 'setUserPhone',
         'user_first_name' => 'setUserFirstName',
-        'user_last_name' => 'setUserLastName',
-        'account_name' => 'setAccountName',
-        'country' => 'setCountry'
+        'user_last_name'  => 'setUserLastName',
+        'account_name'    => 'setAccountName',
+        'country'         => 'setCountry'
     ];
 
     /**
@@ -143,14 +144,14 @@ class ResellerAccount implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'username' => 'getUsername',
-        'password' => 'getPassword',
-        'user_email' => 'getUserEmail',
-        'user_phone' => 'getUserPhone',
+        'username'        => 'getUsername',
+        'password'        => 'getPassword',
+        'user_email'      => 'getUserEmail',
+        'user_phone'      => 'getUserPhone',
         'user_first_name' => 'getUserFirstName',
-        'user_last_name' => 'getUserLastName',
-        'account_name' => 'getAccountName',
-        'country' => 'getCountry'
+        'user_last_name'  => 'getUserLastName',
+        'account_name'    => 'getAccountName',
+        'country'         => 'getCountry'
     ];
 
     /**
@@ -194,9 +195,9 @@ class ResellerAccount implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -473,6 +474,7 @@ class ResellerAccount implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -485,6 +487,7 @@ class ResellerAccount implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -498,6 +501,7 @@ class ResellerAccount implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -514,6 +518,7 @@ class ResellerAccount implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -536,5 +541,3 @@ class ResellerAccount implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

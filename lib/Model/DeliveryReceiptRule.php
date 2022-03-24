@@ -1,4 +1,5 @@
 <?php
+
 /**
  * DeliveryReceiptRule
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * DeliveryReceiptRule Class Doc Comment
@@ -58,11 +59,11 @@ class DeliveryReceiptRule implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'rule_name' => 'string',
-        'match_type' => 'float',
-        'action' => 'string',
+        'rule_name'      => 'string',
+        'match_type'     => 'float',
+        'action'         => 'string',
         'action_address' => 'string',
-        'enabled' => 'float'
+        'enabled'        => 'float'
     ];
 
     /**
@@ -71,11 +72,11 @@ class DeliveryReceiptRule implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'rule_name' => null,
-        'match_type' => null,
-        'action' => null,
+        'rule_name'      => null,
+        'match_type'     => null,
+        'action'         => null,
         'action_address' => null,
-        'enabled' => null
+        'enabled'        => null
     ];
 
     /**
@@ -105,11 +106,11 @@ class DeliveryReceiptRule implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'rule_name' => 'rule_name',
-        'match_type' => 'match_type',
-        'action' => 'action',
+        'rule_name'      => 'rule_name',
+        'match_type'     => 'match_type',
+        'action'         => 'action',
         'action_address' => 'action_address',
-        'enabled' => 'enabled'
+        'enabled'        => 'enabled'
     ];
 
     /**
@@ -118,11 +119,11 @@ class DeliveryReceiptRule implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'rule_name' => 'setRuleName',
-        'match_type' => 'setMatchType',
-        'action' => 'setAction',
+        'rule_name'      => 'setRuleName',
+        'match_type'     => 'setMatchType',
+        'action'         => 'setAction',
         'action_address' => 'setActionAddress',
-        'enabled' => 'setEnabled'
+        'enabled'        => 'setEnabled'
     ];
 
     /**
@@ -131,11 +132,11 @@ class DeliveryReceiptRule implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'rule_name' => 'getRuleName',
-        'match_type' => 'getMatchType',
-        'action' => 'getAction',
+        'rule_name'      => 'getRuleName',
+        'match_type'     => 'getMatchType',
+        'action'         => 'getAction',
         'action_address' => 'getActionAddress',
-        'enabled' => 'getEnabled'
+        'enabled'        => 'getEnabled'
     ];
 
     /**
@@ -179,9 +180,9 @@ class DeliveryReceiptRule implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -374,6 +375,7 @@ class DeliveryReceiptRule implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -386,6 +388,7 @@ class DeliveryReceiptRule implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -399,6 +402,7 @@ class DeliveryReceiptRule implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -415,6 +419,7 @@ class DeliveryReceiptRule implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -437,5 +442,3 @@ class DeliveryReceiptRule implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

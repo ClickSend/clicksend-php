@@ -1,4 +1,5 @@
 <?php
+
 /**
  * InboundFaxRule
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * InboundFaxRule Class Doc Comment
@@ -59,10 +60,10 @@ class InboundFaxRule implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'dedicated_number' => 'string',
-        'rule_name' => 'string',
-        'action' => 'string',
-        'action_address' => 'string',
-        'enabled' => 'float'
+        'rule_name'        => 'string',
+        'action'           => 'string',
+        'action_address'   => 'string',
+        'enabled'          => 'float'
     ];
 
     /**
@@ -72,10 +73,10 @@ class InboundFaxRule implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'dedicated_number' => null,
-        'rule_name' => null,
-        'action' => null,
-        'action_address' => null,
-        'enabled' => null
+        'rule_name'        => null,
+        'action'           => null,
+        'action_address'   => null,
+        'enabled'          => null
     ];
 
     /**
@@ -106,10 +107,10 @@ class InboundFaxRule implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'dedicated_number' => 'dedicated_number',
-        'rule_name' => 'rule_name',
-        'action' => 'action',
-        'action_address' => 'action_address',
-        'enabled' => 'enabled'
+        'rule_name'        => 'rule_name',
+        'action'           => 'action',
+        'action_address'   => 'action_address',
+        'enabled'          => 'enabled'
     ];
 
     /**
@@ -119,10 +120,10 @@ class InboundFaxRule implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'dedicated_number' => 'setDedicatedNumber',
-        'rule_name' => 'setRuleName',
-        'action' => 'setAction',
-        'action_address' => 'setActionAddress',
-        'enabled' => 'setEnabled'
+        'rule_name'        => 'setRuleName',
+        'action'           => 'setAction',
+        'action_address'   => 'setActionAddress',
+        'enabled'          => 'setEnabled'
     ];
 
     /**
@@ -132,10 +133,10 @@ class InboundFaxRule implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'dedicated_number' => 'getDedicatedNumber',
-        'rule_name' => 'getRuleName',
-        'action' => 'getAction',
-        'action_address' => 'getActionAddress',
-        'enabled' => 'getEnabled'
+        'rule_name'        => 'getRuleName',
+        'action'           => 'getAction',
+        'action_address'   => 'getActionAddress',
+        'enabled'          => 'getEnabled'
     ];
 
     /**
@@ -179,9 +180,9 @@ class InboundFaxRule implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -374,6 +375,7 @@ class InboundFaxRule implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -386,6 +388,7 @@ class InboundFaxRule implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -399,6 +402,7 @@ class InboundFaxRule implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -415,6 +419,7 @@ class InboundFaxRule implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -437,5 +442,3 @@ class InboundFaxRule implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

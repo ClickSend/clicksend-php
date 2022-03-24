@@ -1,4 +1,5 @@
 <?php
+
 /**
  * DeliveryIssue
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * DeliveryIssue Class Doc Comment
@@ -58,11 +59,11 @@ class DeliveryIssue implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'message_id' => 'string',
-        'type' => 'string',
-        'description' => 'string',
+        'message_id'      => 'string',
+        'type'            => 'string',
+        'description'     => 'string',
         'client_comments' => 'string',
-        'email_address' => 'string'
+        'email_address'   => 'string'
     ];
 
     /**
@@ -71,11 +72,11 @@ class DeliveryIssue implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'message_id' => null,
-        'type' => null,
-        'description' => null,
+        'message_id'      => null,
+        'type'            => null,
+        'description'     => null,
         'client_comments' => null,
-        'email_address' => null
+        'email_address'   => null
     ];
 
     /**
@@ -105,11 +106,11 @@ class DeliveryIssue implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'message_id' => 'message_id',
-        'type' => 'type',
-        'description' => 'description',
+        'message_id'      => 'message_id',
+        'type'            => 'type',
+        'description'     => 'description',
         'client_comments' => 'client_comments',
-        'email_address' => 'email_address'
+        'email_address'   => 'email_address'
     ];
 
     /**
@@ -118,11 +119,11 @@ class DeliveryIssue implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'message_id' => 'setMessageId',
-        'type' => 'setType',
-        'description' => 'setDescription',
+        'message_id'      => 'setMessageId',
+        'type'            => 'setType',
+        'description'     => 'setDescription',
         'client_comments' => 'setClientComments',
-        'email_address' => 'setEmailAddress'
+        'email_address'   => 'setEmailAddress'
     ];
 
     /**
@@ -131,11 +132,11 @@ class DeliveryIssue implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'message_id' => 'getMessageId',
-        'type' => 'getType',
-        'description' => 'getDescription',
+        'message_id'      => 'getMessageId',
+        'type'            => 'getType',
+        'description'     => 'getDescription',
         'client_comments' => 'getClientComments',
-        'email_address' => 'getEmailAddress'
+        'email_address'   => 'getEmailAddress'
     ];
 
     /**
@@ -179,9 +180,9 @@ class DeliveryIssue implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -368,6 +369,7 @@ class DeliveryIssue implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -380,6 +382,7 @@ class DeliveryIssue implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -393,6 +396,7 @@ class DeliveryIssue implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -409,6 +413,7 @@ class DeliveryIssue implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -431,5 +436,3 @@ class DeliveryIssue implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

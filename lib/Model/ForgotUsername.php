@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ForgotUsername
  *
@@ -29,8 +30,8 @@
 
 namespace ClickSend\Model;
 
-use \ArrayAccess;
-use \ClickSend\ObjectSerializer;
+use ArrayAccess;
+use ClickSend\ObjectSerializer;
 
 /**
  * ForgotUsername Class Doc Comment
@@ -57,7 +58,7 @@ class ForgotUsername implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'email' => 'string',
+        'email'        => 'string',
         'phone_number' => 'string'
     ];
 
@@ -67,7 +68,7 @@ class ForgotUsername implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'email' => null,
+        'email'        => null,
         'phone_number' => null
     ];
 
@@ -98,7 +99,7 @@ class ForgotUsername implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'email' => 'email',
+        'email'        => 'email',
         'phone_number' => 'phone_number'
     ];
 
@@ -108,7 +109,7 @@ class ForgotUsername implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'email' => 'setEmail',
+        'email'        => 'setEmail',
         'phone_number' => 'setPhoneNumber'
     ];
 
@@ -118,7 +119,7 @@ class ForgotUsername implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'email' => 'getEmail',
+        'email'        => 'getEmail',
         'phone_number' => 'getPhoneNumber'
     ];
 
@@ -163,9 +164,9 @@ class ForgotUsername implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -264,6 +265,7 @@ class ForgotUsername implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -276,6 +278,7 @@ class ForgotUsername implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -289,6 +292,7 @@ class ForgotUsername implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -305,6 +309,7 @@ class ForgotUsername implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
@@ -327,5 +332,3 @@ class ForgotUsername implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

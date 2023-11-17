@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listsContactsByListIdGet**
-> string listsContactsByListIdGet($list_id, $page, $limit)
+> string listsContactsByListIdGet($list_id, $page, $limit, $updated_after)
 
 Get all contacts in a list
 
@@ -217,9 +217,10 @@ $apiInstance = new ClickSend\Api\ContactApi(
 $list_id = 56; // int | Contact list ID
 $page = 1; // int | Page number
 $limit = 10; // int | Number of records per page
+$updated_after = 10; // int | Get all contacts updated after a given timestamp.
 
 try {
-    $result = $apiInstance->listsContactsByListIdGet($list_id, $page, $limit);
+    $result = $apiInstance->listsContactsByListIdGet($list_id, $page, $limit, $updated_after);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactApi->listsContactsByListIdGet: ', $e->getMessage(), PHP_EOL;
@@ -234,6 +235,7 @@ Name | Type | Description  | Notes
  **list_id** | **int**| Contact list ID |
  **page** | **int**| Page number | [optional] [default to 1]
  **limit** | **int**| Number of records per page | [optional] [default to 10]
+ **updated_after** | **int**| Get all contacts updated after a given timestamp. | [optional] [default to 10]
 
 ### Return type
 

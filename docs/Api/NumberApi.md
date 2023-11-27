@@ -4,10 +4,9 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**numbersBuyByDedicatedNumberPost**](NumberApi.md#numbersBuyByDedicatedNumberPost) | **POST** /numbers/buy/{dedicated_number} | Buy dedicated number
-[**numbersGet**](NumberApi.md#numbersGet) | **GET** /numbers | Get all availible dedicated numbers
-[**numbersSearchByCountryGet**](NumberApi.md#numbersSearchByCountryGet) | **GET** /numbers/search/{country} | Get all dedicated numbers by country
-
+[**numbersBuyByDedicatedNumberPost**](NumberApi.md#numbersbuybydedicatednumberpost) | **POST** /numbers/buy/{dedicated_number} | Buy dedicated number
+[**numbersGet**](NumberApi.md#numbersget) | **GET** /numbers | Get all availible dedicated numbers
+[**numbersSearchByCountryGet**](NumberApi.md#numberssearchbycountryget) | **GET** /numbers/search/{country} | Get all dedicated numbers by country
 
 # **numbersBuyByDedicatedNumberPost**
 > string numbersBuyByDedicatedNumberPost($dedicated_number)
@@ -20,7 +19,6 @@ Buy dedicated number
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -60,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -76,7 +74,6 @@ Get all availible dedicated numbers
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -118,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -134,7 +131,6 @@ Get all dedicated numbers by country
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -182,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

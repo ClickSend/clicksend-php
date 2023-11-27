@@ -4,13 +4,12 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**mmsHistoryExportGet**](MMSApi.md#mmsHistoryExportGet) | **GET** /mms/history/export | Export all mms history
-[**mmsHistoryGet**](MMSApi.md#mmsHistoryGet) | **GET** /mms/history | Get all mms history
-[**mmsPricePost**](MMSApi.md#mmsPricePost) | **POST** /mms/price | Get Price for MMS sent
-[**mmsReceiptsGet**](MMSApi.md#mmsReceiptsGet) | **GET** /mms/receipts | Get all delivery receipts
-[**mmsReceiptsReadPut**](MMSApi.md#mmsReceiptsReadPut) | **PUT** /mms/receipts-read | Mark delivery receipts as read
-[**mmsSendPost**](MMSApi.md#mmsSendPost) | **POST** /mms/send | Send MMS
-
+[**mmsHistoryExportGet**](MMSApi.md#mmshistoryexportget) | **GET** /mms/history/export | Export all mms history
+[**mmsHistoryGet**](MMSApi.md#mmshistoryget) | **GET** /mms/history | Get all mms history
+[**mmsPricePost**](MMSApi.md#mmspricepost) | **POST** /mms/price | Get Price for MMS sent
+[**mmsReceiptsGet**](MMSApi.md#mmsreceiptsget) | **GET** /mms/receipts | Get all delivery receipts
+[**mmsReceiptsReadPut**](MMSApi.md#mmsreceiptsreadput) | **PUT** /mms/receipts-read | Mark delivery receipts as read
+[**mmsSendPost**](MMSApi.md#mmssendpost) | **POST** /mms/send | Send MMS
 
 # **mmsHistoryExportGet**
 > string mmsHistoryExportGet($filename)
@@ -23,7 +22,6 @@ Export all mms history
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -63,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -79,7 +77,6 @@ Get all mms history
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -127,13 +124,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **mmsPricePost**
-> string mmsPricePost($mms_messages)
+> string mmsPricePost($body)
 
 Get Price for MMS sent
 
@@ -143,7 +140,6 @@ Get Price for MMS sent
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -156,10 +152,10 @@ $apiInstance = new ClickSend\Api\MMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-$mms_messages = new \ClickSend\Model\MmsMessageCollection(); // \ClickSend\Model\MmsMessageCollection | MmsMessageCollection model
+$body = new \ClickSend\Model\MmsMessageCollection(); // \ClickSend\Model\MmsMessageCollection | MmsMessageCollection model
 
 try {
-    $result = $apiInstance->mmsPricePost($mms_messages);
+    $result = $apiInstance->mmsPricePost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MMSApi->mmsPricePost: ', $e->getMessage(), PHP_EOL;
@@ -171,7 +167,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mms_messages** | [**\ClickSend\Model\MmsMessageCollection**](../Model/MmsMessageCollection.md)| MmsMessageCollection model |
+ **body** | [**\ClickSend\Model\MmsMessageCollection**](../Model/MmsMessageCollection.md)| MmsMessageCollection model |
 
 ### Return type
 
@@ -199,7 +195,6 @@ Get all delivery receipts
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -241,13 +236,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **mmsReceiptsReadPut**
-> string mmsReceiptsReadPut($date_before)
+> string mmsReceiptsReadPut($body)
 
 Mark delivery receipts as read
 
@@ -257,7 +252,6 @@ Mark delivery receipts as read
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -270,10 +264,10 @@ $apiInstance = new ClickSend\Api\MMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-$date_before = new \ClickSend\Model\DateBefore(); // \ClickSend\Model\DateBefore | DateBefore model
+$body = new \ClickSend\Model\DateBefore(); // \ClickSend\Model\DateBefore | DateBefore model
 
 try {
-    $result = $apiInstance->mmsReceiptsReadPut($date_before);
+    $result = $apiInstance->mmsReceiptsReadPut($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MMSApi->mmsReceiptsReadPut: ', $e->getMessage(), PHP_EOL;
@@ -285,7 +279,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **date_before** | [**\ClickSend\Model\DateBefore**](../Model/DateBefore.md)| DateBefore model | [optional]
+ **body** | [**\ClickSend\Model\DateBefore**](../Model/DateBefore.md)| DateBefore model | [optional]
 
 ### Return type
 
@@ -303,7 +297,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **mmsSendPost**
-> string mmsSendPost($mms_messages)
+> string mmsSendPost($body)
 
 Send MMS
 
@@ -313,7 +307,6 @@ Send MMS
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -326,10 +319,10 @@ $apiInstance = new ClickSend\Api\MMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-$mms_messages = new \ClickSend\Model\MmsMessageCollection(); // \ClickSend\Model\MmsMessageCollection | MmsMessageCollection model
+$body = new \ClickSend\Model\MmsMessageCollection(); // \ClickSend\Model\MmsMessageCollection | MmsMessageCollection model
 
 try {
-    $result = $apiInstance->mmsSendPost($mms_messages);
+    $result = $apiInstance->mmsSendPost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MMSApi->mmsSendPost: ', $e->getMessage(), PHP_EOL;
@@ -341,7 +334,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mms_messages** | [**\ClickSend\Model\MmsMessageCollection**](../Model/MmsMessageCollection.md)| MmsMessageCollection model |
+ **body** | [**\ClickSend\Model\MmsMessageCollection**](../Model/MmsMessageCollection.md)| MmsMessageCollection model |
 
 ### Return type
 

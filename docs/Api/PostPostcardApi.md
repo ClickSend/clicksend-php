@@ -4,11 +4,10 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**postPostcardsHistoryExportGet**](PostPostcardApi.md#postPostcardsHistoryExportGet) | **GET** /post/postcards/history/export | Export postcard history to a CSV file
-[**postPostcardsHistoryGet**](PostPostcardApi.md#postPostcardsHistoryGet) | **GET** /post/postcards/history | Retrieve the history of postcards sent or scheduled
-[**postPostcardsPricePost**](PostPostcardApi.md#postPostcardsPricePost) | **POST** /post/postcards/price | Calculate price for sending one or more postcards
-[**postPostcardsSendPost**](PostPostcardApi.md#postPostcardsSendPost) | **POST** /post/postcards/send | Send one or more postcards
-
+[**postPostcardsHistoryExportGet**](PostPostcardApi.md#postpostcardshistoryexportget) | **GET** /post/postcards/history/export | Export postcard history to a CSV file
+[**postPostcardsHistoryGet**](PostPostcardApi.md#postpostcardshistoryget) | **GET** /post/postcards/history | Retrieve the history of postcards sent or scheduled
+[**postPostcardsPricePost**](PostPostcardApi.md#postpostcardspricepost) | **POST** /post/postcards/price | Calculate price for sending one or more postcards
+[**postPostcardsSendPost**](PostPostcardApi.md#postpostcardssendpost) | **POST** /post/postcards/send | Send one or more postcards
 
 # **postPostcardsHistoryExportGet**
 > string postPostcardsHistoryExportGet($filename)
@@ -21,7 +20,6 @@ Export postcard history to a CSV file
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -61,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -77,7 +75,6 @@ Retrieve the history of postcards sent or scheduled
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -119,13 +116,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postPostcardsPricePost**
-> string postPostcardsPricePost($post_postcards)
+> string postPostcardsPricePost($body)
 
 Calculate price for sending one or more postcards
 
@@ -135,7 +132,6 @@ Calculate price for sending one or more postcards
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -148,10 +144,10 @@ $apiInstance = new ClickSend\Api\PostPostcardApi(
     new GuzzleHttp\Client(),
     $config
 );
-$post_postcards = new \ClickSend\Model\PostPostcard(); // \ClickSend\Model\PostPostcard | PostPostcard model
+$body = new \ClickSend\Model\PostPostcard(); // \ClickSend\Model\PostPostcard | PostPostcard model
 
 try {
-    $result = $apiInstance->postPostcardsPricePost($post_postcards);
+    $result = $apiInstance->postPostcardsPricePost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PostPostcardApi->postPostcardsPricePost: ', $e->getMessage(), PHP_EOL;
@@ -163,7 +159,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **post_postcards** | [**\ClickSend\Model\PostPostcard**](../Model/PostPostcard.md)| PostPostcard model |
+ **body** | [**\ClickSend\Model\PostPostcard**](../Model/PostPostcard.md)| PostPostcard model |
 
 ### Return type
 
@@ -181,7 +177,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postPostcardsSendPost**
-> string postPostcardsSendPost($post_postcards)
+> string postPostcardsSendPost($body)
 
 Send one or more postcards
 
@@ -191,7 +187,6 @@ Send one or more postcards
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -204,10 +199,10 @@ $apiInstance = new ClickSend\Api\PostPostcardApi(
     new GuzzleHttp\Client(),
     $config
 );
-$post_postcards = new \ClickSend\Model\PostPostcard(); // \ClickSend\Model\PostPostcard | PostPostcard model
+$body = new \ClickSend\Model\PostPostcard(); // \ClickSend\Model\PostPostcard | PostPostcard model
 
 try {
-    $result = $apiInstance->postPostcardsSendPost($post_postcards);
+    $result = $apiInstance->postPostcardsSendPost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PostPostcardApi->postPostcardsSendPost: ', $e->getMessage(), PHP_EOL;
@@ -219,7 +214,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **post_postcards** | [**\ClickSend\Model\PostPostcard**](../Model/PostPostcard.md)| PostPostcard model |
+ **body** | [**\ClickSend\Model\PostPostcard**](../Model/PostPostcard.md)| PostPostcard model |
 
 ### Return type
 

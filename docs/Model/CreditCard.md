@@ -10,6 +10,5 @@ Name | Type | Description | Notes
 **name** | **string** | Name printed on credit card | 
 **bank_name** | **string** | Name of bank that credit card belongs to | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

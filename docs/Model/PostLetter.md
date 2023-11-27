@@ -11,6 +11,5 @@ Name | Type | Description | Notes
 **colour** | **int** | Whether letter is in colour | [optional] [default to 0]
 **source** | **string** | Source being sent from | [optional] [default to 'sdk']
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

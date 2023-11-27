@@ -15,6 +15,5 @@ Name | Type | Description | Notes
 **access_contacts** | **int** | Your access contacts flag value, must be 1 or 0. | [optional] [default to 0]
 **access_settings** | **int** | Your access settings flag value, must be 1 or 0. | [optional] [default to 1]
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

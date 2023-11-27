@@ -12,6 +12,5 @@ Name | Type | Description | Notes
 **account_name** | **string** | Account name (usually company name) | 
 **country** | **string** | Country of account holder | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

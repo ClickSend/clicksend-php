@@ -4,12 +4,11 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**faxInboundAutomationDelete**](InboundFAXRulesApi.md#faxInboundAutomationDelete) | **DELETE** /automations/fax/inbound/{inbound_rule_id} | Delete inbound fax automation
-[**faxInboundAutomationGet**](InboundFAXRulesApi.md#faxInboundAutomationGet) | **GET** /automations/fax/inbound/{inbound_rule_id} | Get specific inbound fax automation
-[**faxInboundAutomationPost**](InboundFAXRulesApi.md#faxInboundAutomationPost) | **POST** /automations/fax/inbound | Create new inbound fax automation
-[**faxInboundAutomationPut**](InboundFAXRulesApi.md#faxInboundAutomationPut) | **PUT** /automations/fax/inbound/{inbound_rule_id} | Update inbound fax automation
-[**faxInboundAutomationsGet**](InboundFAXRulesApi.md#faxInboundAutomationsGet) | **GET** /automations/fax/inbound | Get all inbound fax automations
-
+[**faxInboundAutomationDelete**](InboundFAXRulesApi.md#faxinboundautomationdelete) | **DELETE** /automations/fax/inbound/{inbound_rule_id} | Delete inbound fax automation
+[**faxInboundAutomationGet**](InboundFAXRulesApi.md#faxinboundautomationget) | **GET** /automations/fax/inbound/{inbound_rule_id} | Get specific inbound fax automation
+[**faxInboundAutomationPost**](InboundFAXRulesApi.md#faxinboundautomationpost) | **POST** /automations/fax/inbound | Create new inbound fax automation
+[**faxInboundAutomationPut**](InboundFAXRulesApi.md#faxinboundautomationput) | **PUT** /automations/fax/inbound/{inbound_rule_id} | Update inbound fax automation
+[**faxInboundAutomationsGet**](InboundFAXRulesApi.md#faxinboundautomationsget) | **GET** /automations/fax/inbound | Get all inbound fax automations
 
 # **faxInboundAutomationDelete**
 > string faxInboundAutomationDelete($inbound_rule_id)
@@ -22,7 +21,6 @@ Delete inbound fax automation
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -62,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -78,7 +76,6 @@ Get specific inbound fax automation
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -118,13 +115,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **faxInboundAutomationPost**
-> string faxInboundAutomationPost($inbound_fax_rule)
+> string faxInboundAutomationPost($body)
 
 Create new inbound fax automation
 
@@ -134,7 +131,6 @@ Create new inbound fax automation
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -147,10 +143,10 @@ $apiInstance = new ClickSend\Api\InboundFAXRulesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$inbound_fax_rule = new \ClickSend\Model\InboundFaxRule(); // \ClickSend\Model\InboundFaxRule | Inbound fax rule model
+$body = new \ClickSend\Model\InboundFaxRule(); // \ClickSend\Model\InboundFaxRule | Inbound fax rule model
 
 try {
-    $result = $apiInstance->faxInboundAutomationPost($inbound_fax_rule);
+    $result = $apiInstance->faxInboundAutomationPost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InboundFAXRulesApi->faxInboundAutomationPost: ', $e->getMessage(), PHP_EOL;
@@ -162,7 +158,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inbound_fax_rule** | [**\ClickSend\Model\InboundFaxRule**](../Model/InboundFaxRule.md)| Inbound fax rule model |
+ **body** | [**\ClickSend\Model\InboundFaxRule**](../Model/InboundFaxRule.md)| Inbound fax rule model |
 
 ### Return type
 
@@ -180,7 +176,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **faxInboundAutomationPut**
-> string faxInboundAutomationPut($inbound_rule_id, $inbound_fax_rule)
+> string faxInboundAutomationPut($body, $inbound_rule_id)
 
 Update inbound fax automation
 
@@ -190,7 +186,6 @@ Update inbound fax automation
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -203,11 +198,11 @@ $apiInstance = new ClickSend\Api\InboundFAXRulesApi(
     new GuzzleHttp\Client(),
     $config
 );
+$body = new \ClickSend\Model\InboundFaxRule(); // \ClickSend\Model\InboundFaxRule | Inbound fax rule model
 $inbound_rule_id = 56; // int | Inbound rule id
-$inbound_fax_rule = new \ClickSend\Model\InboundFaxRule(); // \ClickSend\Model\InboundFaxRule | Inbound fax rule model
 
 try {
-    $result = $apiInstance->faxInboundAutomationPut($inbound_rule_id, $inbound_fax_rule);
+    $result = $apiInstance->faxInboundAutomationPut($body, $inbound_rule_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InboundFAXRulesApi->faxInboundAutomationPut: ', $e->getMessage(), PHP_EOL;
@@ -219,8 +214,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**\ClickSend\Model\InboundFaxRule**](../Model/InboundFaxRule.md)| Inbound fax rule model |
  **inbound_rule_id** | **int**| Inbound rule id |
- **inbound_fax_rule** | [**\ClickSend\Model\InboundFaxRule**](../Model/InboundFaxRule.md)| Inbound fax rule model |
 
 ### Return type
 
@@ -248,7 +243,6 @@ Get all inbound fax automations
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -292,7 +286,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

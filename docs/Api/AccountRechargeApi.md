@@ -4,13 +4,12 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**rechargeCreditCardGet**](AccountRechargeApi.md#rechargeCreditCardGet) | **GET** /recharge/credit-card | Get Credit Card info
-[**rechargeCreditCardPut**](AccountRechargeApi.md#rechargeCreditCardPut) | **PUT** /recharge/credit-card | Update credit card info
-[**rechargePackagesGet**](AccountRechargeApi.md#rechargePackagesGet) | **GET** /recharge/packages | Get list of all packages
-[**rechargePurchaseByPackageIdPut**](AccountRechargeApi.md#rechargePurchaseByPackageIdPut) | **PUT** /recharge/purchase/{package_id} | Purchase a package
-[**rechargeTransactionsByTransactionIdGet**](AccountRechargeApi.md#rechargeTransactionsByTransactionIdGet) | **GET** /recharge/transactions/{transaction_id} | Get specific Transaction
-[**rechargeTransactionsGet**](AccountRechargeApi.md#rechargeTransactionsGet) | **GET** /recharge/transactions | Purchase a package
-
+[**rechargeCreditCardGet**](AccountRechargeApi.md#rechargecreditcardget) | **GET** /recharge/credit-card | Get Credit Card info
+[**rechargeCreditCardPut**](AccountRechargeApi.md#rechargecreditcardput) | **PUT** /recharge/credit-card | Update credit card info
+[**rechargePackagesGet**](AccountRechargeApi.md#rechargepackagesget) | **GET** /recharge/packages | Get list of all packages
+[**rechargePurchaseByPackageIdPut**](AccountRechargeApi.md#rechargepurchasebypackageidput) | **PUT** /recharge/purchase/{package_id} | Purchase a package
+[**rechargeTransactionsByTransactionIdGet**](AccountRechargeApi.md#rechargetransactionsbytransactionidget) | **GET** /recharge/transactions/{transaction_id} | Get specific Transaction
+[**rechargeTransactionsGet**](AccountRechargeApi.md#rechargetransactionsget) | **GET** /recharge/transactions | Purchase a package
 
 # **rechargeCreditCardGet**
 > string rechargeCreditCardGet()
@@ -23,7 +22,6 @@ Get Credit Card info
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -59,13 +57,13 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **rechargeCreditCardPut**
-> string rechargeCreditCardPut($credit_card)
+> string rechargeCreditCardPut($body)
 
 Update credit card info
 
@@ -75,7 +73,6 @@ Update credit card info
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -88,10 +85,10 @@ $apiInstance = new ClickSend\Api\AccountRechargeApi(
     new GuzzleHttp\Client(),
     $config
 );
-$credit_card = new \ClickSend\Model\CreditCard(); // \ClickSend\Model\CreditCard | CreditCard model
+$body = new \ClickSend\Model\CreditCard(); // \ClickSend\Model\CreditCard | CreditCard model
 
 try {
-    $result = $apiInstance->rechargeCreditCardPut($credit_card);
+    $result = $apiInstance->rechargeCreditCardPut($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountRechargeApi->rechargeCreditCardPut: ', $e->getMessage(), PHP_EOL;
@@ -103,7 +100,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **credit_card** | [**\ClickSend\Model\CreditCard**](../Model/CreditCard.md)| CreditCard model |
+ **body** | [**\ClickSend\Model\CreditCard**](../Model/CreditCard.md)| CreditCard model |
 
 ### Return type
 
@@ -131,7 +128,6 @@ Get list of all packages
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -171,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -187,7 +183,6 @@ Purchase a package
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -227,7 +222,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -243,7 +238,6 @@ Get specific Transaction
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -283,7 +277,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -299,7 +293,6 @@ Get all transactions
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -341,7 +334,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

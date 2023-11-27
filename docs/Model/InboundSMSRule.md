@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**dedicated_number** | **string** | Dedicated Number. Can be &#39;*&#39; to apply to all numbers. | 
+**dedicated_number** | **string** | Dedicated Number. Can be &#x27;*&#x27; to apply to all numbers. | 
 **rule_name** | **string** | Rule Name. | 
 **message_search_type** | **float** | Message Search Type: 0&#x3D;Any message, 1&#x3D;starts with, 2&#x3D;contains, 3&#x3D;does not contain. | 
 **message_search_term** | **string** | Message search term. | 
@@ -12,6 +12,5 @@ Name | Type | Description | Notes
 **enabled** | **float** | Enabled: Disabled&#x3D;0 or Enabled&#x3D;1. | 
 **webhook_type** | **string** | post, get, or json. post by default | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

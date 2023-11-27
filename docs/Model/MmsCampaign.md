@@ -11,6 +11,5 @@ Name | Type | Description | Notes
 **subject** | **string** | Subject of MMS campaign. | 
 **media_file** | **string** | URL pointing to media file. | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

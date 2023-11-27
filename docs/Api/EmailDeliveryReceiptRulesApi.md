@@ -4,12 +4,11 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**emailDeliveryReceiptAutomationDelete**](EmailDeliveryReceiptRulesApi.md#emailDeliveryReceiptAutomationDelete) | **DELETE** /automations/email/receipts/{receipt_rule_id} | Delete email delivery receipt automation
-[**emailDeliveryReceiptAutomationGet**](EmailDeliveryReceiptRulesApi.md#emailDeliveryReceiptAutomationGet) | **GET** /automations/email/receipts/{receipt_rule_id} | Get specific email delivery receipt automation
-[**emailDeliveryReceiptAutomationPost**](EmailDeliveryReceiptRulesApi.md#emailDeliveryReceiptAutomationPost) | **POST** /automations/email/receipts | Create email delivery receipt automations
-[**emailDeliveryReceiptAutomationPut**](EmailDeliveryReceiptRulesApi.md#emailDeliveryReceiptAutomationPut) | **PUT** /automations/email/receipts/{receipt_rule_id} | Update email delivery receipt automation
-[**emailDeliveryReceiptAutomationsGet**](EmailDeliveryReceiptRulesApi.md#emailDeliveryReceiptAutomationsGet) | **GET** /automations/email/receipts | Get all email delivery receipt automations
-
+[**emailDeliveryReceiptAutomationDelete**](EmailDeliveryReceiptRulesApi.md#emaildeliveryreceiptautomationdelete) | **DELETE** /automations/email/receipts/{receipt_rule_id} | Delete email delivery receipt automation
+[**emailDeliveryReceiptAutomationGet**](EmailDeliveryReceiptRulesApi.md#emaildeliveryreceiptautomationget) | **GET** /automations/email/receipts/{receipt_rule_id} | Get specific email delivery receipt automation
+[**emailDeliveryReceiptAutomationPost**](EmailDeliveryReceiptRulesApi.md#emaildeliveryreceiptautomationpost) | **POST** /automations/email/receipts | Create email delivery receipt automations
+[**emailDeliveryReceiptAutomationPut**](EmailDeliveryReceiptRulesApi.md#emaildeliveryreceiptautomationput) | **PUT** /automations/email/receipts/{receipt_rule_id} | Update email delivery receipt automation
+[**emailDeliveryReceiptAutomationsGet**](EmailDeliveryReceiptRulesApi.md#emaildeliveryreceiptautomationsget) | **GET** /automations/email/receipts | Get all email delivery receipt automations
 
 # **emailDeliveryReceiptAutomationDelete**
 > string emailDeliveryReceiptAutomationDelete($receipt_rule_id)
@@ -22,7 +21,6 @@ Delete email delivery receipt automation
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -62,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -78,7 +76,6 @@ Get specific email delivery receipt automation
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -118,13 +115,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **emailDeliveryReceiptAutomationPost**
-> string emailDeliveryReceiptAutomationPost($delivery_receipt_rule)
+> string emailDeliveryReceiptAutomationPost($body)
 
 Create email delivery receipt automations
 
@@ -134,7 +131,6 @@ Create email delivery receipt automations
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -147,10 +143,10 @@ $apiInstance = new ClickSend\Api\EmailDeliveryReceiptRulesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$delivery_receipt_rule = new \ClickSend\Model\DeliveryReceiptRule(); // \ClickSend\Model\DeliveryReceiptRule | Email delivery receipt rule model
+$body = new \ClickSend\Model\DeliveryReceiptRule(); // \ClickSend\Model\DeliveryReceiptRule | Email delivery receipt rule model
 
 try {
-    $result = $apiInstance->emailDeliveryReceiptAutomationPost($delivery_receipt_rule);
+    $result = $apiInstance->emailDeliveryReceiptAutomationPost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EmailDeliveryReceiptRulesApi->emailDeliveryReceiptAutomationPost: ', $e->getMessage(), PHP_EOL;
@@ -162,7 +158,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **delivery_receipt_rule** | [**\ClickSend\Model\DeliveryReceiptRule**](../Model/DeliveryReceiptRule.md)| Email delivery receipt rule model |
+ **body** | [**\ClickSend\Model\DeliveryReceiptRule**](../Model/DeliveryReceiptRule.md)| Email delivery receipt rule model |
 
 ### Return type
 
@@ -180,7 +176,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **emailDeliveryReceiptAutomationPut**
-> string emailDeliveryReceiptAutomationPut($receipt_rule_id, $delivery_receipt_rule)
+> string emailDeliveryReceiptAutomationPut($body, $receipt_rule_id)
 
 Update email delivery receipt automation
 
@@ -190,7 +186,6 @@ Update email delivery receipt automation
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -203,11 +198,11 @@ $apiInstance = new ClickSend\Api\EmailDeliveryReceiptRulesApi(
     new GuzzleHttp\Client(),
     $config
 );
+$body = new \ClickSend\Model\DeliveryReceiptRule(); // \ClickSend\Model\DeliveryReceiptRule | Delivery receipt rule model
 $receipt_rule_id = 56; // int | Receipt rule id
-$delivery_receipt_rule = new \ClickSend\Model\DeliveryReceiptRule(); // \ClickSend\Model\DeliveryReceiptRule | Delivery receipt rule model
 
 try {
-    $result = $apiInstance->emailDeliveryReceiptAutomationPut($receipt_rule_id, $delivery_receipt_rule);
+    $result = $apiInstance->emailDeliveryReceiptAutomationPut($body, $receipt_rule_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EmailDeliveryReceiptRulesApi->emailDeliveryReceiptAutomationPut: ', $e->getMessage(), PHP_EOL;
@@ -219,8 +214,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**\ClickSend\Model\DeliveryReceiptRule**](../Model/DeliveryReceiptRule.md)| Delivery receipt rule model |
  **receipt_rule_id** | **int**| Receipt rule id |
- **delivery_receipt_rule** | [**\ClickSend\Model\DeliveryReceiptRule**](../Model/DeliveryReceiptRule.md)| Delivery receipt rule model |
 
 ### Return type
 
@@ -248,7 +243,6 @@ Get all email delivery receipt automations
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -292,7 +286,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

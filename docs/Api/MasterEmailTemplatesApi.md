@@ -4,12 +4,11 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**masterEmailTemplateCategoriesGet**](MasterEmailTemplatesApi.md#masterEmailTemplateCategoriesGet) | **GET** /email/master-templates-categories | Get all master email template categories
-[**masterEmailTemplateCategoryGet**](MasterEmailTemplatesApi.md#masterEmailTemplateCategoryGet) | **GET** /email/master-templates-categories/{category_id} | Get specific master email template category
-[**masterEmailTemplateGet**](MasterEmailTemplatesApi.md#masterEmailTemplateGet) | **GET** /email/master-templates/{template_id} | Get specific master email template
-[**masterEmailTemplatesGet**](MasterEmailTemplatesApi.md#masterEmailTemplatesGet) | **GET** /email/master-templates | Get all master email templates
-[**masterEmailTemplatesInCategoryGet**](MasterEmailTemplatesApi.md#masterEmailTemplatesInCategoryGet) | **GET** /email/master-templates-categories/{category_id}/master-templates | Get all master email templates in a category
-
+[**masterEmailTemplateCategoriesGet**](MasterEmailTemplatesApi.md#masteremailtemplatecategoriesget) | **GET** /email/master-templates-categories | Get all master email template categories
+[**masterEmailTemplateCategoryGet**](MasterEmailTemplatesApi.md#masteremailtemplatecategoryget) | **GET** /email/master-templates-categories/{category_id} | Get specific master email template category
+[**masterEmailTemplateGet**](MasterEmailTemplatesApi.md#masteremailtemplateget) | **GET** /email/master-templates/{template_id} | Get specific master email template
+[**masterEmailTemplatesGet**](MasterEmailTemplatesApi.md#masteremailtemplatesget) | **GET** /email/master-templates | Get all master email templates
+[**masterEmailTemplatesInCategoryGet**](MasterEmailTemplatesApi.md#masteremailtemplatesincategoryget) | **GET** /email/master-templates-categories/{category_id}/master-templates | Get all master email templates in a category
 
 # **masterEmailTemplateCategoriesGet**
 > string masterEmailTemplateCategoriesGet($page, $limit)
@@ -22,7 +21,6 @@ Get all master email template categories
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -64,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -80,7 +78,6 @@ Get specific master email template category
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -120,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -136,7 +133,6 @@ Get specific master email template
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -176,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -192,7 +188,6 @@ Get all master email templates
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -234,7 +229,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -250,7 +245,6 @@ Get all master email templates in a category
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -294,7 +288,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

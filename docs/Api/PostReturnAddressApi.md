@@ -4,12 +4,11 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**postReturnAddressesByReturnAddressIdDelete**](PostReturnAddressApi.md#postReturnAddressesByReturnAddressIdDelete) | **DELETE** /post/return-addresses/{return_address_id} | Delete specific post return address
-[**postReturnAddressesByReturnAddressIdGet**](PostReturnAddressApi.md#postReturnAddressesByReturnAddressIdGet) | **GET** /post/return-addresses/{return_address_id} | Get specific post return address
-[**postReturnAddressesByReturnAddressIdPut**](PostReturnAddressApi.md#postReturnAddressesByReturnAddressIdPut) | **PUT** /post/return-addresses/{return_address_id} | Update post return address
-[**postReturnAddressesGet**](PostReturnAddressApi.md#postReturnAddressesGet) | **GET** /post/return-addresses | Get list of post return addresses
-[**postReturnAddressesPost**](PostReturnAddressApi.md#postReturnAddressesPost) | **POST** /post/return-addresses | Create post return address
-
+[**postReturnAddressesByReturnAddressIdDelete**](PostReturnAddressApi.md#postreturnaddressesbyreturnaddressiddelete) | **DELETE** /post/return-addresses/{return_address_id} | Delete specific post return address
+[**postReturnAddressesByReturnAddressIdGet**](PostReturnAddressApi.md#postreturnaddressesbyreturnaddressidget) | **GET** /post/return-addresses/{return_address_id} | Get specific post return address
+[**postReturnAddressesByReturnAddressIdPut**](PostReturnAddressApi.md#postreturnaddressesbyreturnaddressidput) | **PUT** /post/return-addresses/{return_address_id} | Update post return address
+[**postReturnAddressesGet**](PostReturnAddressApi.md#postreturnaddressesget) | **GET** /post/return-addresses | Get list of post return addresses
+[**postReturnAddressesPost**](PostReturnAddressApi.md#postreturnaddressespost) | **POST** /post/return-addresses | Create post return address
 
 # **postReturnAddressesByReturnAddressIdDelete**
 > string postReturnAddressesByReturnAddressIdDelete($return_address_id)
@@ -22,7 +21,6 @@ Delete specific post return address
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -62,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -78,7 +76,6 @@ Get specific post return address
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -118,13 +115,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postReturnAddressesByReturnAddressIdPut**
-> string postReturnAddressesByReturnAddressIdPut($return_address_id, $return_address)
+> string postReturnAddressesByReturnAddressIdPut($body, $return_address_id)
 
 Update post return address
 
@@ -134,7 +131,6 @@ Update post return address
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -147,11 +143,11 @@ $apiInstance = new ClickSend\Api\PostReturnAddressApi(
     new GuzzleHttp\Client(),
     $config
 );
+$body = new \ClickSend\Model\Address(); // \ClickSend\Model\Address | Address model
 $return_address_id = 56; // int | Return address ID
-$return_address = new \ClickSend\Model\Address(); // \ClickSend\Model\Address | Address model
 
 try {
-    $result = $apiInstance->postReturnAddressesByReturnAddressIdPut($return_address_id, $return_address);
+    $result = $apiInstance->postReturnAddressesByReturnAddressIdPut($body, $return_address_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PostReturnAddressApi->postReturnAddressesByReturnAddressIdPut: ', $e->getMessage(), PHP_EOL;
@@ -163,8 +159,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**\ClickSend\Model\Address**](../Model/Address.md)| Address model |
  **return_address_id** | **int**| Return address ID |
- **return_address** | [**\ClickSend\Model\Address**](../Model/Address.md)| Address model |
 
 ### Return type
 
@@ -192,7 +188,6 @@ Get list of post return addresses
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -234,13 +229,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postReturnAddressesPost**
-> string postReturnAddressesPost($return_address)
+> string postReturnAddressesPost($body)
 
 Create post return address
 
@@ -250,7 +245,6 @@ Create post return address
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -263,10 +257,10 @@ $apiInstance = new ClickSend\Api\PostReturnAddressApi(
     new GuzzleHttp\Client(),
     $config
 );
-$return_address = new \ClickSend\Model\Address(); // \ClickSend\Model\Address | Address model
+$body = new \ClickSend\Model\Address(); // \ClickSend\Model\Address | Address model
 
 try {
-    $result = $apiInstance->postReturnAddressesPost($return_address);
+    $result = $apiInstance->postReturnAddressesPost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PostReturnAddressApi->postReturnAddressesPost: ', $e->getMessage(), PHP_EOL;
@@ -278,7 +272,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **return_address** | [**\ClickSend\Model\Address**](../Model/Address.md)| Address model |
+ **body** | [**\ClickSend\Model\Address**](../Model/Address.md)| Address model |
 
 ### Return type
 

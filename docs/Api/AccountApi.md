@@ -4,15 +4,14 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**accountGet**](AccountApi.md#accountGet) | **GET** /account | Get account information
-[**accountPost**](AccountApi.md#accountPost) | **POST** /account | Create a new account
-[**accountUseageBySubaccountGet**](AccountApi.md#accountUseageBySubaccountGet) | **GET** /account/usage/{year}/{month}/subaccount | Get account useage by subaccount
-[**accountVerifySendPut**](AccountApi.md#accountVerifySendPut) | **PUT** /account-verify/send | Send account activation token
-[**accountVerifyVerifyByActivationTokenPut**](AccountApi.md#accountVerifyVerifyByActivationTokenPut) | **PUT** /account-verify/verify/{activation_token} | Verify new account
-[**forgotPasswordPut**](AccountApi.md#forgotPasswordPut) | **PUT** /forgot-password | Forgot password
-[**forgotPasswordVerifyPut**](AccountApi.md#forgotPasswordVerifyPut) | **PUT** /forgot-password/verify | Verify forgot password
-[**forgotUsernamePut**](AccountApi.md#forgotUsernamePut) | **PUT** /forgot-username | Forgot username
-
+[**accountGet**](AccountApi.md#accountget) | **GET** /account | Get account information
+[**accountPost**](AccountApi.md#accountpost) | **POST** /account | Create a new account
+[**accountUseageBySubaccountGet**](AccountApi.md#accountuseagebysubaccountget) | **GET** /account/usage/{year}/{month}/subaccount | Get account useage by subaccount
+[**accountVerifySendPut**](AccountApi.md#accountverifysendput) | **PUT** /account-verify/send | Send account activation token
+[**accountVerifyVerifyByActivationTokenPut**](AccountApi.md#accountverifyverifybyactivationtokenput) | **PUT** /account-verify/verify/{activation_token} | Verify new account
+[**forgotPasswordPut**](AccountApi.md#forgotpasswordput) | **PUT** /forgot-password | Forgot password
+[**forgotPasswordVerifyPut**](AccountApi.md#forgotpasswordverifyput) | **PUT** /forgot-password/verify | Verify forgot password
+[**forgotUsernamePut**](AccountApi.md#forgotusernameput) | **PUT** /forgot-username | Forgot username
 
 # **accountGet**
 > string accountGet()
@@ -25,7 +24,6 @@ Get account details
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -61,13 +59,13 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **accountPost**
-> string accountPost($account)
+> string accountPost($body)
 
 Create a new account
 
@@ -77,7 +75,6 @@ Create An Account
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -90,10 +87,10 @@ $apiInstance = new ClickSend\Api\AccountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$account = new \ClickSend\Model\Account(); // \ClickSend\Model\Account | Account model
+$body = new \ClickSend\Model\Account(); // \ClickSend\Model\Account | Account model
 
 try {
-    $result = $apiInstance->accountPost($account);
+    $result = $apiInstance->accountPost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountApi->accountPost: ', $e->getMessage(), PHP_EOL;
@@ -105,7 +102,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **account** | [**\ClickSend\Model\Account**](../Model/Account.md)| Account model |
+ **body** | [**\ClickSend\Model\Account**](../Model/Account.md)| Account model |
 
 ### Return type
 
@@ -133,7 +130,6 @@ Get account useage by subaccount
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -175,13 +171,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **accountVerifySendPut**
-> string accountVerifySendPut($account_verify)
+> string accountVerifySendPut($body)
 
 Send account activation token
 
@@ -191,7 +187,6 @@ Send account activation token
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -204,10 +199,10 @@ $apiInstance = new ClickSend\Api\AccountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$account_verify = new \ClickSend\Model\AccountVerify(); // \ClickSend\Model\AccountVerify | Account details
+$body = new \ClickSend\Model\AccountVerify(); // \ClickSend\Model\AccountVerify | Account details
 
 try {
-    $result = $apiInstance->accountVerifySendPut($account_verify);
+    $result = $apiInstance->accountVerifySendPut($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountApi->accountVerifySendPut: ', $e->getMessage(), PHP_EOL;
@@ -219,7 +214,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **account_verify** | [**\ClickSend\Model\AccountVerify**](../Model/AccountVerify.md)| Account details |
+ **body** | [**\ClickSend\Model\AccountVerify**](../Model/AccountVerify.md)| Account details |
 
 ### Return type
 
@@ -247,7 +242,6 @@ Verify new account
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -287,13 +281,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **forgotPasswordPut**
-> string forgotPasswordPut($forgot_password)
+> string forgotPasswordPut($body)
 
 Forgot password
 
@@ -303,7 +297,6 @@ Forgot password
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -316,10 +309,10 @@ $apiInstance = new ClickSend\Api\AccountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$forgot_password = new \ClickSend\Model\ForgotPassword(); // \ClickSend\Model\ForgotPassword | 
+$body = new \ClickSend\Model\ForgotPassword(); // \ClickSend\Model\ForgotPassword | 
 
 try {
-    $result = $apiInstance->forgotPasswordPut($forgot_password);
+    $result = $apiInstance->forgotPasswordPut($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountApi->forgotPasswordPut: ', $e->getMessage(), PHP_EOL;
@@ -331,7 +324,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **forgot_password** | [**\ClickSend\Model\ForgotPassword**](../Model/ForgotPassword.md)|  | [optional]
+ **body** | [**\ClickSend\Model\ForgotPassword**](../Model/ForgotPassword.md)|  | [optional]
 
 ### Return type
 
@@ -349,7 +342,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **forgotPasswordVerifyPut**
-> string forgotPasswordVerifyPut($verify_password)
+> string forgotPasswordVerifyPut($body)
 
 Verify forgot password
 
@@ -359,7 +352,6 @@ Verify forgot password
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -372,10 +364,10 @@ $apiInstance = new ClickSend\Api\AccountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$verify_password = new \ClickSend\Model\AccountForgotPasswordVerify(); // \ClickSend\Model\AccountForgotPasswordVerify | verifyPassword data
+$body = new \ClickSend\Model\AccountForgotPasswordVerify(); // \ClickSend\Model\AccountForgotPasswordVerify | verifyPassword data
 
 try {
-    $result = $apiInstance->forgotPasswordVerifyPut($verify_password);
+    $result = $apiInstance->forgotPasswordVerifyPut($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountApi->forgotPasswordVerifyPut: ', $e->getMessage(), PHP_EOL;
@@ -387,7 +379,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **verify_password** | [**\ClickSend\Model\AccountForgotPasswordVerify**](../Model/AccountForgotPasswordVerify.md)| verifyPassword data |
+ **body** | [**\ClickSend\Model\AccountForgotPasswordVerify**](../Model/AccountForgotPasswordVerify.md)| verifyPassword data |
 
 ### Return type
 
@@ -405,7 +397,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **forgotUsernamePut**
-> string forgotUsernamePut($forgot_username)
+> string forgotUsernamePut($body)
 
 Forgot username
 
@@ -421,10 +413,10 @@ $apiInstance = new ClickSend\Api\AccountApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$forgot_username = new \ClickSend\Model\ForgotUsername(); // \ClickSend\Model\ForgotUsername | 
+$body = new \ClickSend\Model\ForgotUsername(); // \ClickSend\Model\ForgotUsername | 
 
 try {
-    $result = $apiInstance->forgotUsernamePut($forgot_username);
+    $result = $apiInstance->forgotUsernamePut($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountApi->forgotUsernamePut: ', $e->getMessage(), PHP_EOL;
@@ -436,7 +428,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **forgot_username** | [**\ClickSend\Model\ForgotUsername**](../Model/ForgotUsername.md)|  | [optional]
+ **body** | [**\ClickSend\Model\ForgotUsername**](../Model/ForgotUsername.md)|  | [optional]
 
 ### Return type
 

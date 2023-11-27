@@ -4,21 +4,20 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**allowedEmailAddressGet**](EmailMarketingApi.md#allowedEmailAddressGet) | **GET** /email/addresses | Get all email addresses
-[**allowedEmailAddressPost**](EmailMarketingApi.md#allowedEmailAddressPost) | **POST** /email/addresses | Create allowed Email Address
-[**cancelEmailCampaignPut**](EmailMarketingApi.md#cancelEmailCampaignPut) | **PUT** /email-campaigns/{email_campaign_id}/cancel | Cancel email campaign
-[**emailCampaignGet**](EmailMarketingApi.md#emailCampaignGet) | **GET** /email-campaigns/{email_campaign_id} | Get specific email campaign
-[**emailCampaignHistoryExportGet**](EmailMarketingApi.md#emailCampaignHistoryExportGet) | **GET** /email-campaigns/{email_campaign_id}/history/export | Export specific email campaign history
-[**emailCampaignHistoryGet**](EmailMarketingApi.md#emailCampaignHistoryGet) | **GET** /email-campaigns/{email_campaign_id}/history | Get specific email campaign history
-[**emailCampaignPost**](EmailMarketingApi.md#emailCampaignPost) | **POST** /email-campaigns/send | Send email campaign
-[**emailCampaignPricePost**](EmailMarketingApi.md#emailCampaignPricePost) | **POST** /email-campaigns/price | Calculate email campaign price
-[**emailCampaignPut**](EmailMarketingApi.md#emailCampaignPut) | **PUT** /email-campaigns/{email_campaign_id} | Edit email campaign
-[**emailCampaignsGet**](EmailMarketingApi.md#emailCampaignsGet) | **GET** /email-campaigns | Get all email campaigns
-[**sendVerificationTokenGet**](EmailMarketingApi.md#sendVerificationTokenGet) | **PUT** /email/address-verify/{email_address_id}/send | Send verification token
-[**specificAllowedEmailAddressDelete**](EmailMarketingApi.md#specificAllowedEmailAddressDelete) | **DELETE** /email/addresses/{email_address_id} | Delete specific email address
-[**specificAllowedEmailAddressGet**](EmailMarketingApi.md#specificAllowedEmailAddressGet) | **GET** /email/addresses/{email_address_id} | Get specific email address
-[**verifyAllowedEmailAddressGet**](EmailMarketingApi.md#verifyAllowedEmailAddressGet) | **PUT** /email/address-verify/{email_address_id}/verify/{activation_token} | Verify email address using verification token
-
+[**allowedEmailAddressGet**](EmailMarketingApi.md#allowedemailaddressget) | **GET** /email/addresses | Get all email addresses
+[**allowedEmailAddressPost**](EmailMarketingApi.md#allowedemailaddresspost) | **POST** /email/addresses | Create allowed Email Address
+[**cancelEmailCampaignPut**](EmailMarketingApi.md#cancelemailcampaignput) | **PUT** /email-campaigns/{email_campaign_id}/cancel | Cancel email campaign
+[**emailCampaignGet**](EmailMarketingApi.md#emailcampaignget) | **GET** /email-campaigns/{email_campaign_id} | Get specific email campaign
+[**emailCampaignHistoryExportGet**](EmailMarketingApi.md#emailcampaignhistoryexportget) | **GET** /email-campaigns/{email_campaign_id}/history/export | Export specific email campaign history
+[**emailCampaignHistoryGet**](EmailMarketingApi.md#emailcampaignhistoryget) | **GET** /email-campaigns/{email_campaign_id}/history | Get specific email campaign history
+[**emailCampaignPost**](EmailMarketingApi.md#emailcampaignpost) | **POST** /email-campaigns/send | Send email campaign
+[**emailCampaignPricePost**](EmailMarketingApi.md#emailcampaignpricepost) | **POST** /email-campaigns/price | Calculate email campaign price
+[**emailCampaignPut**](EmailMarketingApi.md#emailcampaignput) | **PUT** /email-campaigns/{email_campaign_id} | Edit email campaign
+[**emailCampaignsGet**](EmailMarketingApi.md#emailcampaignsget) | **GET** /email-campaigns | Get all email campaigns
+[**sendVerificationTokenGet**](EmailMarketingApi.md#sendverificationtokenget) | **PUT** /email/address-verify/{email_address_id}/send | Send verification token
+[**specificAllowedEmailAddressDelete**](EmailMarketingApi.md#specificallowedemailaddressdelete) | **DELETE** /email/addresses/{email_address_id} | Delete specific email address
+[**specificAllowedEmailAddressGet**](EmailMarketingApi.md#specificallowedemailaddressget) | **GET** /email/addresses/{email_address_id} | Get specific email address
+[**verifyAllowedEmailAddressGet**](EmailMarketingApi.md#verifyallowedemailaddressget) | **PUT** /email/address-verify/{email_address_id}/verify/{activation_token} | Verify email address using verification token
 
 # **allowedEmailAddressGet**
 > string allowedEmailAddressGet($page, $limit)
@@ -31,7 +30,6 @@ Get all email addresses
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -73,13 +71,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **allowedEmailAddressPost**
-> string allowedEmailAddressPost($email_address)
+> string allowedEmailAddressPost($body)
 
 Create allowed Email Address
 
@@ -89,7 +87,6 @@ Create allowed Email Address
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -102,10 +99,10 @@ $apiInstance = new ClickSend\Api\EmailMarketingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$email_address = new \ClickSend\Model\EmailAddress(); // \ClickSend\Model\EmailAddress | 
+$body = new \ClickSend\Model\EmailAddress(); // \ClickSend\Model\EmailAddress | 
 
 try {
-    $result = $apiInstance->allowedEmailAddressPost($email_address);
+    $result = $apiInstance->allowedEmailAddressPost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EmailMarketingApi->allowedEmailAddressPost: ', $e->getMessage(), PHP_EOL;
@@ -117,7 +114,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email_address** | [**\ClickSend\Model\EmailAddress**](../Model/EmailAddress.md)|  | [optional]
+ **body** | [**\ClickSend\Model\EmailAddress**](../Model/EmailAddress.md)|  | [optional]
 
 ### Return type
 
@@ -145,7 +142,6 @@ Cancel email campaign
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -185,7 +181,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -201,7 +197,6 @@ Get specific email campaign
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -241,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -257,7 +252,6 @@ Export specific email campaign history
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -301,7 +295,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -317,7 +311,6 @@ Get specific email campaign history
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -365,13 +358,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **emailCampaignPost**
-> string emailCampaignPost($email_campaign)
+> string emailCampaignPost($body)
 
 Send email campaign
 
@@ -381,7 +374,6 @@ Send email campaign
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -394,10 +386,10 @@ $apiInstance = new ClickSend\Api\EmailMarketingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$email_campaign = new \ClickSend\Model\EmailCampaign(); // \ClickSend\Model\EmailCampaign | Email model
+$body = new \ClickSend\Model\EmailCampaign(); // \ClickSend\Model\EmailCampaign | Email model
 
 try {
-    $result = $apiInstance->emailCampaignPost($email_campaign);
+    $result = $apiInstance->emailCampaignPost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EmailMarketingApi->emailCampaignPost: ', $e->getMessage(), PHP_EOL;
@@ -409,7 +401,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email_campaign** | [**\ClickSend\Model\EmailCampaign**](../Model/EmailCampaign.md)| Email model |
+ **body** | [**\ClickSend\Model\EmailCampaign**](../Model/EmailCampaign.md)| Email model |
 
 ### Return type
 
@@ -427,7 +419,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **emailCampaignPricePost**
-> string emailCampaignPricePost($email_campaign)
+> string emailCampaignPricePost($body)
 
 Calculate email campaign price
 
@@ -437,7 +429,6 @@ Calculate email campaign price
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -450,10 +441,10 @@ $apiInstance = new ClickSend\Api\EmailMarketingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$email_campaign = new \ClickSend\Model\EmailCampaign(); // \ClickSend\Model\EmailCampaign | Email model
+$body = new \ClickSend\Model\EmailCampaign(); // \ClickSend\Model\EmailCampaign | Email model
 
 try {
-    $result = $apiInstance->emailCampaignPricePost($email_campaign);
+    $result = $apiInstance->emailCampaignPricePost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EmailMarketingApi->emailCampaignPricePost: ', $e->getMessage(), PHP_EOL;
@@ -465,7 +456,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email_campaign** | [**\ClickSend\Model\EmailCampaign**](../Model/EmailCampaign.md)| Email model |
+ **body** | [**\ClickSend\Model\EmailCampaign**](../Model/EmailCampaign.md)| Email model |
 
 ### Return type
 
@@ -483,7 +474,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **emailCampaignPut**
-> string emailCampaignPut($email_campaign_id, $email_campaign)
+> string emailCampaignPut($body, $email_campaign_id)
 
 Edit email campaign
 
@@ -493,7 +484,6 @@ Edit email campaign
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -506,11 +496,11 @@ $apiInstance = new ClickSend\Api\EmailMarketingApi(
     new GuzzleHttp\Client(),
     $config
 );
+$body = new \ClickSend\Model\EmailCampaign(); // \ClickSend\Model\EmailCampaign | Email model
 $email_campaign_id = 56; // int | Allowed email campaign id
-$email_campaign = new \ClickSend\Model\EmailCampaign(); // \ClickSend\Model\EmailCampaign | Email model
 
 try {
-    $result = $apiInstance->emailCampaignPut($email_campaign_id, $email_campaign);
+    $result = $apiInstance->emailCampaignPut($body, $email_campaign_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EmailMarketingApi->emailCampaignPut: ', $e->getMessage(), PHP_EOL;
@@ -522,8 +512,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**\ClickSend\Model\EmailCampaign**](../Model/EmailCampaign.md)| Email model |
  **email_campaign_id** | **int**| Allowed email campaign id |
- **email_campaign** | [**\ClickSend\Model\EmailCampaign**](../Model/EmailCampaign.md)| Email model |
 
 ### Return type
 
@@ -551,7 +541,6 @@ Get all email campaigns
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -593,7 +582,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -609,7 +598,6 @@ Send verification token
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -649,7 +637,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -665,7 +653,6 @@ Delete specific email address
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -705,7 +692,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -721,7 +708,6 @@ Get specific email address
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -761,7 +747,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -777,7 +763,6 @@ Verify email address using verification token
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -819,7 +804,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

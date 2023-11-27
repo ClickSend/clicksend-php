@@ -4,13 +4,12 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**mmsCampaignByMmsCampaignIdGet**](MmsCampaignApi.md#mmsCampaignByMmsCampaignIdGet) | **GET** /mms-campaigns/{mms_campaign_id} | Get specific mms campaign
-[**mmsCampaignsByMmsCampaignIdPut**](MmsCampaignApi.md#mmsCampaignsByMmsCampaignIdPut) | **PUT** /mms-campaigns/{mms_campaign_id} | Update mms campaign
-[**mmsCampaignsCancelByMmsCampaignIdPut**](MmsCampaignApi.md#mmsCampaignsCancelByMmsCampaignIdPut) | **PUT** /mms-campaigns/{mms_campaign_id}/cancel | Cancel mms campaign
-[**mmsCampaignsGet**](MmsCampaignApi.md#mmsCampaignsGet) | **GET** /mms-campaigns | Get list of mms campaigns
-[**mmsCampaignsPricePost**](MmsCampaignApi.md#mmsCampaignsPricePost) | **POST** /mms-campaigns/price | Calculate price for mms campaign
-[**mmsCampaignsSendPost**](MmsCampaignApi.md#mmsCampaignsSendPost) | **POST** /mms-campaigns/send | Create mms campaign
-
+[**mmsCampaignByMmsCampaignIdGet**](MmsCampaignApi.md#mmscampaignbymmscampaignidget) | **GET** /mms-campaigns/{mms_campaign_id} | Get specific mms campaign
+[**mmsCampaignsByMmsCampaignIdPut**](MmsCampaignApi.md#mmscampaignsbymmscampaignidput) | **PUT** /mms-campaigns/{mms_campaign_id} | Update mms campaign
+[**mmsCampaignsCancelByMmsCampaignIdPut**](MmsCampaignApi.md#mmscampaignscancelbymmscampaignidput) | **PUT** /mms-campaigns/{mms_campaign_id}/cancel | Cancel mms campaign
+[**mmsCampaignsGet**](MmsCampaignApi.md#mmscampaignsget) | **GET** /mms-campaigns | Get list of mms campaigns
+[**mmsCampaignsPricePost**](MmsCampaignApi.md#mmscampaignspricepost) | **POST** /mms-campaigns/price | Calculate price for mms campaign
+[**mmsCampaignsSendPost**](MmsCampaignApi.md#mmscampaignssendpost) | **POST** /mms-campaigns/send | Create mms campaign
 
 # **mmsCampaignByMmsCampaignIdGet**
 > string mmsCampaignByMmsCampaignIdGet($mms_campaign_id)
@@ -23,7 +22,6 @@ Get specific mms campaign
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -63,13 +61,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **mmsCampaignsByMmsCampaignIdPut**
-> string mmsCampaignsByMmsCampaignIdPut($mms_campaign_id, $campaign)
+> string mmsCampaignsByMmsCampaignIdPut($body, $mms_campaign_id)
 
 Update mms campaign
 
@@ -79,7 +77,6 @@ Update mms campaign
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -92,11 +89,11 @@ $apiInstance = new ClickSend\Api\MmsCampaignApi(
     new GuzzleHttp\Client(),
     $config
 );
+$body = new \ClickSend\Model\MmsCampaign(); // \ClickSend\Model\MmsCampaign | MmsCampaign model
 $mms_campaign_id = 56; // int | ID of MMS campaign to update
-$campaign = new \ClickSend\Model\MmsCampaign(); // \ClickSend\Model\MmsCampaign | MmsCampaign model
 
 try {
-    $result = $apiInstance->mmsCampaignsByMmsCampaignIdPut($mms_campaign_id, $campaign);
+    $result = $apiInstance->mmsCampaignsByMmsCampaignIdPut($body, $mms_campaign_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MmsCampaignApi->mmsCampaignsByMmsCampaignIdPut: ', $e->getMessage(), PHP_EOL;
@@ -108,8 +105,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**\ClickSend\Model\MmsCampaign**](../Model/MmsCampaign.md)| MmsCampaign model |
  **mms_campaign_id** | **int**| ID of MMS campaign to update |
- **campaign** | [**\ClickSend\Model\MmsCampaign**](../Model/MmsCampaign.md)| MmsCampaign model |
 
 ### Return type
 
@@ -137,7 +134,6 @@ Cancel sms campaign
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -177,7 +173,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -193,7 +189,6 @@ Get list of mms campaigns
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -235,13 +230,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **mmsCampaignsPricePost**
-> string mmsCampaignsPricePost($campaign)
+> string mmsCampaignsPricePost($body)
 
 Calculate price for mms campaign
 
@@ -251,7 +246,6 @@ Calculate price for sms campaign
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -264,10 +258,10 @@ $apiInstance = new ClickSend\Api\MmsCampaignApi(
     new GuzzleHttp\Client(),
     $config
 );
-$campaign = new \ClickSend\Model\MmsCampaign(); // \ClickSend\Model\MmsCampaign | MmsCampaign model
+$body = new \ClickSend\Model\MmsCampaign(); // \ClickSend\Model\MmsCampaign | MmsCampaign model
 
 try {
-    $result = $apiInstance->mmsCampaignsPricePost($campaign);
+    $result = $apiInstance->mmsCampaignsPricePost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MmsCampaignApi->mmsCampaignsPricePost: ', $e->getMessage(), PHP_EOL;
@@ -279,7 +273,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign** | [**\ClickSend\Model\MmsCampaign**](../Model/MmsCampaign.md)| MmsCampaign model |
+ **body** | [**\ClickSend\Model\MmsCampaign**](../Model/MmsCampaign.md)| MmsCampaign model |
 
 ### Return type
 
@@ -297,7 +291,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **mmsCampaignsSendPost**
-> string mmsCampaignsSendPost($campaign)
+> string mmsCampaignsSendPost($body)
 
 Create mms campaign
 
@@ -307,7 +301,6 @@ Create mms campaign
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -320,10 +313,10 @@ $apiInstance = new ClickSend\Api\MmsCampaignApi(
     new GuzzleHttp\Client(),
     $config
 );
-$campaign = new \ClickSend\Model\MmsCampaign(); // \ClickSend\Model\MmsCampaign | MmsCampaign model
+$body = new \ClickSend\Model\MmsCampaign(); // \ClickSend\Model\MmsCampaign | MmsCampaign model
 
 try {
-    $result = $apiInstance->mmsCampaignsSendPost($campaign);
+    $result = $apiInstance->mmsCampaignsSendPost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MmsCampaignApi->mmsCampaignsSendPost: ', $e->getMessage(), PHP_EOL;
@@ -335,7 +328,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign** | [**\ClickSend\Model\MmsCampaign**](../Model/MmsCampaign.md)| MmsCampaign model |
+ **body** | [**\ClickSend\Model\MmsCampaign**](../Model/MmsCampaign.md)| MmsCampaign model |
 
 ### Return type
 

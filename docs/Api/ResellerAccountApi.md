@@ -4,11 +4,10 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**resellerAccountsByClientUserIdGet**](ResellerAccountApi.md#resellerAccountsByClientUserIdGet) | **GET** /reseller/accounts/{client_user_id} | Get Reseller clients Account
-[**resellerAccountsByClientUserIdPut**](ResellerAccountApi.md#resellerAccountsByClientUserIdPut) | **PUT** /reseller/accounts/{client_user_id} | Update Reseller clients Account
-[**resellerAccountsGet**](ResellerAccountApi.md#resellerAccountsGet) | **GET** /reseller/accounts | Get list of reseller accounts
-[**resellerAccountsPost**](ResellerAccountApi.md#resellerAccountsPost) | **POST** /reseller/accounts | Create reseller account
-
+[**resellerAccountsByClientUserIdGet**](ResellerAccountApi.md#reselleraccountsbyclientuseridget) | **GET** /reseller/accounts/{client_user_id} | Get Reseller clients Account
+[**resellerAccountsByClientUserIdPut**](ResellerAccountApi.md#reselleraccountsbyclientuseridput) | **PUT** /reseller/accounts/{client_user_id} | Update Reseller clients Account
+[**resellerAccountsGet**](ResellerAccountApi.md#reselleraccountsget) | **GET** /reseller/accounts | Get list of reseller accounts
+[**resellerAccountsPost**](ResellerAccountApi.md#reselleraccountspost) | **POST** /reseller/accounts | Create reseller account
 
 # **resellerAccountsByClientUserIdGet**
 > string resellerAccountsByClientUserIdGet($client_user_id)
@@ -21,7 +20,6 @@ Get Reseller clients Account
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -61,13 +59,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **resellerAccountsByClientUserIdPut**
-> string resellerAccountsByClientUserIdPut($client_user_id, $reseller_account)
+> string resellerAccountsByClientUserIdPut($body, $client_user_id)
 
 Update Reseller clients Account
 
@@ -77,7 +75,6 @@ Update Reseller clients Account
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -90,11 +87,11 @@ $apiInstance = new ClickSend\Api\ResellerAccountApi(
     new GuzzleHttp\Client(),
     $config
 );
+$body = new \ClickSend\Model\ResellerAccount(); // \ClickSend\Model\ResellerAccount | ResellerAccount model
 $client_user_id = 56; // int | User ID of client
-$reseller_account = new \ClickSend\Model\ResellerAccount(); // \ClickSend\Model\ResellerAccount | ResellerAccount model
 
 try {
-    $result = $apiInstance->resellerAccountsByClientUserIdPut($client_user_id, $reseller_account);
+    $result = $apiInstance->resellerAccountsByClientUserIdPut($body, $client_user_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ResellerAccountApi->resellerAccountsByClientUserIdPut: ', $e->getMessage(), PHP_EOL;
@@ -106,8 +103,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**\ClickSend\Model\ResellerAccount**](../Model/ResellerAccount.md)| ResellerAccount model |
  **client_user_id** | **int**| User ID of client |
- **reseller_account** | [**\ClickSend\Model\ResellerAccount**](../Model/ResellerAccount.md)| ResellerAccount model |
 
 ### Return type
 
@@ -135,7 +132,6 @@ Get list of reseller accounts
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -177,13 +173,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **resellerAccountsPost**
-> string resellerAccountsPost($reseller_account)
+> string resellerAccountsPost($body)
 
 Create reseller account
 
@@ -193,7 +189,6 @@ Create reseller account
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -206,10 +201,10 @@ $apiInstance = new ClickSend\Api\ResellerAccountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$reseller_account = new \ClickSend\Model\ResellerAccount(); // \ClickSend\Model\ResellerAccount | ResellerAccount model
+$body = new \ClickSend\Model\ResellerAccount(); // \ClickSend\Model\ResellerAccount | ResellerAccount model
 
 try {
-    $result = $apiInstance->resellerAccountsPost($reseller_account);
+    $result = $apiInstance->resellerAccountsPost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ResellerAccountApi->resellerAccountsPost: ', $e->getMessage(), PHP_EOL;
@@ -221,7 +216,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reseller_account** | [**\ClickSend\Model\ResellerAccount**](../Model/ResellerAccount.md)| ResellerAccount model |
+ **body** | [**\ClickSend\Model\ResellerAccount**](../Model/ResellerAccount.md)| ResellerAccount model |
 
 ### Return type
 

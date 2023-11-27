@@ -4,17 +4,16 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**voiceCancelAllPut**](VoiceApi.md#voiceCancelAllPut) | **PUT** /voice/cancel-all | Update all voice messages as cancelled
-[**voiceCancelByMessageIdPut**](VoiceApi.md#voiceCancelByMessageIdPut) | **PUT** /voice/{message_id}/cancel | Update voice message status as cancelled
-[**voiceHistoryExportGet**](VoiceApi.md#voiceHistoryExportGet) | **GET** /voice/history/export | Export voice history
-[**voiceHistoryGet**](VoiceApi.md#voiceHistoryGet) | **GET** /voice/history | Get all voice history
-[**voiceLangGet**](VoiceApi.md#voiceLangGet) | **GET** /voice/lang | Get all voice languages
-[**voicePricePost**](VoiceApi.md#voicePricePost) | **POST** /voice/price | Calculate voice price
-[**voiceReceiptsGet**](VoiceApi.md#voiceReceiptsGet) | **GET** /voice/receipts | Get all delivery receipts
-[**voiceReceiptsPost**](VoiceApi.md#voiceReceiptsPost) | **POST** /voice/receipts | Add a delivery receipt
-[**voiceReceiptsReadPut**](VoiceApi.md#voiceReceiptsReadPut) | **PUT** /voice/receipts-read | Mark delivery receipts as read
-[**voiceSendPost**](VoiceApi.md#voiceSendPost) | **POST** /voice/send | Send voice message(s)
-
+[**voiceCancelAllPut**](VoiceApi.md#voicecancelallput) | **PUT** /voice/cancel-all | Update all voice messages as cancelled
+[**voiceCancelByMessageIdPut**](VoiceApi.md#voicecancelbymessageidput) | **PUT** /voice/{message_id}/cancel | Update voice message status as cancelled
+[**voiceHistoryExportGet**](VoiceApi.md#voicehistoryexportget) | **GET** /voice/history/export | Export voice history
+[**voiceHistoryGet**](VoiceApi.md#voicehistoryget) | **GET** /voice/history | Get all voice history
+[**voiceLangGet**](VoiceApi.md#voicelangget) | **GET** /voice/lang | Get all voice languages
+[**voicePricePost**](VoiceApi.md#voicepricepost) | **POST** /voice/price | Calculate voice price
+[**voiceReceiptsGet**](VoiceApi.md#voicereceiptsget) | **GET** /voice/receipts | Get all delivery receipts
+[**voiceReceiptsPost**](VoiceApi.md#voicereceiptspost) | **POST** /voice/receipts | Add a delivery receipt
+[**voiceReceiptsReadPut**](VoiceApi.md#voicereceiptsreadput) | **PUT** /voice/receipts-read | Mark delivery receipts as read
+[**voiceSendPost**](VoiceApi.md#voicesendpost) | **POST** /voice/send | Send voice message(s)
 
 # **voiceCancelAllPut**
 > string voiceCancelAllPut()
@@ -27,7 +26,6 @@ Update all voice messages as cancelled
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -63,7 +61,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -79,7 +77,6 @@ Update voice message status as cancelled
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -119,7 +116,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -135,7 +132,6 @@ Export voice history
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -175,7 +171,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -191,7 +187,6 @@ Get all voice history
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -237,7 +232,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -253,7 +248,6 @@ Get all voice languages
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -289,13 +283,13 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **voicePricePost**
-> string voicePricePost($voice_messages)
+> string voicePricePost($body)
 
 Calculate voice price
 
@@ -305,7 +299,6 @@ Calculate voice price
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -318,10 +311,10 @@ $apiInstance = new ClickSend\Api\VoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$voice_messages = new \ClickSend\Model\VoiceMessageCollection(); // \ClickSend\Model\VoiceMessageCollection | VoiceMessageCollection model
+$body = new \ClickSend\Model\VoiceMessageCollection(); // \ClickSend\Model\VoiceMessageCollection | VoiceMessageCollection model
 
 try {
-    $result = $apiInstance->voicePricePost($voice_messages);
+    $result = $apiInstance->voicePricePost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VoiceApi->voicePricePost: ', $e->getMessage(), PHP_EOL;
@@ -333,7 +326,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **voice_messages** | [**\ClickSend\Model\VoiceMessageCollection**](../Model/VoiceMessageCollection.md)| VoiceMessageCollection model |
+ **body** | [**\ClickSend\Model\VoiceMessageCollection**](../Model/VoiceMessageCollection.md)| VoiceMessageCollection model |
 
 ### Return type
 
@@ -361,7 +354,6 @@ Get all delivery receipts
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -403,13 +395,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **voiceReceiptsPost**
-> string voiceReceiptsPost($url)
+> string voiceReceiptsPost($body)
 
 Add a delivery receipt
 
@@ -419,7 +411,6 @@ Add a delivery receipt
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -432,10 +423,10 @@ $apiInstance = new ClickSend\Api\VoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$url = new \ClickSend\Model\Url(); // \ClickSend\Model\Url | Url model
+$body = new \ClickSend\Model\Url(); // \ClickSend\Model\Url | Url model
 
 try {
-    $result = $apiInstance->voiceReceiptsPost($url);
+    $result = $apiInstance->voiceReceiptsPost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VoiceApi->voiceReceiptsPost: ', $e->getMessage(), PHP_EOL;
@@ -447,7 +438,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **url** | [**\ClickSend\Model\Url**](../Model/Url.md)| Url model |
+ **body** | [**\ClickSend\Model\Url**](../Model/Url.md)| Url model |
 
 ### Return type
 
@@ -465,7 +456,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **voiceReceiptsReadPut**
-> string voiceReceiptsReadPut($date_before)
+> string voiceReceiptsReadPut($body)
 
 Mark delivery receipts as read
 
@@ -475,7 +466,6 @@ Mark delivery receipts as read
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -488,10 +478,10 @@ $apiInstance = new ClickSend\Api\VoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$date_before = new \ClickSend\Model\DateBefore(); // \ClickSend\Model\DateBefore | DateBefore model
+$body = new \ClickSend\Model\DateBefore(); // \ClickSend\Model\DateBefore | DateBefore model
 
 try {
-    $result = $apiInstance->voiceReceiptsReadPut($date_before);
+    $result = $apiInstance->voiceReceiptsReadPut($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VoiceApi->voiceReceiptsReadPut: ', $e->getMessage(), PHP_EOL;
@@ -503,7 +493,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **date_before** | [**\ClickSend\Model\DateBefore**](../Model/DateBefore.md)| DateBefore model | [optional]
+ **body** | [**\ClickSend\Model\DateBefore**](../Model/DateBefore.md)| DateBefore model | [optional]
 
 ### Return type
 
@@ -521,7 +511,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **voiceSendPost**
-> string voiceSendPost($voice_messages)
+> string voiceSendPost($body)
 
 Send voice message(s)
 
@@ -531,7 +521,6 @@ Send a voice call
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -544,10 +533,10 @@ $apiInstance = new ClickSend\Api\VoiceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$voice_messages = new \ClickSend\Model\VoiceMessageCollection(); // \ClickSend\Model\VoiceMessageCollection | VoiceMessageCollection model
+$body = new \ClickSend\Model\VoiceMessageCollection(); // \ClickSend\Model\VoiceMessageCollection | VoiceMessageCollection model
 
 try {
-    $result = $apiInstance->voiceSendPost($voice_messages);
+    $result = $apiInstance->voiceSendPost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VoiceApi->voiceSendPost: ', $e->getMessage(), PHP_EOL;
@@ -559,7 +548,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **voice_messages** | [**\ClickSend\Model\VoiceMessageCollection**](../Model/VoiceMessageCollection.md)| VoiceMessageCollection model |
+ **body** | [**\ClickSend\Model\VoiceMessageCollection**](../Model/VoiceMessageCollection.md)| VoiceMessageCollection model |
 
 ### Return type
 

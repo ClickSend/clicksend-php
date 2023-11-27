@@ -4,14 +4,13 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**smsEmailSmsGet**](EmailToSmsApi.md#smsEmailSmsGet) | **GET** /sms/email-sms | Get list of email to sms allowed addresses
-[**smsEmailSmsPost**](EmailToSmsApi.md#smsEmailSmsPost) | **POST** /sms/email-sms | Create email to sms allowed address
-[**smsEmailSmsStrippedStringDelete**](EmailToSmsApi.md#smsEmailSmsStrippedStringDelete) | **DELETE** /sms/email-sms-stripped-strings/{rule_id} | Delete email to sms stripped string rule
-[**smsEmailSmsStrippedStringGet**](EmailToSmsApi.md#smsEmailSmsStrippedStringGet) | **GET** /sms/email-sms-stripped-strings/{rule_id} | Get email to sms stripped string rule
-[**smsEmailSmsStrippedStringPost**](EmailToSmsApi.md#smsEmailSmsStrippedStringPost) | **POST** /sms/email-sms-stripped-strings | Create email to sms stripped string rule
-[**smsEmailSmsStrippedStringPut**](EmailToSmsApi.md#smsEmailSmsStrippedStringPut) | **PUT** /sms/email-sms-stripped-strings/{rule_id} | Update email to sms stripped string rule
-[**smsEmailSmsStrippedStringsGet**](EmailToSmsApi.md#smsEmailSmsStrippedStringsGet) | **GET** /sms/email-sms-stripped-strings | Get list of email to sms stripped string rules
-
+[**smsEmailSmsGet**](EmailToSmsApi.md#smsemailsmsget) | **GET** /sms/email-sms | Get list of email to sms allowed addresses
+[**smsEmailSmsPost**](EmailToSmsApi.md#smsemailsmspost) | **POST** /sms/email-sms | Create email to sms allowed address
+[**smsEmailSmsStrippedStringDelete**](EmailToSmsApi.md#smsemailsmsstrippedstringdelete) | **DELETE** /sms/email-sms-stripped-strings/{rule_id} | Delete email to sms stripped string rule
+[**smsEmailSmsStrippedStringGet**](EmailToSmsApi.md#smsemailsmsstrippedstringget) | **GET** /sms/email-sms-stripped-strings/{rule_id} | Get email to sms stripped string rule
+[**smsEmailSmsStrippedStringPost**](EmailToSmsApi.md#smsemailsmsstrippedstringpost) | **POST** /sms/email-sms-stripped-strings | Create email to sms stripped string rule
+[**smsEmailSmsStrippedStringPut**](EmailToSmsApi.md#smsemailsmsstrippedstringput) | **PUT** /sms/email-sms-stripped-strings/{rule_id} | Update email to sms stripped string rule
+[**smsEmailSmsStrippedStringsGet**](EmailToSmsApi.md#smsemailsmsstrippedstringsget) | **GET** /sms/email-sms-stripped-strings | Get list of email to sms stripped string rules
 
 # **smsEmailSmsGet**
 > string smsEmailSmsGet($page, $limit)
@@ -24,7 +23,6 @@ Get list of email to sms allowed addresses
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -66,13 +64,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **smsEmailSmsPost**
-> string smsEmailSmsPost($email_sms_address)
+> string smsEmailSmsPost($body)
 
 Create email to sms allowed address
 
@@ -82,7 +80,6 @@ Create email to sms allowed address
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -95,10 +92,10 @@ $apiInstance = new ClickSend\Api\EmailToSmsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$email_sms_address = new \ClickSend\Model\EmailSMSAddress(); // \ClickSend\Model\EmailSMSAddress | EmailSMSAddress model
+$body = new \ClickSend\Model\EmailSMSAddress(); // \ClickSend\Model\EmailSMSAddress | EmailSMSAddress model
 
 try {
-    $result = $apiInstance->smsEmailSmsPost($email_sms_address);
+    $result = $apiInstance->smsEmailSmsPost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EmailToSmsApi->smsEmailSmsPost: ', $e->getMessage(), PHP_EOL;
@@ -110,7 +107,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email_sms_address** | [**\ClickSend\Model\EmailSMSAddress**](../Model/EmailSMSAddress.md)| EmailSMSAddress model |
+ **body** | [**\ClickSend\Model\EmailSMSAddress**](../Model/EmailSMSAddress.md)| EmailSMSAddress model |
 
 ### Return type
 
@@ -138,7 +135,6 @@ Delete email to sms stripped string rule
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -178,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -194,7 +190,6 @@ Get email to sms stripped string rule
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -234,13 +229,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **smsEmailSmsStrippedStringPost**
-> string smsEmailSmsStrippedStringPost($stripped_string)
+> string smsEmailSmsStrippedStringPost($body)
 
 Create email to sms stripped string rule
 
@@ -250,7 +245,6 @@ Create email to sms stripped string rules
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -263,10 +257,10 @@ $apiInstance = new ClickSend\Api\EmailToSmsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stripped_string = new \ClickSend\Model\StrippedString(); // \ClickSend\Model\StrippedString | StrippedString model
+$body = new \ClickSend\Model\StrippedString(); // \ClickSend\Model\StrippedString | StrippedString model
 
 try {
-    $result = $apiInstance->smsEmailSmsStrippedStringPost($stripped_string);
+    $result = $apiInstance->smsEmailSmsStrippedStringPost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EmailToSmsApi->smsEmailSmsStrippedStringPost: ', $e->getMessage(), PHP_EOL;
@@ -278,7 +272,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **stripped_string** | [**\ClickSend\Model\StrippedString**](../Model/StrippedString.md)| StrippedString model |
+ **body** | [**\ClickSend\Model\StrippedString**](../Model/StrippedString.md)| StrippedString model |
 
 ### Return type
 
@@ -296,7 +290,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **smsEmailSmsStrippedStringPut**
-> string smsEmailSmsStrippedStringPut($stripped_string, $rule_id)
+> string smsEmailSmsStrippedStringPut($body, $rule_id)
 
 Update email to sms stripped string rule
 
@@ -306,7 +300,6 @@ Update email to sms stripped string rule
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -319,11 +312,11 @@ $apiInstance = new ClickSend\Api\EmailToSmsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stripped_string = new \ClickSend\Model\StrippedString(); // \ClickSend\Model\StrippedString | StrippedString model
+$body = new \ClickSend\Model\StrippedString(); // \ClickSend\Model\StrippedString | StrippedString model
 $rule_id = 56; // int | Your rule id
 
 try {
-    $result = $apiInstance->smsEmailSmsStrippedStringPut($stripped_string, $rule_id);
+    $result = $apiInstance->smsEmailSmsStrippedStringPut($body, $rule_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EmailToSmsApi->smsEmailSmsStrippedStringPut: ', $e->getMessage(), PHP_EOL;
@@ -335,7 +328,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **stripped_string** | [**\ClickSend\Model\StrippedString**](../Model/StrippedString.md)| StrippedString model |
+ **body** | [**\ClickSend\Model\StrippedString**](../Model/StrippedString.md)| StrippedString model |
  **rule_id** | **int**| Your rule id |
 
 ### Return type
@@ -364,7 +357,6 @@ Get list of email to sms stripped string rules
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -406,7 +398,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

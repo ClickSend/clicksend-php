@@ -13,6 +13,5 @@ Name | Type | Description | Notes
 **return_address_id** | **int** | ID of return address to use | 
 **schedule** | **int** | When to send letter (0/null&#x3D;now) | [optional] [default to 0]
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -20,6 +20,5 @@ Name | Type | Description | Notes
 **custom_4** | **string** |  | [optional] 
 **last_name** | **string** | Your last name | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -4,13 +4,12 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**subaccountsBySubaccountIdDelete**](SubaccountApi.md#subaccountsBySubaccountIdDelete) | **DELETE** /subaccounts/{subaccount_id} | Delete a subaccount
-[**subaccountsBySubaccountIdGet**](SubaccountApi.md#subaccountsBySubaccountIdGet) | **GET** /subaccounts/{subaccount_id} | Get specific subaccount
-[**subaccountsBySubaccountIdPut**](SubaccountApi.md#subaccountsBySubaccountIdPut) | **PUT** /subaccounts/{subaccount_id} | Update subaccount
-[**subaccountsGet**](SubaccountApi.md#subaccountsGet) | **GET** /subaccounts | Get all subaccounts
-[**subaccountsPost**](SubaccountApi.md#subaccountsPost) | **POST** /subaccounts | Create new subaccount
-[**subaccountsRegenApiKeyBySubaccountIdPut**](SubaccountApi.md#subaccountsRegenApiKeyBySubaccountIdPut) | **PUT** /subaccounts/{subaccount_id}/regen-api-key | Regenerate an API Key
-
+[**subaccountsBySubaccountIdDelete**](SubaccountApi.md#subaccountsbysubaccountiddelete) | **DELETE** /subaccounts/{subaccount_id} | Delete a subaccount
+[**subaccountsBySubaccountIdGet**](SubaccountApi.md#subaccountsbysubaccountidget) | **GET** /subaccounts/{subaccount_id} | Get specific subaccount
+[**subaccountsBySubaccountIdPut**](SubaccountApi.md#subaccountsbysubaccountidput) | **PUT** /subaccounts/{subaccount_id} | Update subaccount
+[**subaccountsGet**](SubaccountApi.md#subaccountsget) | **GET** /subaccounts | Get all subaccounts
+[**subaccountsPost**](SubaccountApi.md#subaccountspost) | **POST** /subaccounts | Create new subaccount
+[**subaccountsRegenApiKeyBySubaccountIdPut**](SubaccountApi.md#subaccountsregenapikeybysubaccountidput) | **PUT** /subaccounts/{subaccount_id}/regen-api-key | Regenerate an API Key
 
 # **subaccountsBySubaccountIdDelete**
 > string subaccountsBySubaccountIdDelete($subaccount_id)
@@ -23,7 +22,6 @@ Delete a subaccount
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -63,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -79,7 +77,6 @@ Get specific subaccount
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -119,13 +116,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subaccountsBySubaccountIdPut**
-> string subaccountsBySubaccountIdPut($subaccount_id, $subaccount)
+> string subaccountsBySubaccountIdPut($body, $subaccount_id)
 
 Update subaccount
 
@@ -135,7 +132,6 @@ Update subaccount
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -148,11 +144,11 @@ $apiInstance = new ClickSend\Api\SubaccountApi(
     new GuzzleHttp\Client(),
     $config
 );
+$body = new \ClickSend\Model\Subaccount(); // \ClickSend\Model\Subaccount | Subaccount model
 $subaccount_id = 56; // int | ID of subaccount to update
-$subaccount = new \ClickSend\Model\Subaccount(); // \ClickSend\Model\Subaccount | Subaccount model
 
 try {
-    $result = $apiInstance->subaccountsBySubaccountIdPut($subaccount_id, $subaccount);
+    $result = $apiInstance->subaccountsBySubaccountIdPut($body, $subaccount_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SubaccountApi->subaccountsBySubaccountIdPut: ', $e->getMessage(), PHP_EOL;
@@ -164,8 +160,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**\ClickSend\Model\Subaccount**](../Model/Subaccount.md)| Subaccount model |
  **subaccount_id** | **int**| ID of subaccount to update |
- **subaccount** | [**\ClickSend\Model\Subaccount**](../Model/Subaccount.md)| Subaccount model |
 
 ### Return type
 
@@ -193,7 +189,6 @@ Get all subaccounts
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -235,13 +230,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subaccountsPost**
-> string subaccountsPost($subaccount)
+> string subaccountsPost($body)
 
 Create new subaccount
 
@@ -251,7 +246,6 @@ Create new subaccount
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -264,10 +258,10 @@ $apiInstance = new ClickSend\Api\SubaccountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$subaccount = new \ClickSend\Model\Subaccount(); // \ClickSend\Model\Subaccount | Subaccount model
+$body = new \ClickSend\Model\Subaccount(); // \ClickSend\Model\Subaccount | Subaccount model
 
 try {
-    $result = $apiInstance->subaccountsPost($subaccount);
+    $result = $apiInstance->subaccountsPost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SubaccountApi->subaccountsPost: ', $e->getMessage(), PHP_EOL;
@@ -279,7 +273,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subaccount** | [**\ClickSend\Model\Subaccount**](../Model/Subaccount.md)| Subaccount model |
+ **body** | [**\ClickSend\Model\Subaccount**](../Model/Subaccount.md)| Subaccount model |
 
 ### Return type
 
@@ -307,7 +301,6 @@ Regenerate an API Key
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -347,7 +340,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

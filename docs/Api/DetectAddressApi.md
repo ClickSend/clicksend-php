@@ -4,11 +4,10 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**detectAddressPost**](DetectAddressApi.md#detectAddressPost) | **POST** /post/letters/detect-address | Detects address in uploaded file.
-
+[**detectAddressPost**](DetectAddressApi.md#detectaddresspost) | **POST** /post/letters/detect-address | Detects address in uploaded file.
 
 # **detectAddressPost**
-> string detectAddressPost($upload_file)
+> string detectAddressPost($body)
 
 Detects address in uploaded file.
 
@@ -18,7 +17,6 @@ Detects address in uploaded file.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -31,10 +29,10 @@ $apiInstance = new ClickSend\Api\DetectAddressApi(
     new GuzzleHttp\Client(),
     $config
 );
-$upload_file = new \ClickSend\Model\UploadFile(); // \ClickSend\Model\UploadFile | Your file to be uploaded
+$body = new \ClickSend\Model\UploadFile(); // \ClickSend\Model\UploadFile | Your file to be uploaded
 
 try {
-    $result = $apiInstance->detectAddressPost($upload_file);
+    $result = $apiInstance->detectAddressPost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DetectAddressApi->detectAddressPost: ', $e->getMessage(), PHP_EOL;
@@ -46,7 +44,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **upload_file** | [**\ClickSend\Model\UploadFile**](../Model/UploadFile.md)| Your file to be uploaded |
+ **body** | [**\ClickSend\Model\UploadFile**](../Model/UploadFile.md)| Your file to be uploaded |
 
 ### Return type
 

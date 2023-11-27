@@ -4,12 +4,11 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**smsDeliveryReceiptAutomationDelete**](SMSDeliveryReceiptRulesApi.md#smsDeliveryReceiptAutomationDelete) | **DELETE** /automations/sms/receipts/{receipt_rule_id} | Delete sms delivery receipt automation
-[**smsDeliveryReceiptAutomationGet**](SMSDeliveryReceiptRulesApi.md#smsDeliveryReceiptAutomationGet) | **GET** /automations/sms/receipts/{receipt_rule_id} | Get specific sms delivery receipt automation
-[**smsDeliveryReceiptAutomationPost**](SMSDeliveryReceiptRulesApi.md#smsDeliveryReceiptAutomationPost) | **POST** /automations/sms/receipts | Create sms delivery receipt automations
-[**smsDeliveryReceiptAutomationPut**](SMSDeliveryReceiptRulesApi.md#smsDeliveryReceiptAutomationPut) | **PUT** /automations/sms/receipts/{receipt_rule_id} | Update sms delivery receipt automation
-[**smsDeliveryReceiptAutomationsGet**](SMSDeliveryReceiptRulesApi.md#smsDeliveryReceiptAutomationsGet) | **GET** /automations/sms/receipts | Get all sms delivery receipt automations
-
+[**smsDeliveryReceiptAutomationDelete**](SMSDeliveryReceiptRulesApi.md#smsdeliveryreceiptautomationdelete) | **DELETE** /automations/sms/receipts/{receipt_rule_id} | Delete sms delivery receipt automation
+[**smsDeliveryReceiptAutomationGet**](SMSDeliveryReceiptRulesApi.md#smsdeliveryreceiptautomationget) | **GET** /automations/sms/receipts/{receipt_rule_id} | Get specific sms delivery receipt automation
+[**smsDeliveryReceiptAutomationPost**](SMSDeliveryReceiptRulesApi.md#smsdeliveryreceiptautomationpost) | **POST** /automations/sms/receipts | Create sms delivery receipt automations
+[**smsDeliveryReceiptAutomationPut**](SMSDeliveryReceiptRulesApi.md#smsdeliveryreceiptautomationput) | **PUT** /automations/sms/receipts/{receipt_rule_id} | Update sms delivery receipt automation
+[**smsDeliveryReceiptAutomationsGet**](SMSDeliveryReceiptRulesApi.md#smsdeliveryreceiptautomationsget) | **GET** /automations/sms/receipts | Get all sms delivery receipt automations
 
 # **smsDeliveryReceiptAutomationDelete**
 > string smsDeliveryReceiptAutomationDelete($receipt_rule_id)
@@ -22,7 +21,6 @@ Delete sms delivery receipt automation
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -62,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -78,7 +76,6 @@ Get specific sms delivery receipt automation
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -118,13 +115,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **smsDeliveryReceiptAutomationPost**
-> string smsDeliveryReceiptAutomationPost($delivery_receipt_rule)
+> string smsDeliveryReceiptAutomationPost($body)
 
 Create sms delivery receipt automations
 
@@ -134,7 +131,6 @@ Create sms delivery receipt automations
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -147,10 +143,10 @@ $apiInstance = new ClickSend\Api\SMSDeliveryReceiptRulesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$delivery_receipt_rule = new \ClickSend\Model\DeliveryReceiptRule(); // \ClickSend\Model\DeliveryReceiptRule | sms delivery receipt rule model
+$body = new \ClickSend\Model\DeliveryReceiptRule(); // \ClickSend\Model\DeliveryReceiptRule | sms delivery receipt rule model
 
 try {
-    $result = $apiInstance->smsDeliveryReceiptAutomationPost($delivery_receipt_rule);
+    $result = $apiInstance->smsDeliveryReceiptAutomationPost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SMSDeliveryReceiptRulesApi->smsDeliveryReceiptAutomationPost: ', $e->getMessage(), PHP_EOL;
@@ -162,7 +158,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **delivery_receipt_rule** | [**\ClickSend\Model\DeliveryReceiptRule**](../Model/DeliveryReceiptRule.md)| sms delivery receipt rule model |
+ **body** | [**\ClickSend\Model\DeliveryReceiptRule**](../Model/DeliveryReceiptRule.md)| sms delivery receipt rule model |
 
 ### Return type
 
@@ -180,7 +176,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **smsDeliveryReceiptAutomationPut**
-> string smsDeliveryReceiptAutomationPut($receipt_rule_id, $delivery_receipt_rule)
+> string smsDeliveryReceiptAutomationPut($body, $receipt_rule_id)
 
 Update sms delivery receipt automation
 
@@ -190,7 +186,6 @@ Update sms delivery receipt automation
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -203,11 +198,11 @@ $apiInstance = new ClickSend\Api\SMSDeliveryReceiptRulesApi(
     new GuzzleHttp\Client(),
     $config
 );
+$body = new \ClickSend\Model\DeliveryReceiptRule(); // \ClickSend\Model\DeliveryReceiptRule | Delivery receipt rule model
 $receipt_rule_id = 56; // int | Receipt rule id
-$delivery_receipt_rule = new \ClickSend\Model\DeliveryReceiptRule(); // \ClickSend\Model\DeliveryReceiptRule | Delivery receipt rule model
 
 try {
-    $result = $apiInstance->smsDeliveryReceiptAutomationPut($receipt_rule_id, $delivery_receipt_rule);
+    $result = $apiInstance->smsDeliveryReceiptAutomationPut($body, $receipt_rule_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SMSDeliveryReceiptRulesApi->smsDeliveryReceiptAutomationPut: ', $e->getMessage(), PHP_EOL;
@@ -219,8 +214,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**\ClickSend\Model\DeliveryReceiptRule**](../Model/DeliveryReceiptRule.md)| Delivery receipt rule model |
  **receipt_rule_id** | **int**| Receipt rule id |
- **delivery_receipt_rule** | [**\ClickSend\Model\DeliveryReceiptRule**](../Model/DeliveryReceiptRule.md)| Delivery receipt rule model |
 
 ### Return type
 
@@ -248,7 +243,6 @@ Get all sms delivery receipt automations
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -292,7 +286,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

@@ -4,13 +4,12 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**smsCampaignBySmsCampaignIdGet**](SmsCampaignApi.md#smsCampaignBySmsCampaignIdGet) | **GET** /sms-campaigns/{sms_campaign_id} | Get specific sms campaign
-[**smsCampaignsBySmsCampaignIdPut**](SmsCampaignApi.md#smsCampaignsBySmsCampaignIdPut) | **PUT** /sms-campaigns/{sms_campaign_id} | Update sms campaign
-[**smsCampaignsCancelBySmsCampaignIdPut**](SmsCampaignApi.md#smsCampaignsCancelBySmsCampaignIdPut) | **PUT** /sms-campaigns/{sms_campaign_id}/cancel | Cancel sms campaign
-[**smsCampaignsGet**](SmsCampaignApi.md#smsCampaignsGet) | **GET** /sms-campaigns | Get list of sms campaigns
-[**smsCampaignsPricePost**](SmsCampaignApi.md#smsCampaignsPricePost) | **POST** /sms-campaigns/price | Calculate price for sms campaign
-[**smsCampaignsSendPost**](SmsCampaignApi.md#smsCampaignsSendPost) | **POST** /sms-campaigns/send | Create sms campaign
-
+[**smsCampaignBySmsCampaignIdGet**](SmsCampaignApi.md#smscampaignbysmscampaignidget) | **GET** /sms-campaigns/{sms_campaign_id} | Get specific sms campaign
+[**smsCampaignsBySmsCampaignIdPut**](SmsCampaignApi.md#smscampaignsbysmscampaignidput) | **PUT** /sms-campaigns/{sms_campaign_id} | Update sms campaign
+[**smsCampaignsCancelBySmsCampaignIdPut**](SmsCampaignApi.md#smscampaignscancelbysmscampaignidput) | **PUT** /sms-campaigns/{sms_campaign_id}/cancel | Cancel sms campaign
+[**smsCampaignsGet**](SmsCampaignApi.md#smscampaignsget) | **GET** /sms-campaigns | Get list of sms campaigns
+[**smsCampaignsPricePost**](SmsCampaignApi.md#smscampaignspricepost) | **POST** /sms-campaigns/price | Calculate price for sms campaign
+[**smsCampaignsSendPost**](SmsCampaignApi.md#smscampaignssendpost) | **POST** /sms-campaigns/send | Create sms campaign
 
 # **smsCampaignBySmsCampaignIdGet**
 > string smsCampaignBySmsCampaignIdGet($sms_campaign_id)
@@ -23,7 +22,6 @@ Get specific sms campaign
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -63,13 +61,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **smsCampaignsBySmsCampaignIdPut**
-> string smsCampaignsBySmsCampaignIdPut($sms_campaign_id, $campaign)
+> string smsCampaignsBySmsCampaignIdPut($body, $sms_campaign_id)
 
 Update sms campaign
 
@@ -79,7 +77,6 @@ Update sms campaign
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -92,11 +89,11 @@ $apiInstance = new ClickSend\Api\SmsCampaignApi(
     new GuzzleHttp\Client(),
     $config
 );
+$body = new \ClickSend\Model\SmsCampaign(); // \ClickSend\Model\SmsCampaign | SmsCampaign model
 $sms_campaign_id = 56; // int | ID of SMS campaign to update
-$campaign = new \ClickSend\Model\SmsCampaign(); // \ClickSend\Model\SmsCampaign | SmsCampaign model
 
 try {
-    $result = $apiInstance->smsCampaignsBySmsCampaignIdPut($sms_campaign_id, $campaign);
+    $result = $apiInstance->smsCampaignsBySmsCampaignIdPut($body, $sms_campaign_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SmsCampaignApi->smsCampaignsBySmsCampaignIdPut: ', $e->getMessage(), PHP_EOL;
@@ -108,8 +105,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**\ClickSend\Model\SmsCampaign**](../Model/SmsCampaign.md)| SmsCampaign model |
  **sms_campaign_id** | **int**| ID of SMS campaign to update |
- **campaign** | [**\ClickSend\Model\SmsCampaign**](../Model/SmsCampaign.md)| SmsCampaign model |
 
 ### Return type
 
@@ -137,7 +134,6 @@ Cancel sms campaign
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -177,7 +173,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -193,7 +189,6 @@ Get list of sms campaigns
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -235,13 +230,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **smsCampaignsPricePost**
-> string smsCampaignsPricePost($campaign)
+> string smsCampaignsPricePost($body)
 
 Calculate price for sms campaign
 
@@ -251,7 +246,6 @@ Calculate price for sms campaign
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -264,10 +258,10 @@ $apiInstance = new ClickSend\Api\SmsCampaignApi(
     new GuzzleHttp\Client(),
     $config
 );
-$campaign = new \ClickSend\Model\SmsCampaign(); // \ClickSend\Model\SmsCampaign | SmsCampaign model
+$body = new \ClickSend\Model\SmsCampaign(); // \ClickSend\Model\SmsCampaign | SmsCampaign model
 
 try {
-    $result = $apiInstance->smsCampaignsPricePost($campaign);
+    $result = $apiInstance->smsCampaignsPricePost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SmsCampaignApi->smsCampaignsPricePost: ', $e->getMessage(), PHP_EOL;
@@ -279,7 +273,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign** | [**\ClickSend\Model\SmsCampaign**](../Model/SmsCampaign.md)| SmsCampaign model |
+ **body** | [**\ClickSend\Model\SmsCampaign**](../Model/SmsCampaign.md)| SmsCampaign model |
 
 ### Return type
 
@@ -297,7 +291,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **smsCampaignsSendPost**
-> string smsCampaignsSendPost($campaign)
+> string smsCampaignsSendPost($body)
 
 Create sms campaign
 
@@ -307,7 +301,6 @@ Create sms campaign
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -320,10 +313,10 @@ $apiInstance = new ClickSend\Api\SmsCampaignApi(
     new GuzzleHttp\Client(),
     $config
 );
-$campaign = new \ClickSend\Model\SmsCampaign(); // \ClickSend\Model\SmsCampaign | SmsCampaign model
+$body = new \ClickSend\Model\SmsCampaign(); // \ClickSend\Model\SmsCampaign | SmsCampaign model
 
 try {
-    $result = $apiInstance->smsCampaignsSendPost($campaign);
+    $result = $apiInstance->smsCampaignsSendPost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SmsCampaignApi->smsCampaignsSendPost: ', $e->getMessage(), PHP_EOL;
@@ -335,7 +328,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign** | [**\ClickSend\Model\SmsCampaign**](../Model/SmsCampaign.md)| SmsCampaign model |
+ **body** | [**\ClickSend\Model\SmsCampaign**](../Model/SmsCampaign.md)| SmsCampaign model |
 
 ### Return type
 

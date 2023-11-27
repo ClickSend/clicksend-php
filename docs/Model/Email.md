@@ -12,6 +12,5 @@ Name | Type | Description | Notes
 **attachments** | [**\ClickSend\Model\Attachment[]**](Attachment.md) | Array of Attachment items. | [optional] 
 **schedule** | **float** | Schedule. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -4,9 +4,8 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deliveryIssuesGet**](DeliveryIssuesApi.md#deliveryIssuesGet) | **GET** /delivery-issues | Get all delivery issues
-[**deliveryIssuesPost**](DeliveryIssuesApi.md#deliveryIssuesPost) | **POST** /delivery-issues | Create delivery Issue
-
+[**deliveryIssuesGet**](DeliveryIssuesApi.md#deliveryissuesget) | **GET** /delivery-issues | Get all delivery issues
+[**deliveryIssuesPost**](DeliveryIssuesApi.md#deliveryissuespost) | **POST** /delivery-issues | Create delivery Issue
 
 # **deliveryIssuesGet**
 > string deliveryIssuesGet($page, $limit)
@@ -19,7 +18,6 @@ Get all delivery issues
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -61,13 +59,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deliveryIssuesPost**
-> string deliveryIssuesPost($delivery_issue)
+> string deliveryIssuesPost($body)
 
 Create delivery Issue
 
@@ -77,7 +75,6 @@ Create delivery Issue
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -90,10 +87,10 @@ $apiInstance = new ClickSend\Api\DeliveryIssuesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$delivery_issue = new \ClickSend\Model\DeliveryIssue(); // \ClickSend\Model\DeliveryIssue | DeliveryIssue model
+$body = new \ClickSend\Model\DeliveryIssue(); // \ClickSend\Model\DeliveryIssue | DeliveryIssue model
 
 try {
-    $result = $apiInstance->deliveryIssuesPost($delivery_issue);
+    $result = $apiInstance->deliveryIssuesPost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DeliveryIssuesApi->deliveryIssuesPost: ', $e->getMessage(), PHP_EOL;
@@ -105,7 +102,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **delivery_issue** | [**\ClickSend\Model\DeliveryIssue**](../Model/DeliveryIssue.md)| DeliveryIssue model |
+ **body** | [**\ClickSend\Model\DeliveryIssue**](../Model/DeliveryIssue.md)| DeliveryIssue model |
 
 ### Return type
 

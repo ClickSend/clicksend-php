@@ -4,15 +4,14 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listsContactsByListIdAndContactIdDelete**](ContactApi.md#listsContactsByListIdAndContactIdDelete) | **DELETE** /lists/{list_id}/contacts/{contact_id} | Delete a contact
-[**listsContactsByListIdAndContactIdGet**](ContactApi.md#listsContactsByListIdAndContactIdGet) | **GET** /lists/{list_id}/contacts/{contact_id} | Get a specific contact
-[**listsContactsByListIdAndContactIdPut**](ContactApi.md#listsContactsByListIdAndContactIdPut) | **PUT** /lists/{list_id}/contacts/{contact_id} | Update specific contact
-[**listsContactsByListIdGet**](ContactApi.md#listsContactsByListIdGet) | **GET** /lists/{list_id}/contacts | Get all contacts in a list
-[**listsContactsByListIdPost**](ContactApi.md#listsContactsByListIdPost) | **POST** /lists/{list_id}/contacts | Create new contact
-[**listsCopyContactPut**](ContactApi.md#listsCopyContactPut) | **PUT** /lists/{from_list_id}/contacts/{contact_id}/copy/{to_list_id} | Copy contact to another list
-[**listsRemoveOptedOutContactsByListIdAndOptOutListIdPut**](ContactApi.md#listsRemoveOptedOutContactsByListIdAndOptOutListIdPut) | **PUT** /lists/{list_id}/remove-opted-out-contacts/{opt_out_list_id} | Remove all opted out contacts
-[**listsTransferContactPut**](ContactApi.md#listsTransferContactPut) | **PUT** /lists/{from_list_id}/contacts/{contact_id}/transfer/{to_list_id} | Transfer contact to another list
-
+[**listsContactsByListIdAndContactIdDelete**](ContactApi.md#listscontactsbylistidandcontactiddelete) | **DELETE** /lists/{list_id}/contacts/{contact_id} | Delete a contact
+[**listsContactsByListIdAndContactIdGet**](ContactApi.md#listscontactsbylistidandcontactidget) | **GET** /lists/{list_id}/contacts/{contact_id} | Get a specific contact
+[**listsContactsByListIdAndContactIdPut**](ContactApi.md#listscontactsbylistidandcontactidput) | **PUT** /lists/{list_id}/contacts/{contact_id} | Update specific contact
+[**listsContactsByListIdGet**](ContactApi.md#listscontactsbylistidget) | **GET** /lists/{list_id}/contacts | Get all contacts in a list
+[**listsContactsByListIdPost**](ContactApi.md#listscontactsbylistidpost) | **POST** /lists/{list_id}/contacts | Create new contact
+[**listsCopyContactPut**](ContactApi.md#listscopycontactput) | **PUT** /lists/{from_list_id}/contacts/{contact_id}/copy/{to_list_id} | Copy contact to another list
+[**listsRemoveOptedOutContactsByListIdAndOptOutListIdPut**](ContactApi.md#listsremoveoptedoutcontactsbylistidandoptoutlistidput) | **PUT** /lists/{list_id}/remove-opted-out-contacts/{opt_out_list_id} | Remove all opted out contacts
+[**listsTransferContactPut**](ContactApi.md#liststransfercontactput) | **PUT** /lists/{from_list_id}/contacts/{contact_id}/transfer/{to_list_id} | Transfer contact to another list
 
 # **listsContactsByListIdAndContactIdDelete**
 > string listsContactsByListIdAndContactIdDelete($list_id, $contact_id)
@@ -25,7 +24,6 @@ Delete a contact
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -67,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -83,7 +81,6 @@ Get a specific contact
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -125,13 +122,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listsContactsByListIdAndContactIdPut**
-> string listsContactsByListIdAndContactIdPut($list_id, $contact_id, $contact)
+> string listsContactsByListIdAndContactIdPut($body, $list_id, $contact_id)
 
 Update specific contact
 
@@ -141,7 +138,6 @@ Update specific contact
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -154,12 +150,12 @@ $apiInstance = new ClickSend\Api\ContactApi(
     new GuzzleHttp\Client(),
     $config
 );
+$body = new \ClickSend\Model\Contact(); // \ClickSend\Model\Contact | Contact model
 $list_id = 56; // int | Contact list id
 $contact_id = 56; // int | Contact ID
-$contact = new \ClickSend\Model\Contact(); // \ClickSend\Model\Contact | Contact model
 
 try {
-    $result = $apiInstance->listsContactsByListIdAndContactIdPut($list_id, $contact_id, $contact);
+    $result = $apiInstance->listsContactsByListIdAndContactIdPut($body, $list_id, $contact_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactApi->listsContactsByListIdAndContactIdPut: ', $e->getMessage(), PHP_EOL;
@@ -171,9 +167,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**\ClickSend\Model\Contact**](../Model/Contact.md)| Contact model |
  **list_id** | **int**| Contact list id |
  **contact_id** | **int**| Contact ID |
- **contact** | [**\ClickSend\Model\Contact**](../Model/Contact.md)| Contact model |
 
 ### Return type
 
@@ -191,7 +187,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listsContactsByListIdGet**
-> string listsContactsByListIdGet($list_id, $page, $limit)
+> string listsContactsByListIdGet($list_id, $page, $limit, $updated_after)
 
 Get all contacts in a list
 
@@ -201,7 +197,6 @@ Get all contacts in a list
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -217,9 +212,10 @@ $apiInstance = new ClickSend\Api\ContactApi(
 $list_id = 56; // int | Contact list ID
 $page = 1; // int | Page number
 $limit = 10; // int | Number of records per page
+$updated_after = 10; // int | Get all contacts updated after a given timestamp.
 
 try {
-    $result = $apiInstance->listsContactsByListIdGet($list_id, $page, $limit);
+    $result = $apiInstance->listsContactsByListIdGet($list_id, $page, $limit, $updated_after);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactApi->listsContactsByListIdGet: ', $e->getMessage(), PHP_EOL;
@@ -234,6 +230,7 @@ Name | Type | Description  | Notes
  **list_id** | **int**| Contact list ID |
  **page** | **int**| Page number | [optional] [default to 1]
  **limit** | **int**| Number of records per page | [optional] [default to 10]
+ **updated_after** | **int**| Get all contacts updated after a given timestamp. | [optional] [default to 10]
 
 ### Return type
 
@@ -245,13 +242,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listsContactsByListIdPost**
-> string listsContactsByListIdPost($contact, $list_id)
+> string listsContactsByListIdPost($body, $list_id)
 
 Create new contact
 
@@ -261,7 +258,6 @@ Create new contact
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -274,11 +270,11 @@ $apiInstance = new ClickSend\Api\ContactApi(
     new GuzzleHttp\Client(),
     $config
 );
-$contact = new \ClickSend\Model\Contact(); // \ClickSend\Model\Contact | Contact model
+$body = new \ClickSend\Model\Contact(); // \ClickSend\Model\Contact | Contact model
 $list_id = 56; // int | List id
 
 try {
-    $result = $apiInstance->listsContactsByListIdPost($contact, $list_id);
+    $result = $apiInstance->listsContactsByListIdPost($body, $list_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactApi->listsContactsByListIdPost: ', $e->getMessage(), PHP_EOL;
@@ -290,7 +286,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact** | [**\ClickSend\Model\Contact**](../Model/Contact.md)| Contact model |
+ **body** | [**\ClickSend\Model\Contact**](../Model/Contact.md)| Contact model |
  **list_id** | **int**| List id |
 
 ### Return type
@@ -319,7 +315,6 @@ Copy contact to another list
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -363,7 +358,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -379,7 +374,6 @@ Remove all opted out contacts
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -421,7 +415,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -437,7 +431,6 @@ Transfer contact to another list
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -481,7 +474,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

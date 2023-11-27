@@ -10,6 +10,5 @@ Name | Type | Description | Notes
 **schedule** | **int** | Your schedule timestamp. | [optional] [default to 0]
 **url_to_shorten** | **string** | url to be shortened add http://smsg.io/xxxxx&#x60; to the body as a placeholder. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

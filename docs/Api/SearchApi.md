@@ -4,8 +4,7 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**searchContactsListsGet**](SearchApi.md#searchContactsListsGet) | **GET** /search/contacts-lists | Get list of searched contact list
-
+[**searchContactsListsGet**](SearchApi.md#searchcontactslistsget) | **GET** /search/contacts-lists | Get list of searched contact list
 
 # **searchContactsListsGet**
 > string searchContactsListsGet($q, $page, $limit)
@@ -18,7 +17,6 @@ Get list of searched contact list
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -62,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

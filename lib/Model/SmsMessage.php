@@ -270,7 +270,7 @@ class SmsMessage implements ModelInterface, ArrayAccess
     /**
      * Sets from
      *
-     * @param string $from Your sender id - more info: hhttps://help.clicksend.com/en/collections/57584-numbers-sender-ids.
+     * @param string $from Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids.
      *
      * @return $this
      */

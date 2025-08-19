@@ -483,7 +483,7 @@ class VoiceMessage implements ModelInterface, ArrayAccess
     /**
      * Sets schedule
      *
-     * @param int $schedule Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp
+     * @param int $schedule Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp
      *
      * @return $this
      */

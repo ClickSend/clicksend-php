@@ -330,7 +330,8 @@ class SmsCampaign implements ModelInterface, ArrayAccess
     /**
      * Sets from
      *
-     * @param string $from Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids
+     * @param string $from Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number.
+     *
      * @return $this
      */
     public function setFrom($from)

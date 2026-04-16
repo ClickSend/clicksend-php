@@ -8,7 +8,7 @@
     "api"
   ],
   "homepage": "http://swagger.io",
-  "license": "proprietary",
+  "license": "MIT",
   "authors": [
     {
       "name": "Swagger and contributors",

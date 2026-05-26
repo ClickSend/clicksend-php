@@ -4,11 +4,12 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**voiceDeliveryReceiptAutomationDelete**](VoiceDeliveryReceiptRulesApi.md#voicedeliveryreceiptautomationdelete) | **DELETE** /automations/voice/receipts/{receipt_rule_id} | Delete voice delivery receipt automation
-[**voiceDeliveryReceiptAutomationGet**](VoiceDeliveryReceiptRulesApi.md#voicedeliveryreceiptautomationget) | **GET** /automations/voice/receipts/{receipt_rule_id} | Get specific voice delivery receipt automation
-[**voiceDeliveryReceiptAutomationPost**](VoiceDeliveryReceiptRulesApi.md#voicedeliveryreceiptautomationpost) | **POST** /automations/voice/receipts | Create voice delivery receipt automations
-[**voiceDeliveryReceiptAutomationPut**](VoiceDeliveryReceiptRulesApi.md#voicedeliveryreceiptautomationput) | **PUT** /automations/voice/receipts/{receipt_rule_id} | Update voice delivery receipt automation
-[**voiceDeliveryReceiptAutomationsGet**](VoiceDeliveryReceiptRulesApi.md#voicedeliveryreceiptautomationsget) | **GET** /automations/voice/receipts | Get all voice delivery receipt automations
+[**voiceDeliveryReceiptAutomationDelete**](VoiceDeliveryReceiptRulesApi.md#voiceDeliveryReceiptAutomationDelete) | **DELETE** /automations/voice/receipts/{receipt_rule_id} | Delete voice delivery receipt automation
+[**voiceDeliveryReceiptAutomationGet**](VoiceDeliveryReceiptRulesApi.md#voiceDeliveryReceiptAutomationGet) | **GET** /automations/voice/receipts/{receipt_rule_id} | Get specific voice delivery receipt automation
+[**voiceDeliveryReceiptAutomationPost**](VoiceDeliveryReceiptRulesApi.md#voiceDeliveryReceiptAutomationPost) | **POST** /automations/voice/receipts | Create voice delivery receipt automations
+[**voiceDeliveryReceiptAutomationPut**](VoiceDeliveryReceiptRulesApi.md#voiceDeliveryReceiptAutomationPut) | **PUT** /automations/voice/receipts/{receipt_rule_id} | Update voice delivery receipt automation
+[**voiceDeliveryReceiptAutomationsGet**](VoiceDeliveryReceiptRulesApi.md#voiceDeliveryReceiptAutomationsGet) | **GET** /automations/voice/receipts | Get all voice delivery receipt automations
+
 
 # **voiceDeliveryReceiptAutomationDelete**
 > string voiceDeliveryReceiptAutomationDelete($receipt_rule_id)
@@ -21,6 +22,7 @@ Delete voice delivery receipt automation
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -60,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -76,6 +78,7 @@ Get specific voice delivery receipt automation
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -115,13 +118,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **voiceDeliveryReceiptAutomationPost**
-> string voiceDeliveryReceiptAutomationPost($body)
+> string voiceDeliveryReceiptAutomationPost($delivery_receipt_rule)
 
 Create voice delivery receipt automations
 
@@ -131,6 +134,7 @@ Create voice delivery receipt automations
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -143,10 +147,10 @@ $apiInstance = new ClickSend\Api\VoiceDeliveryReceiptRulesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\DeliveryReceiptRule(); // \ClickSend\Model\DeliveryReceiptRule | voice delivery receipt rule model
+$delivery_receipt_rule = new \ClickSend\Model\DeliveryReceiptRule(); // \ClickSend\Model\DeliveryReceiptRule | voice delivery receipt rule model
 
 try {
-    $result = $apiInstance->voiceDeliveryReceiptAutomationPost($body);
+    $result = $apiInstance->voiceDeliveryReceiptAutomationPost($delivery_receipt_rule);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VoiceDeliveryReceiptRulesApi->voiceDeliveryReceiptAutomationPost: ', $e->getMessage(), PHP_EOL;
@@ -158,7 +162,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\DeliveryReceiptRule**](../Model/DeliveryReceiptRule.md)| voice delivery receipt rule model |
+ **delivery_receipt_rule** | [**\ClickSend\Model\DeliveryReceiptRule**](../Model/DeliveryReceiptRule.md)| voice delivery receipt rule model |
 
 ### Return type
 
@@ -176,7 +180,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **voiceDeliveryReceiptAutomationPut**
-> string voiceDeliveryReceiptAutomationPut($body, $receipt_rule_id)
+> string voiceDeliveryReceiptAutomationPut($receipt_rule_id, $delivery_receipt_rule)
 
 Update voice delivery receipt automation
 
@@ -186,6 +190,7 @@ Update voice delivery receipt automation
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -198,11 +203,11 @@ $apiInstance = new ClickSend\Api\VoiceDeliveryReceiptRulesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\DeliveryReceiptRule(); // \ClickSend\Model\DeliveryReceiptRule | Delivery receipt rule model
 $receipt_rule_id = 56; // int | Receipt rule id
+$delivery_receipt_rule = new \ClickSend\Model\DeliveryReceiptRule(); // \ClickSend\Model\DeliveryReceiptRule | Delivery receipt rule model
 
 try {
-    $result = $apiInstance->voiceDeliveryReceiptAutomationPut($body, $receipt_rule_id);
+    $result = $apiInstance->voiceDeliveryReceiptAutomationPut($receipt_rule_id, $delivery_receipt_rule);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VoiceDeliveryReceiptRulesApi->voiceDeliveryReceiptAutomationPut: ', $e->getMessage(), PHP_EOL;
@@ -214,8 +219,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\DeliveryReceiptRule**](../Model/DeliveryReceiptRule.md)| Delivery receipt rule model |
  **receipt_rule_id** | **int**| Receipt rule id |
+ **delivery_receipt_rule** | [**\ClickSend\Model\DeliveryReceiptRule**](../Model/DeliveryReceiptRule.md)| Delivery receipt rule model |
 
 ### Return type
 
@@ -243,6 +248,7 @@ Get all voice delivery receipt automations
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -286,7 +292,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

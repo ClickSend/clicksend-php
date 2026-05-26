@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **action_address** | **string** | Action address. | 
 **enabled** | **float** | Enabled: Disabled&#x3D;0 or Enabled&#x3D;1. | 
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

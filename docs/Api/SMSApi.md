@@ -4,24 +4,25 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**smsCancelAllPut**](SMSApi.md#smscancelallput) | **PUT** /sms/cancel-all | Update all scheduled message as cancelled
-[**smsCancelByMessageIdPut**](SMSApi.md#smscancelbymessageidput) | **PUT** /sms/{message_id}/cancel | Update scheduled message as cancelled
-[**smsHistoryExportGet**](SMSApi.md#smshistoryexportget) | **GET** /sms/history/export | Export all sms history
-[**smsHistoryGet**](SMSApi.md#smshistoryget) | **GET** /sms/history | Get all sms history
-[**smsInboundGet**](SMSApi.md#smsinboundget) | **GET** /sms/inbound | Get all inbound sms
-[**smsInboundPost**](SMSApi.md#smsinboundpost) | **POST** /sms/inbound | Create inbound sms
-[**smsInboundReadByMessageIdPut**](SMSApi.md#smsinboundreadbymessageidput) | **PUT** /sms/inbound-read/{message_id} | Mark inbound SMS as read
-[**smsInboundReadPut**](SMSApi.md#smsinboundreadput) | **PUT** /sms/inbound-read | Mark inbound SMS as read
-[**smsPricePost**](SMSApi.md#smspricepost) | **POST** /sms/price | Calculate sms price
-[**smsReceiptsByMessageIdGet**](SMSApi.md#smsreceiptsbymessageidget) | **GET** /sms/receipts/{message_id} | Get a Specific Delivery Receipt
-[**smsReceiptsGet**](SMSApi.md#smsreceiptsget) | **GET** /sms/receipts | Get all delivery receipts
-[**smsReceiptsPost**](SMSApi.md#smsreceiptspost) | **POST** /sms/receipts | Add a delivery receipt
-[**smsReceiptsReadPut**](SMSApi.md#smsreceiptsreadput) | **PUT** /sms/receipts-read | Mark delivery receipts as read
-[**smsSendPost**](SMSApi.md#smssendpost) | **POST** /sms/send | Send sms message(s)
-[**smsTemplatesByTemplateIdDelete**](SMSApi.md#smstemplatesbytemplateiddelete) | **DELETE** /sms/templates/{template_id} | Delete sms template
-[**smsTemplatesByTemplateIdPut**](SMSApi.md#smstemplatesbytemplateidput) | **PUT** /sms/templates/{template_id} | Update sms template
-[**smsTemplatesGet**](SMSApi.md#smstemplatesget) | **GET** /sms/templates | Get lists of all sms templates
-[**smsTemplatesPost**](SMSApi.md#smstemplatespost) | **POST** /sms/templates | Create sms template
+[**smsCancelAllPut**](SMSApi.md#smsCancelAllPut) | **PUT** /sms/cancel-all | Update all scheduled message as cancelled
+[**smsCancelByMessageIdPut**](SMSApi.md#smsCancelByMessageIdPut) | **PUT** /sms/{message_id}/cancel | Update scheduled message as cancelled
+[**smsHistoryExportGet**](SMSApi.md#smsHistoryExportGet) | **GET** /sms/history/export | Export all sms history
+[**smsHistoryGet**](SMSApi.md#smsHistoryGet) | **GET** /sms/history | Get all sms history
+[**smsInboundGet**](SMSApi.md#smsInboundGet) | **GET** /sms/inbound | Get all inbound sms
+[**smsInboundPost**](SMSApi.md#smsInboundPost) | **POST** /sms/inbound | Create inbound sms
+[**smsInboundReadByMessageIdPut**](SMSApi.md#smsInboundReadByMessageIdPut) | **PUT** /sms/inbound-read/{message_id} | Mark inbound SMS as read
+[**smsInboundReadPut**](SMSApi.md#smsInboundReadPut) | **PUT** /sms/inbound-read | Mark inbound SMS as read
+[**smsPricePost**](SMSApi.md#smsPricePost) | **POST** /sms/price | Calculate sms price
+[**smsReceiptsByMessageIdGet**](SMSApi.md#smsReceiptsByMessageIdGet) | **GET** /sms/receipts/{message_id} | Get a Specific Delivery Receipt
+[**smsReceiptsGet**](SMSApi.md#smsReceiptsGet) | **GET** /sms/receipts | Get all delivery receipts
+[**smsReceiptsPost**](SMSApi.md#smsReceiptsPost) | **POST** /sms/receipts | Add a delivery receipt
+[**smsReceiptsReadPut**](SMSApi.md#smsReceiptsReadPut) | **PUT** /sms/receipts-read | Mark delivery receipts as read
+[**smsSendPost**](SMSApi.md#smsSendPost) | **POST** /sms/send | Send sms message(s)
+[**smsTemplatesByTemplateIdDelete**](SMSApi.md#smsTemplatesByTemplateIdDelete) | **DELETE** /sms/templates/{template_id} | Delete sms template
+[**smsTemplatesByTemplateIdPut**](SMSApi.md#smsTemplatesByTemplateIdPut) | **PUT** /sms/templates/{template_id} | Update sms template
+[**smsTemplatesGet**](SMSApi.md#smsTemplatesGet) | **GET** /sms/templates | Get lists of all sms templates
+[**smsTemplatesPost**](SMSApi.md#smsTemplatesPost) | **POST** /sms/templates | Create sms template
+
 
 # **smsCancelAllPut**
 > string smsCancelAllPut()
@@ -34,6 +35,7 @@ Update all scheduled message as cancelled
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -69,7 +71,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -85,6 +87,7 @@ Update scheduled message as cancelled
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -124,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -140,6 +143,7 @@ Export all sms history
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -179,7 +183,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -195,6 +199,7 @@ Get all sms history
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -242,7 +247,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -258,6 +263,7 @@ Get all inbound sms
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -301,13 +307,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **smsInboundPost**
-> string smsInboundPost($body)
+> string smsInboundPost($url)
 
 Create inbound sms
 
@@ -317,6 +323,7 @@ Create inbound sms
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -329,10 +336,10 @@ $apiInstance = new ClickSend\Api\SMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\Url(); // \ClickSend\Model\Url | Url model
+$url = new \ClickSend\Model\Url(); // \ClickSend\Model\Url | Url model
 
 try {
-    $result = $apiInstance->smsInboundPost($body);
+    $result = $apiInstance->smsInboundPost($url);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SMSApi->smsInboundPost: ', $e->getMessage(), PHP_EOL;
@@ -344,7 +351,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\Url**](../Model/Url.md)| Url model |
+ **url** | [**\ClickSend\Model\Url**](../Model/Url.md)| Url model |
 
 ### Return type
 
@@ -372,6 +379,7 @@ Mark specific inbound SMS as read
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -411,13 +419,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **smsInboundReadPut**
-> string smsInboundReadPut($body)
+> string smsInboundReadPut($date_before)
 
 Mark inbound SMS as read
 
@@ -427,6 +435,7 @@ Mark all inbound SMS as read optionally before a certain date
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -439,10 +448,10 @@ $apiInstance = new ClickSend\Api\SMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\DateBefore(); // \ClickSend\Model\DateBefore | DateBefore model
+$date_before = new \ClickSend\Model\DateBefore(); // \ClickSend\Model\DateBefore | DateBefore model
 
 try {
-    $result = $apiInstance->smsInboundReadPut($body);
+    $result = $apiInstance->smsInboundReadPut($date_before);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SMSApi->smsInboundReadPut: ', $e->getMessage(), PHP_EOL;
@@ -454,7 +463,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\DateBefore**](../Model/DateBefore.md)| DateBefore model | [optional]
+ **date_before** | [**\ClickSend\Model\DateBefore**](../Model/DateBefore.md)| DateBefore model | [optional]
 
 ### Return type
 
@@ -472,7 +481,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **smsPricePost**
-> string smsPricePost($body)
+> string smsPricePost($sms_messages)
 
 Calculate sms price
 
@@ -482,6 +491,7 @@ Calculate sms price
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -494,10 +504,10 @@ $apiInstance = new ClickSend\Api\SMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\SmsMessageCollection(); // \ClickSend\Model\SmsMessageCollection | SmsMessageCollection model
+$sms_messages = new \ClickSend\Model\SmsMessageCollection(); // \ClickSend\Model\SmsMessageCollection | SmsMessageCollection model
 
 try {
-    $result = $apiInstance->smsPricePost($body);
+    $result = $apiInstance->smsPricePost($sms_messages);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SMSApi->smsPricePost: ', $e->getMessage(), PHP_EOL;
@@ -509,7 +519,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\SmsMessageCollection**](../Model/SmsMessageCollection.md)| SmsMessageCollection model |
+ **sms_messages** | [**\ClickSend\Model\SmsMessageCollection**](../Model/SmsMessageCollection.md)| SmsMessageCollection model |
 
 ### Return type
 
@@ -537,6 +547,7 @@ Get a Specific Delivery Receipt
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -576,7 +587,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -592,6 +603,7 @@ Get all delivery receipts
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -633,13 +645,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **smsReceiptsPost**
-> string smsReceiptsPost($body)
+> string smsReceiptsPost($url)
 
 Add a delivery receipt
 
@@ -649,6 +661,7 @@ Add a delivery receipt
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -661,10 +674,10 @@ $apiInstance = new ClickSend\Api\SMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\Url(); // \ClickSend\Model\Url | Url model
+$url = new \ClickSend\Model\Url(); // \ClickSend\Model\Url | Url model
 
 try {
-    $result = $apiInstance->smsReceiptsPost($body);
+    $result = $apiInstance->smsReceiptsPost($url);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SMSApi->smsReceiptsPost: ', $e->getMessage(), PHP_EOL;
@@ -676,7 +689,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\Url**](../Model/Url.md)| Url model |
+ **url** | [**\ClickSend\Model\Url**](../Model/Url.md)| Url model |
 
 ### Return type
 
@@ -694,7 +707,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **smsReceiptsReadPut**
-> string smsReceiptsReadPut($body)
+> string smsReceiptsReadPut($date_before)
 
 Mark delivery receipts as read
 
@@ -704,6 +717,7 @@ Mark delivery receipts as read
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -716,10 +730,10 @@ $apiInstance = new ClickSend\Api\SMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\DateBefore(); // \ClickSend\Model\DateBefore | DateBefore model
+$date_before = new \ClickSend\Model\DateBefore(); // \ClickSend\Model\DateBefore | DateBefore model
 
 try {
-    $result = $apiInstance->smsReceiptsReadPut($body);
+    $result = $apiInstance->smsReceiptsReadPut($date_before);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SMSApi->smsReceiptsReadPut: ', $e->getMessage(), PHP_EOL;
@@ -731,7 +745,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\DateBefore**](../Model/DateBefore.md)| DateBefore model | [optional]
+ **date_before** | [**\ClickSend\Model\DateBefore**](../Model/DateBefore.md)| DateBefore model | [optional]
 
 ### Return type
 
@@ -749,7 +763,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **smsSendPost**
-> string smsSendPost($body)
+> string smsSendPost($sms_messages)
 
 Send sms message(s)
 
@@ -759,6 +773,7 @@ Send sms message(s)
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -771,10 +786,10 @@ $apiInstance = new ClickSend\Api\SMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\SmsMessageCollection(); // \ClickSend\Model\SmsMessageCollection | SmsMessageCollection model
+$sms_messages = new \ClickSend\Model\SmsMessageCollection(); // \ClickSend\Model\SmsMessageCollection | SmsMessageCollection model
 
 try {
-    $result = $apiInstance->smsSendPost($body);
+    $result = $apiInstance->smsSendPost($sms_messages);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SMSApi->smsSendPost: ', $e->getMessage(), PHP_EOL;
@@ -786,7 +801,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\SmsMessageCollection**](../Model/SmsMessageCollection.md)| SmsMessageCollection model |
+ **sms_messages** | [**\ClickSend\Model\SmsMessageCollection**](../Model/SmsMessageCollection.md)| SmsMessageCollection model |
 
 ### Return type
 
@@ -814,6 +829,7 @@ Delete sms template
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -853,13 +869,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **smsTemplatesByTemplateIdPut**
-> string smsTemplatesByTemplateIdPut($body, $template_id)
+> string smsTemplatesByTemplateIdPut($template_id, $sms_template)
 
 Update sms template
 
@@ -869,6 +885,7 @@ Update sms template
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -881,11 +898,11 @@ $apiInstance = new ClickSend\Api\SMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\SmsTemplate(); // \ClickSend\Model\SmsTemplate | Template item
 $template_id = 56; // int | Template id
+$sms_template = new \ClickSend\Model\SmsTemplate(); // \ClickSend\Model\SmsTemplate | Template item
 
 try {
-    $result = $apiInstance->smsTemplatesByTemplateIdPut($body, $template_id);
+    $result = $apiInstance->smsTemplatesByTemplateIdPut($template_id, $sms_template);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SMSApi->smsTemplatesByTemplateIdPut: ', $e->getMessage(), PHP_EOL;
@@ -897,8 +914,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\SmsTemplate**](../Model/SmsTemplate.md)| Template item |
  **template_id** | **int**| Template id |
+ **sms_template** | [**\ClickSend\Model\SmsTemplate**](../Model/SmsTemplate.md)| Template item |
 
 ### Return type
 
@@ -926,6 +943,7 @@ Get lists of all sms templates
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -967,13 +985,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **smsTemplatesPost**
-> string smsTemplatesPost($body)
+> string smsTemplatesPost($sms_template)
 
 Create sms template
 
@@ -983,6 +1001,7 @@ Create sms template
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -995,10 +1014,10 @@ $apiInstance = new ClickSend\Api\SMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\SmsTemplate(); // \ClickSend\Model\SmsTemplate | SmsTemplate model
+$sms_template = new \ClickSend\Model\SmsTemplate(); // \ClickSend\Model\SmsTemplate | SmsTemplate model
 
 try {
-    $result = $apiInstance->smsTemplatesPost($body);
+    $result = $apiInstance->smsTemplatesPost($sms_template);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SMSApi->smsTemplatesPost: ', $e->getMessage(), PHP_EOL;
@@ -1010,7 +1029,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\SmsTemplate**](../Model/SmsTemplate.md)| SmsTemplate model |
+ **sms_template** | [**\ClickSend\Model\SmsTemplate**](../Model/SmsTemplate.md)| SmsTemplate model |
 
 ### Return type
 

@@ -4,8 +4,9 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**statisticsSmsGet**](StatisticsApi.md#statisticssmsget) | **GET** /statistics/sms | Get sms statistics
-[**statisticsVoiceGet**](StatisticsApi.md#statisticsvoiceget) | **GET** /statistics/voice | Get voice statistics
+[**statisticsSmsGet**](StatisticsApi.md#statisticsSmsGet) | **GET** /statistics/sms | Get sms statistics
+[**statisticsVoiceGet**](StatisticsApi.md#statisticsVoiceGet) | **GET** /statistics/voice | Get voice statistics
+
 
 # **statisticsSmsGet**
 > string statisticsSmsGet()
@@ -18,6 +19,7 @@ Get sms statistics
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -53,7 +55,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -69,6 +71,7 @@ Get voice statistics
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -104,7 +107,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

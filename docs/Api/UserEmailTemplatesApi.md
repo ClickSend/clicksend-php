@@ -4,11 +4,12 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**emailTemplateDelete**](UserEmailTemplatesApi.md#emailtemplatedelete) | **DELETE** /email/templates/{template_id} | Delete user email template
-[**emailTemplateGet**](UserEmailTemplatesApi.md#emailtemplateget) | **GET** /email/templates/{template_id} | Get specific user email template
-[**emailTemplatePost**](UserEmailTemplatesApi.md#emailtemplatepost) | **POST** /email/templates | Create email template
-[**emailTemplatePut**](UserEmailTemplatesApi.md#emailtemplateput) | **PUT** /email/templates/{template_id} | Update email template
-[**emailTemplatesGet**](UserEmailTemplatesApi.md#emailtemplatesget) | **GET** /email/templates | Get all user email templates
+[**emailTemplateDelete**](UserEmailTemplatesApi.md#emailTemplateDelete) | **DELETE** /email/templates/{template_id} | Delete user email template
+[**emailTemplateGet**](UserEmailTemplatesApi.md#emailTemplateGet) | **GET** /email/templates/{template_id} | Get specific user email template
+[**emailTemplatePost**](UserEmailTemplatesApi.md#emailTemplatePost) | **POST** /email/templates | Create email template
+[**emailTemplatePut**](UserEmailTemplatesApi.md#emailTemplatePut) | **PUT** /email/templates/{template_id} | Update email template
+[**emailTemplatesGet**](UserEmailTemplatesApi.md#emailTemplatesGet) | **GET** /email/templates | Get all user email templates
+
 
 # **emailTemplateDelete**
 > string emailTemplateDelete($template_id)
@@ -21,6 +22,7 @@ Delete user email template
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -60,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -76,6 +78,7 @@ Get specific user email templates
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -115,13 +118,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **emailTemplatePost**
-> string emailTemplatePost($body)
+> string emailTemplatePost($email_template)
 
 Create email template
 
@@ -131,6 +134,7 @@ Create email template
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -143,10 +147,10 @@ $apiInstance = new ClickSend\Api\UserEmailTemplatesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\EmailTemplateNew(); // \ClickSend\Model\EmailTemplateNew | Email template model
+$email_template = new \ClickSend\Model\EmailTemplateNew(); // \ClickSend\Model\EmailTemplateNew | Email template model
 
 try {
-    $result = $apiInstance->emailTemplatePost($body);
+    $result = $apiInstance->emailTemplatePost($email_template);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserEmailTemplatesApi->emailTemplatePost: ', $e->getMessage(), PHP_EOL;
@@ -158,7 +162,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\EmailTemplateNew**](../Model/EmailTemplateNew.md)| Email template model |
+ **email_template** | [**\ClickSend\Model\EmailTemplateNew**](../Model/EmailTemplateNew.md)| Email template model |
 
 ### Return type
 
@@ -176,7 +180,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **emailTemplatePut**
-> string emailTemplatePut($body, $template_id)
+> string emailTemplatePut($template_id, $email_template)
 
 Update email template
 
@@ -186,6 +190,7 @@ Update email template
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -198,11 +203,11 @@ $apiInstance = new ClickSend\Api\UserEmailTemplatesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\EmailTemplateUpdate(); // \ClickSend\Model\EmailTemplateUpdate | Email template model
 $template_id = 56; // int | Email template id
+$email_template = new \ClickSend\Model\EmailTemplateUpdate(); // \ClickSend\Model\EmailTemplateUpdate | Email template model
 
 try {
-    $result = $apiInstance->emailTemplatePut($body, $template_id);
+    $result = $apiInstance->emailTemplatePut($template_id, $email_template);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserEmailTemplatesApi->emailTemplatePut: ', $e->getMessage(), PHP_EOL;
@@ -214,8 +219,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\EmailTemplateUpdate**](../Model/EmailTemplateUpdate.md)| Email template model |
  **template_id** | **int**| Email template id |
+ **email_template** | [**\ClickSend\Model\EmailTemplateUpdate**](../Model/EmailTemplateUpdate.md)| Email template model |
 
 ### Return type
 
@@ -243,6 +248,7 @@ Get all user email templates
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -284,7 +290,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

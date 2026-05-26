@@ -4,10 +4,11 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**uploadsPost**](UploadApi.md#uploadspost) | **POST** /uploads | Upload File
+[**uploadsPost**](UploadApi.md#uploadsPost) | **POST** /uploads | Upload File
+
 
 # **uploadsPost**
-> string uploadsPost($body, $convert)
+> string uploadsPost($upload_file, $convert)
 
 Upload File
 
@@ -17,6 +18,7 @@ Upload File
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -29,11 +31,11 @@ $apiInstance = new ClickSend\Api\UploadApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\UploadFile(); // \ClickSend\Model\UploadFile | Your file to be uploaded
+$upload_file = new \ClickSend\Model\UploadFile(); // \ClickSend\Model\UploadFile | Your file to be uploaded
 $convert = "convert_example"; // string | 
 
 try {
-    $result = $apiInstance->uploadsPost($body, $convert);
+    $result = $apiInstance->uploadsPost($upload_file, $convert);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UploadApi->uploadsPost: ', $e->getMessage(), PHP_EOL;
@@ -45,7 +47,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\UploadFile**](../Model/UploadFile.md)| Your file to be uploaded |
+ **upload_file** | [**\ClickSend\Model\UploadFile**](../Model/UploadFile.md)| Your file to be uploaded |
  **convert** | **string**|  |
 
 ### Return type

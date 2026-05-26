@@ -4,10 +4,11 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listCountriesGet**](GlobalSendingApi.md#listcountriesget) | **GET** /country-list | List of countries
-[**userCountriesAgreePost**](GlobalSendingApi.md#usercountriesagreepost) | **POST** /user-countries/agree | Agree to rules and regulation
-[**userCountriesGet**](GlobalSendingApi.md#usercountriesget) | **GET** /user-countries | Get Countries for Global Sending
-[**userCountriesPost**](GlobalSendingApi.md#usercountriespost) | **POST** /user-countries | Select Countries for Global Sending
+[**listCountriesGet**](GlobalSendingApi.md#listCountriesGet) | **GET** /country-list | List of countries
+[**userCountriesAgreePost**](GlobalSendingApi.md#userCountriesAgreePost) | **POST** /user-countries/agree | Agree to rules and regulation
+[**userCountriesGet**](GlobalSendingApi.md#userCountriesGet) | **GET** /user-countries | Get Countries for Global Sending
+[**userCountriesPost**](GlobalSendingApi.md#userCountriesPost) | **POST** /user-countries | Select Countries for Global Sending
+
 
 # **listCountriesGet**
 > string listCountriesGet()
@@ -20,6 +21,7 @@ List of countries with IDs that can be used in selecting countries for Global se
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -55,7 +57,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -71,6 +73,7 @@ To agree on rules and regulations of selected countries and confirm selection.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -106,7 +109,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -122,6 +125,7 @@ Get the list of selected countries.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -157,13 +161,13 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **userCountriesPost**
-> string userCountriesPost($body)
+> string userCountriesPost($country_list_ids)
 
 Select Countries for Global Sending
 
@@ -173,6 +177,7 @@ Use this endpoint to select countries that you intend to send sms / mms to. To r
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -185,10 +190,10 @@ $apiInstance = new ClickSend\Api\GlobalSendingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\CountryListIds(); // \ClickSend\Model\CountryListIds | Id of countr(ies) you want to select, you can get them from GET /country-list response
+$country_list_ids = new \ClickSend\Model\CountryListIds(); // \ClickSend\Model\CountryListIds | Id of countr(ies) you want to select, you can get them from GET /country-list response
 
 try {
-    $result = $apiInstance->userCountriesPost($body);
+    $result = $apiInstance->userCountriesPost($country_list_ids);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobalSendingApi->userCountriesPost: ', $e->getMessage(), PHP_EOL;
@@ -200,7 +205,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\CountryListIds**](../Model/CountryListIds.md)| Id of countr(ies) you want to select, you can get them from GET /country-list response |
+ **country_list_ids** | [**\ClickSend\Model\CountryListIds**](../Model/CountryListIds.md)| Id of countr(ies) you want to select, you can get them from GET /country-list response |
 
 ### Return type
 

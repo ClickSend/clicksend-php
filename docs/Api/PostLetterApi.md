@@ -4,10 +4,11 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**postLettersExportGet**](PostLetterApi.md#postlettersexportget) | **GET** /post/letters/history/export | export post letter history
-[**postLettersHistoryGet**](PostLetterApi.md#postlettershistoryget) | **GET** /post/letters/history | Get all post letter history
-[**postLettersPricePost**](PostLetterApi.md#postletterspricepost) | **POST** /post/letters/price | Calculate post letter price
-[**postLettersSendPost**](PostLetterApi.md#postletterssendpost) | **POST** /post/letters/send | Send post letter
+[**postLettersExportGet**](PostLetterApi.md#postLettersExportGet) | **GET** /post/letters/history/export | export post letter history
+[**postLettersHistoryGet**](PostLetterApi.md#postLettersHistoryGet) | **GET** /post/letters/history | Get all post letter history
+[**postLettersPricePost**](PostLetterApi.md#postLettersPricePost) | **POST** /post/letters/price | Calculate post letter price
+[**postLettersSendPost**](PostLetterApi.md#postLettersSendPost) | **POST** /post/letters/send | Send post letter
+
 
 # **postLettersExportGet**
 > string postLettersExportGet($filename)
@@ -20,6 +21,7 @@ export post letter history
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -59,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -75,6 +77,7 @@ Get all post letter history
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -116,13 +119,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postLettersPricePost**
-> string postLettersPricePost($body)
+> string postLettersPricePost($post_letter)
 
 Calculate post letter price
 
@@ -132,6 +135,7 @@ Calculate post letter price
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -144,10 +148,10 @@ $apiInstance = new ClickSend\Api\PostLetterApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\PostLetter(); // \ClickSend\Model\PostLetter | PostLetter model
+$post_letter = new \ClickSend\Model\PostLetter(); // \ClickSend\Model\PostLetter | PostLetter model
 
 try {
-    $result = $apiInstance->postLettersPricePost($body);
+    $result = $apiInstance->postLettersPricePost($post_letter);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PostLetterApi->postLettersPricePost: ', $e->getMessage(), PHP_EOL;
@@ -159,7 +163,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\PostLetter**](../Model/PostLetter.md)| PostLetter model |
+ **post_letter** | [**\ClickSend\Model\PostLetter**](../Model/PostLetter.md)| PostLetter model |
 
 ### Return type
 
@@ -177,7 +181,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postLettersSendPost**
-> string postLettersSendPost($body)
+> string postLettersSendPost($post_letter)
 
 Send post letter
 
@@ -187,6 +191,7 @@ Send post letter
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -199,10 +204,10 @@ $apiInstance = new ClickSend\Api\PostLetterApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\PostLetter(); // \ClickSend\Model\PostLetter | PostLetter model
+$post_letter = new \ClickSend\Model\PostLetter(); // \ClickSend\Model\PostLetter | PostLetter model
 
 try {
-    $result = $apiInstance->postLettersSendPost($body);
+    $result = $apiInstance->postLettersSendPost($post_letter);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PostLetterApi->postLettersSendPost: ', $e->getMessage(), PHP_EOL;
@@ -214,7 +219,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\PostLetter**](../Model/PostLetter.md)| PostLetter model |
+ **post_letter** | [**\ClickSend\Model\PostLetter**](../Model/PostLetter.md)| PostLetter model |
 
 ### Return type
 

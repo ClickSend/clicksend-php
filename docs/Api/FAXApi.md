@@ -4,13 +4,14 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**faxHistoryGet**](FAXApi.md#faxhistoryget) | **GET** /fax/history | Get a list of Fax History.
-[**faxPricePost**](FAXApi.md#faxpricepost) | **POST** /fax/price | Calculate Total Price for Fax Messages sent
-[**faxReceiptsByMessageIdGet**](FAXApi.md#faxreceiptsbymessageidget) | **GET** /fax/receipts/{message_id} | Get a single fax receipt based on message id.
-[**faxReceiptsGet**](FAXApi.md#faxreceiptsget) | **GET** /fax/receipts | Get all delivery receipts
-[**faxReceiptsPost**](FAXApi.md#faxreceiptspost) | **POST** /fax/receipts | Add a delivery receipt
-[**faxReceiptsReadPut**](FAXApi.md#faxreceiptsreadput) | **PUT** /fax/receipts-read | Mark delivery receipts as read
-[**faxSendPost**](FAXApi.md#faxsendpost) | **POST** /fax/send | Send a fax using supplied supported file-types.
+[**faxHistoryGet**](FAXApi.md#faxHistoryGet) | **GET** /fax/history | Get a list of Fax History.
+[**faxPricePost**](FAXApi.md#faxPricePost) | **POST** /fax/price | Calculate Total Price for Fax Messages sent
+[**faxReceiptsByMessageIdGet**](FAXApi.md#faxReceiptsByMessageIdGet) | **GET** /fax/receipts/{message_id} | Get a single fax receipt based on message id.
+[**faxReceiptsGet**](FAXApi.md#faxReceiptsGet) | **GET** /fax/receipts | Get all delivery receipts
+[**faxReceiptsPost**](FAXApi.md#faxReceiptsPost) | **POST** /fax/receipts | Add a delivery receipt
+[**faxReceiptsReadPut**](FAXApi.md#faxReceiptsReadPut) | **PUT** /fax/receipts-read | Mark delivery receipts as read
+[**faxSendPost**](FAXApi.md#faxSendPost) | **POST** /fax/send | Send a fax using supplied supported file-types.
+
 
 # **faxHistoryGet**
 > string faxHistoryGet($date_from, $date_to, $q, $order, $page, $limit)
@@ -23,6 +24,7 @@ Get a list of Fax History.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -72,13 +74,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **faxPricePost**
-> string faxPricePost($body)
+> string faxPricePost($fax_message)
 
 Calculate Total Price for Fax Messages sent
 
@@ -88,6 +90,7 @@ Calculate Total Price for Fax Messages sent
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -100,10 +103,10 @@ $apiInstance = new ClickSend\Api\FAXApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\FaxMessageCollection(); // \ClickSend\Model\FaxMessageCollection | FaxMessageCollection model
+$fax_message = new \ClickSend\Model\FaxMessageCollection(); // \ClickSend\Model\FaxMessageCollection | FaxMessageCollection model
 
 try {
-    $result = $apiInstance->faxPricePost($body);
+    $result = $apiInstance->faxPricePost($fax_message);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FAXApi->faxPricePost: ', $e->getMessage(), PHP_EOL;
@@ -115,7 +118,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\FaxMessageCollection**](../Model/FaxMessageCollection.md)| FaxMessageCollection model |
+ **fax_message** | [**\ClickSend\Model\FaxMessageCollection**](../Model/FaxMessageCollection.md)| FaxMessageCollection model |
 
 ### Return type
 
@@ -143,6 +146,7 @@ Get a single fax receipt based on message id.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -182,7 +186,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -198,6 +202,7 @@ Get all delivery receipts
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -239,13 +244,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **faxReceiptsPost**
-> string faxReceiptsPost($body)
+> string faxReceiptsPost($url)
 
 Add a delivery receipt
 
@@ -255,6 +260,7 @@ Add a delivery receipt
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -267,10 +273,10 @@ $apiInstance = new ClickSend\Api\FAXApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\Url(); // \ClickSend\Model\Url | Url model
+$url = new \ClickSend\Model\Url(); // \ClickSend\Model\Url | Url model
 
 try {
-    $result = $apiInstance->faxReceiptsPost($body);
+    $result = $apiInstance->faxReceiptsPost($url);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FAXApi->faxReceiptsPost: ', $e->getMessage(), PHP_EOL;
@@ -282,7 +288,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\Url**](../Model/Url.md)| Url model |
+ **url** | [**\ClickSend\Model\Url**](../Model/Url.md)| Url model |
 
 ### Return type
 
@@ -300,7 +306,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **faxReceiptsReadPut**
-> string faxReceiptsReadPut($body)
+> string faxReceiptsReadPut($date_before)
 
 Mark delivery receipts as read
 
@@ -310,6 +316,7 @@ Mark delivery receipts as read
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -322,10 +329,10 @@ $apiInstance = new ClickSend\Api\FAXApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\DateBefore(); // \ClickSend\Model\DateBefore | DateBefore model
+$date_before = new \ClickSend\Model\DateBefore(); // \ClickSend\Model\DateBefore | DateBefore model
 
 try {
-    $result = $apiInstance->faxReceiptsReadPut($body);
+    $result = $apiInstance->faxReceiptsReadPut($date_before);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FAXApi->faxReceiptsReadPut: ', $e->getMessage(), PHP_EOL;
@@ -337,7 +344,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\DateBefore**](../Model/DateBefore.md)| DateBefore model | [optional]
+ **date_before** | [**\ClickSend\Model\DateBefore**](../Model/DateBefore.md)| DateBefore model | [optional]
 
 ### Return type
 
@@ -355,7 +362,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **faxSendPost**
-> string faxSendPost($body)
+> string faxSendPost($fax_message)
 
 Send a fax using supplied supported file-types.
 
@@ -365,6 +372,7 @@ Send a fax using supplied supported file-types.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -377,10 +385,10 @@ $apiInstance = new ClickSend\Api\FAXApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\FaxMessageCollection(); // \ClickSend\Model\FaxMessageCollection | FaxMessageCollection model
+$fax_message = new \ClickSend\Model\FaxMessageCollection(); // \ClickSend\Model\FaxMessageCollection | FaxMessageCollection model
 
 try {
-    $result = $apiInstance->faxSendPost($body);
+    $result = $apiInstance->faxSendPost($fax_message);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FAXApi->faxSendPost: ', $e->getMessage(), PHP_EOL;
@@ -392,7 +400,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\FaxMessageCollection**](../Model/FaxMessageCollection.md)| FaxMessageCollection model |
+ **fax_message** | [**\ClickSend\Model\FaxMessageCollection**](../Model/FaxMessageCollection.md)| FaxMessageCollection model |
 
 ### Return type
 

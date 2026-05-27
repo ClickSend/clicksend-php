@@ -4,7 +4,8 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**countriesGet**](CountriesApi.md#countriesget) | **GET** /countries | Get all country codes
+[**countriesGet**](CountriesApi.md#countriesGet) | **GET** /countries | Get all country codes
+
 
 # **countriesGet**
 > string countriesGet()
@@ -46,7 +47,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

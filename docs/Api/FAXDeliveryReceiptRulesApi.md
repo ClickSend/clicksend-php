@@ -4,11 +4,12 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**faxDeliveryReceiptAutomationDelete**](FAXDeliveryReceiptRulesApi.md#faxdeliveryreceiptautomationdelete) | **DELETE** /automations/fax/receipts/{receipt_rule_id} | Delete fax delivery receipt automation
-[**faxDeliveryReceiptAutomationGet**](FAXDeliveryReceiptRulesApi.md#faxdeliveryreceiptautomationget) | **GET** /automations/fax/receipts/{receipt_rule_id} | Get specific fax delivery receipt automation
-[**faxDeliveryReceiptAutomationPost**](FAXDeliveryReceiptRulesApi.md#faxdeliveryreceiptautomationpost) | **POST** /automations/fax/receipts | Create fax delivery receipt automations
-[**faxDeliveryReceiptAutomationPut**](FAXDeliveryReceiptRulesApi.md#faxdeliveryreceiptautomationput) | **PUT** /automations/fax/receipts/{receipt_rule_id} | Update fax delivery receipt automation
-[**faxDeliveryReceiptAutomationsGet**](FAXDeliveryReceiptRulesApi.md#faxdeliveryreceiptautomationsget) | **GET** /automations/fax/receipts | Get all fax delivery receipt automations
+[**faxDeliveryReceiptAutomationDelete**](FAXDeliveryReceiptRulesApi.md#faxDeliveryReceiptAutomationDelete) | **DELETE** /automations/fax/receipts/{receipt_rule_id} | Delete fax delivery receipt automation
+[**faxDeliveryReceiptAutomationGet**](FAXDeliveryReceiptRulesApi.md#faxDeliveryReceiptAutomationGet) | **GET** /automations/fax/receipts/{receipt_rule_id} | Get specific fax delivery receipt automation
+[**faxDeliveryReceiptAutomationPost**](FAXDeliveryReceiptRulesApi.md#faxDeliveryReceiptAutomationPost) | **POST** /automations/fax/receipts | Create fax delivery receipt automations
+[**faxDeliveryReceiptAutomationPut**](FAXDeliveryReceiptRulesApi.md#faxDeliveryReceiptAutomationPut) | **PUT** /automations/fax/receipts/{receipt_rule_id} | Update fax delivery receipt automation
+[**faxDeliveryReceiptAutomationsGet**](FAXDeliveryReceiptRulesApi.md#faxDeliveryReceiptAutomationsGet) | **GET** /automations/fax/receipts | Get all fax delivery receipt automations
+
 
 # **faxDeliveryReceiptAutomationDelete**
 > string faxDeliveryReceiptAutomationDelete($receipt_rule_id)
@@ -21,6 +22,7 @@ Delete fax delivery receipt automation
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -60,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -76,6 +78,7 @@ Get specific fax delivery receipt automation
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -115,13 +118,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **faxDeliveryReceiptAutomationPost**
-> string faxDeliveryReceiptAutomationPost($body)
+> string faxDeliveryReceiptAutomationPost($delivery_receipt_rule)
 
 Create fax delivery receipt automations
 
@@ -131,6 +134,7 @@ Create fax delivery receipt automations
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -143,10 +147,10 @@ $apiInstance = new ClickSend\Api\FAXDeliveryReceiptRulesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\DeliveryReceiptRule(); // \ClickSend\Model\DeliveryReceiptRule | fax delivery receipt rule model
+$delivery_receipt_rule = new \ClickSend\Model\DeliveryReceiptRule(); // \ClickSend\Model\DeliveryReceiptRule | fax delivery receipt rule model
 
 try {
-    $result = $apiInstance->faxDeliveryReceiptAutomationPost($body);
+    $result = $apiInstance->faxDeliveryReceiptAutomationPost($delivery_receipt_rule);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FAXDeliveryReceiptRulesApi->faxDeliveryReceiptAutomationPost: ', $e->getMessage(), PHP_EOL;
@@ -158,7 +162,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\DeliveryReceiptRule**](../Model/DeliveryReceiptRule.md)| fax delivery receipt rule model |
+ **delivery_receipt_rule** | [**\ClickSend\Model\DeliveryReceiptRule**](../Model/DeliveryReceiptRule.md)| fax delivery receipt rule model |
 
 ### Return type
 
@@ -176,7 +180,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **faxDeliveryReceiptAutomationPut**
-> string faxDeliveryReceiptAutomationPut($body, $receipt_rule_id)
+> string faxDeliveryReceiptAutomationPut($receipt_rule_id, $delivery_receipt_rule)
 
 Update fax delivery receipt automation
 
@@ -186,6 +190,7 @@ Update fax delivery receipt automation
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -198,11 +203,11 @@ $apiInstance = new ClickSend\Api\FAXDeliveryReceiptRulesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\DeliveryReceiptRule(); // \ClickSend\Model\DeliveryReceiptRule | Delivery receipt rule model
 $receipt_rule_id = 56; // int | Receipt rule id
+$delivery_receipt_rule = new \ClickSend\Model\DeliveryReceiptRule(); // \ClickSend\Model\DeliveryReceiptRule | Delivery receipt rule model
 
 try {
-    $result = $apiInstance->faxDeliveryReceiptAutomationPut($body, $receipt_rule_id);
+    $result = $apiInstance->faxDeliveryReceiptAutomationPut($receipt_rule_id, $delivery_receipt_rule);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FAXDeliveryReceiptRulesApi->faxDeliveryReceiptAutomationPut: ', $e->getMessage(), PHP_EOL;
@@ -214,8 +219,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\DeliveryReceiptRule**](../Model/DeliveryReceiptRule.md)| Delivery receipt rule model |
  **receipt_rule_id** | **int**| Receipt rule id |
+ **delivery_receipt_rule** | [**\ClickSend\Model\DeliveryReceiptRule**](../Model/DeliveryReceiptRule.md)| Delivery receipt rule model |
 
 ### Return type
 
@@ -243,6 +248,7 @@ Get all fax delivery receipt automations
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -286,7 +292,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

@@ -4,10 +4,11 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**emailHistoryExportGet**](TransactionalEmailApi.md#emailhistoryexportget) | **GET** /email/history/export | Export all Transactional Email history
-[**emailHistoryGet**](TransactionalEmailApi.md#emailhistoryget) | **GET** /email/history | Get all transactional email history
-[**emailPricePost**](TransactionalEmailApi.md#emailpricepost) | **POST** /email/price | Get transactional email price
-[**emailSendPost**](TransactionalEmailApi.md#emailsendpost) | **POST** /email/send | Send transactional email
+[**emailHistoryExportGet**](TransactionalEmailApi.md#emailHistoryExportGet) | **GET** /email/history/export | Export all Transactional Email history
+[**emailHistoryGet**](TransactionalEmailApi.md#emailHistoryGet) | **GET** /email/history | Get all transactional email history
+[**emailPricePost**](TransactionalEmailApi.md#emailPricePost) | **POST** /email/price | Get transactional email price
+[**emailSendPost**](TransactionalEmailApi.md#emailSendPost) | **POST** /email/send | Send transactional email
+
 
 # **emailHistoryExportGet**
 > string emailHistoryExportGet($filename, $date_from, $date_to)
@@ -20,6 +21,7 @@ Export all Transactional Email history
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -63,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -79,6 +81,7 @@ Get all transactional email history
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -124,13 +127,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **emailPricePost**
-> string emailPricePost($body)
+> string emailPricePost($email)
 
 Get transactional email price
 
@@ -140,6 +143,7 @@ Get transactional email price
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -152,10 +156,10 @@ $apiInstance = new ClickSend\Api\TransactionalEmailApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\Email(); // \ClickSend\Model\Email | Email model
+$email = new \ClickSend\Model\Email(); // \ClickSend\Model\Email | Email model
 
 try {
-    $result = $apiInstance->emailPricePost($body);
+    $result = $apiInstance->emailPricePost($email);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TransactionalEmailApi->emailPricePost: ', $e->getMessage(), PHP_EOL;
@@ -167,7 +171,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\Email**](../Model/Email.md)| Email model |
+ **email** | [**\ClickSend\Model\Email**](../Model/Email.md)| Email model |
 
 ### Return type
 
@@ -185,7 +189,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **emailSendPost**
-> string emailSendPost($body)
+> string emailSendPost($email)
 
 Send transactional email
 
@@ -195,6 +199,7 @@ Send transactional email
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 // Configure HTTP basic authorization: BasicAuth
 $config = ClickSend\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -207,10 +212,10 @@ $apiInstance = new ClickSend\Api\TransactionalEmailApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ClickSend\Model\Email(); // \ClickSend\Model\Email | Email model
+$email = new \ClickSend\Model\Email(); // \ClickSend\Model\Email | Email model
 
 try {
-    $result = $apiInstance->emailSendPost($body);
+    $result = $apiInstance->emailSendPost($email);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TransactionalEmailApi->emailSendPost: ', $e->getMessage(), PHP_EOL;
@@ -222,7 +227,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ClickSend\Model\Email**](../Model/Email.md)| Email model |
+ **email** | [**\ClickSend\Model\Email**](../Model/Email.md)| Email model |
 
 ### Return type
 

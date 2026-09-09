@@ -1,0 +1,1 @@
+For Packagist, new repo name https://github.com/ClickSend/clicksend-php-v2
